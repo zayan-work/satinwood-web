@@ -149,18 +149,27 @@ export default function RingsScene({
   offsetX?: number;
 }) {
   const p = PALETTES[theme];
+  // Stable event target: R3F's default (the canvas parent node) can be null
+  // during mount/unmount churn, throwing in connect(). This wrapper is always
+  // present while the canvas lives, so connect() never sees null.
+  const eventSource = useRef<HTMLDivElement>(null);
+
   return (
-    <Canvas
-      camera={{ position: [0, 0, 6], fov: 42 }}
-      dpr={[1, 1.5]}
-      gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
-      style={{ background: "transparent" }}
-      frameloop={reduce ? "demand" : "always"}
-    >
-      <ambientLight intensity={p.ambient} />
-      <directionalLight position={[4, 5, 6]} intensity={p.key} color="#FFF6E0" />
-      <directionalLight position={[-5, -2, 2]} intensity={0.5} color={p.rim} />
-      <Rings theme={theme} reduce={reduce} offsetX={offsetX} />
-    </Canvas>
+    <div ref={eventSource} className="absolute inset-0">
+      <Canvas
+        camera={{ position: [0, 0, 6], fov: 42 }}
+        dpr={[1, 1.5]}
+        gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
+        style={{ background: "transparent" }}
+        frameloop={reduce ? "demand" : "always"}
+        eventSource={eventSource as React.RefObject<HTMLElement>}
+        eventPrefix="client"
+      >
+        <ambientLight intensity={p.ambient} />
+        <directionalLight position={[4, 5, 6]} intensity={p.key} color="#FFF6E0" />
+        <directionalLight position={[-5, -2, 2]} intensity={0.5} color={p.rim} />
+        <Rings theme={theme} reduce={reduce} offsetX={offsetX} />
+      </Canvas>
+    </div>
   );
 }
