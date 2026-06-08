@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #1c1b16;
+  --forest: #2c3826;
+  --forest-deep: #1e261a;
+  --gold: #9c7b2e;
+  --gold-bright: #c2a24e;
+  --paper: #fbfaf5;
+  --cream: #f2ebdb;
+  --grey: #54534a;
+  --grey-light: #7c7a6f;
+  --hairline: #e2dac8;
+  --tint: #efe6ce;
+  --tint-edge: #d8c792;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-paper: var(--paper);
+  --color-cream: var(--cream);
+  --color-grey: var(--grey);
+  --color-grey-light: var(--grey-light);
+  --color-hairline: var(--hairline);
+  --color-tint: var(--tint);
+  --color-tint-edge: var(--tint-edge);
+
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+
+  --animate-faq-down: faq-down 0.3s ease;
+  --animate-faq-up: faq-up 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes faq-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
   }
 }
 
+@keyframes faq-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reusable paper-grain micro-texture (hero, value band, operator photos) */
+@utility grain {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 3px,
+    rgba(28, 27, 22, 0.012) 3px 4px
+  );
+}
+
+/* Same grain, lighter — for use over dark surfaces */
+@utility grain-light {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 3px,
+    rgba(255, 255, 255, 0.025) 3px 4px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

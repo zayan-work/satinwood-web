@@ -1,0 +1,50 @@
+import { Container } from "@/components/primitives/Container";
+import { SectionHeading } from "@/components/primitives/SectionHeading";
+import { GrainOverlay } from "@/components/primitives/GrainOverlay";
+import { Reveal } from "@/components/primitives/Reveal";
+import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
+import { operators } from "@/lib/content";
+
+export function Operators() {
+  return (
+    <section id="team" className="border-y border-hairline bg-white py-[88px]">
+      <Container>
+        <Reveal>
+          <SectionHeading
+            eyebrow="Meet your operators"
+            title="The people who would run your finance function."
+            lede="CA Sri Lanka, ACCA, CIMA, and CFA qualified, with experience inside global banks, Big Four firms, and listed groups. The same calibre the world's firms recruit."
+          />
+        </Reveal>
+        <RevealGroup className="mt-[46px] grid grid-cols-2 gap-[18px] sm:gap-[22px] lg:grid-cols-4">
+          {operators.map((op) => (
+            <RevealItem key={op.name} className="group">
+              <div
+                className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[14px]"
+                style={{ background: op.gradient }}
+              >
+                <GrainOverlay tone="light" />
+                <span className="font-display text-[64px] font-semibold text-[#F2EBDB]/90 transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100">
+                  {op.initials}
+                </span>
+                <span className="absolute right-3 top-3 rounded-full border border-[#F4EFE2]/45 bg-[#1C1B16]/20 px-2.5 py-1 text-[10px] font-semibold tracking-[0.6px] text-[#F4EFE2]">
+                  {op.cred}
+                </span>
+              </div>
+              <div className="mt-3.5 font-display text-[21px] font-semibold leading-[1.1] text-ink">
+                {op.name}
+              </div>
+              <div className="mt-0.5 text-[13px] font-semibold text-gold">{op.role}</div>
+              <p className="mt-2 text-[12.5px] leading-[1.5] text-grey">{op.meta}</p>
+            </RevealItem>
+          ))}
+        </RevealGroup>
+        <Reveal>
+          <p className="mt-6 text-[12px] italic text-grey-light">
+            Representative of our current bench. We hand-select the match for your business.
+          </p>
+        </Reveal>
+      </Container>
+    </section>
+  );
+}
