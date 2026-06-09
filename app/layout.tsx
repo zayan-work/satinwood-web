@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 const favicon =
-  "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2750%27%20fill%3D%27%231E261A%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23C2A24E%27%20stroke-width%3D%274.2%27%3E%3Ccircle%20cx%3D%2741%27%20cy%3D%2750%27%20r%3D%2722%27/%3E%3Ccircle%20cx%3D%2741%27%20cy%3D%2750%27%20r%3D%2713%27/%3E%3Ccircle%20cx%3D%2759%27%20cy%3D%2750%27%20r%3D%2722%27/%3E%3Ccircle%20cx%3D%2759%27%20cy%3D%2750%27%20r%3D%2713%27/%3E%3C/g%3E%3C/svg%3E";
+  "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2750%27%20fill%3D%27%231E261A%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23C2A24E%27%20stroke-width%3D%272.8%27%3E%3Ccircle%20cx%3D%2737%27%20cy%3D%2750%27%20r%3D%2721%27/%3E%3Ccircle%20cx%3D%2737%27%20cy%3D%2750%27%20r%3D%2714%27/%3E%3Ccircle%20cx%3D%2737%27%20cy%3D%2750%27%20r%3D%277.5%27/%3E%3Ccircle%20cx%3D%2763%27%20cy%3D%2750%27%20r%3D%2721%27/%3E%3Ccircle%20cx%3D%2763%27%20cy%3D%2750%27%20r%3D%2714%27/%3E%3Ccircle%20cx%3D%2763%27%20cy%3D%2750%27%20r%3D%277.5%27/%3E%3C/g%3E%3C/svg%3E";
 
 export const metadata: Metadata = {
   title: "Satinwood · Senior finance teams, crafted in Ceylon",

@@ -1,6 +1,7 @@
 "use client";
 
 import Cal, { getCalApi } from "@calcom/embed-react";
+import { Clock, Video } from "lucide-react";
 import { useEffect } from "react";
 
 const CAL_LINK = process.env.NEXT_PUBLIC_CALCOM_LINK ?? "satinwood/discovery";
@@ -23,22 +24,55 @@ export function BookingEmbed() {
             "cal-brand": "#C2A24E",
           },
         },
-        hideEventTypeDetails: false,
+        // Hide Cal's tall stacked header — we render a slim on-brand one above
+        // instead, so the card stays a normal size with the full month visible.
+        hideEventTypeDetails: true,
         layout: "month_view",
       });
     })();
   }, []);
 
   return (
-    // Strict, fixed-height box. Without a defined height the embed expands to fit
-    // every slot and blows out the page — so we cap it and let Cal scroll inside.
-    <div className="h-[600px] overflow-hidden rounded-2xl bg-white p-3 shadow-[0_18px_50px_rgba(0,0,0,0.25)] sm:h-[680px] sm:p-4">
-      <Cal
-        namespace={NAMESPACE}
-        calLink={CAL_LINK}
-        style={{ width: "100%", height: "100%", overflow: "scroll" }}
-        config={{ layout: "month_view", theme: "light" }}
+    <div className="relative overflow-hidden rounded-[20px] border border-hairline bg-white p-3 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.45)] sm:p-4">
+      <span
+        aria-hidden
+        className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-gold via-gold-bright to-honey"
       />
+
+      {/* Slim, on-brand meeting header (replaces Cal's bulky details panel). */}
+      <div className="flex items-center gap-3 px-1 pb-3 pt-1.5">
+        <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-forest/10 text-forest">
+          <Video className="size-[18px]" strokeWidth={1.8} />
+        </span>
+        <div>
+          <div className="font-display text-[18px] font-semibold leading-tight text-ink">
+            15-minute discovery call
+          </div>
+          <div className="mt-1 flex items-center gap-2 text-[12.5px] text-grey">
+            <span className="inline-flex items-center gap-1">
+              <Clock className="size-3.5 text-gold" strokeWidth={2} />
+              15 min
+            </span>
+            <span className="text-tint-edge">·</span>
+            <span className="inline-flex items-center gap-1">
+              <Video className="size-3.5 text-gold" strokeWidth={2} />
+              Cal Video
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="mb-1 h-px bg-hairline" />
+
+      {/* Normal-height calendar. Scrolls internally so a selected day's time
+          slots stay reachable without the card growing tall. */}
+      <div className="h-[500px] overflow-y-auto rounded-[12px]">
+        <Cal
+          namespace={NAMESPACE}
+          calLink={CAL_LINK}
+          style={{ width: "100%", height: "100%" }}
+          config={{ layout: "month_view", theme: "light" }}
+        />
+      </div>
     </div>
   );
 }

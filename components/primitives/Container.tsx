@@ -1,6 +1,11 @@
 import { cn } from "@/lib/cn";
 
-/** Centered page gutter — mirrors the draft's `.wrap` (max 1140px, responsive padding). */
+/**
+ * Centered page gutter. Wide editorial measure — content spans ~90% of the
+ * viewport (gutters ≤5% per side) up to a generous 1600px cap, so the layout
+ * fills the screen on large displays instead of floating in a narrow column.
+ * Gutters scale down on small screens for breathing room without waste.
+ */
 export function Container({
   children,
   className,
@@ -9,7 +14,12 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-[1140px] px-6 sm:px-10", className)}>
+    <div
+      className={cn(
+        "mx-auto w-[92%] max-w-[1600px] sm:w-[90%] lg:w-[88%]",
+        className,
+      )}
+    >
       {children}
     </div>
   );

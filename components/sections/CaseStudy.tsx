@@ -1,5 +1,6 @@
 import { Container } from "@/components/primitives/Container";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
+import { WoodGrain } from "@/components/primitives/WoodGrain";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { cn } from "@/lib/cn";
@@ -12,65 +13,75 @@ const avatarStyles: Record<string, string> = {
 
 export function CaseStudy() {
   return (
-    <section id="proof" className="bg-paper py-[88px]">
+    <section id="proof" className="bg-paper py-[clamp(80px,10vw,132px)]">
       <Container>
         <Reveal>
           <SectionHeading eyebrow="Proof" title="What it looks like when finance just runs." />
         </Reveal>
 
-        <div className="mt-[46px] grid grid-cols-1 items-center gap-[50px] lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mt-[clamp(40px,5vw,64px)] grid grid-cols-1 items-stretch gap-[clamp(32px,4vw,56px)] lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
-            <div className="rounded-[18px] bg-forest-deep p-[42px_40px] text-[#EDE7D6]">
-              <div className="font-display text-[30px] font-semibold text-[#F4EFE2]">
-                {caseStudy.logo}
-              </div>
-              <div className="mt-1.5 text-[13.5px] text-[#B9B19C]">{caseStudy.desc}</div>
-              <q className="mt-[26px] block font-display text-[23px] italic leading-[1.4] text-[#F4EFE2]">
-                {caseStudy.quote}
-              </q>
-              <div className="mt-4 text-[13.5px] text-[#C5BCA6]">
-                <b className="font-semibold text-[#F4EFE2]">Founder</b>, {caseStudy.who}
+            <div className="relative h-full overflow-hidden rounded-[22px] bg-forest-deep p-[clamp(32px,3vw,46px)] text-[#EDE7D6]">
+              <WoodGrain theme="dark" id="case" className="opacity-60" />
+              <div className="relative z-10">
+                <div className="font-display text-[clamp(28px,2.6vw,34px)] font-semibold text-[#F4EFE2]">
+                  {caseStudy.logo}
+                </div>
+                <div className="mt-2 text-[13.5px] leading-[1.5] text-[#B9B19C]">
+                  {caseStudy.desc}
+                </div>
+                <q className="mt-8 block font-display text-[clamp(22px,2.2vw,27px)] italic leading-[1.4] text-[#F4EFE2]">
+                  {caseStudy.quote}
+                </q>
+                <div className="mt-5 text-[13.5px] text-[#C5BCA6]">
+                  <b className="font-semibold text-[#F4EFE2]">Founder</b>, {caseStudy.who}
+                </div>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div>
+            <div className="flex h-full flex-col justify-center">
               {caseStudy.blocks.map((b) => (
-                <div key={b.label} className="mb-6">
-                  <span className="mb-2.5 inline-block rounded-full border border-tint-edge px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[1.4px] text-gold">
+                <div key={b.label} className="mb-7">
+                  <span className="mb-3 inline-block rounded-full border border-tint-edge px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[1.4px] text-gold">
                     {b.label}
                   </span>
-                  <p className="text-[15px] leading-[1.6] text-grey">{b.body}</p>
+                  <p className="text-[clamp(15px,1.2vw,16.5px)] leading-[1.62] text-grey">
+                    {b.body}
+                  </p>
                 </div>
               ))}
               <div>
-                <span className="mb-2.5 inline-block rounded-full border border-tint-edge px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[1.4px] text-gold">
+                <span className="mb-3 inline-block rounded-full border border-tint-edge px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[1.4px] text-gold">
                   The outcome
                 </span>
-                <p className="font-display text-[22px] leading-[1.35] text-ink">
+                <p className="font-display text-[clamp(22px,2vw,26px)] leading-[1.34] text-ink">
                   A finance function that runs without the founder, with cleaner books and
                   faster reporting, for{" "}
-                  <b className="italic font-semibold text-gold">a fraction of a local hire.</b>
+                  <b className="font-semibold italic text-gold">a fraction of a local hire.</b>
                 </p>
               </div>
             </div>
           </Reveal>
         </div>
 
-        <RevealGroup className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+        <RevealGroup className="mt-12 grid grid-cols-1 gap-[clamp(18px,2vw,28px)] md:grid-cols-2">
           {testimonials.map((t) => (
             <RevealItem
               key={t.initials}
-              className="rounded-[14px] border border-hairline bg-white p-[24px_26px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(28,27,22,0.07)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              className="group relative overflow-hidden rounded-[16px] border border-hairline bg-white p-[clamp(24px,2.2vw,32px)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-tint-edge hover:shadow-[0_20px_44px_rgba(28,27,22,0.08)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
             >
-              <q className="block font-display text-[18px] italic leading-[1.42] text-ink">
+              <span className="pointer-events-none absolute -left-2 -top-4 select-none font-display text-[90px] leading-none text-gold/10">
+                &ldquo;
+              </span>
+              <q className="relative block font-display text-[clamp(17px,1.5vw,20px)] italic leading-[1.42] text-ink">
                 {t.quote}
               </q>
-              <div className="mt-[15px] flex items-center gap-2.5">
+              <div className="mt-5 flex items-center gap-3">
                 <div
                   className={cn(
-                    "flex h-[34px] w-[34px] items-center justify-center rounded-full font-display text-[14px] font-semibold",
+                    "flex h-[36px] w-[36px] items-center justify-center rounded-full font-display text-[14px] font-semibold",
                     avatarStyles[t.avatar],
                   )}
                 >

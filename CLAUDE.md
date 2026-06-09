@@ -26,9 +26,14 @@ There is no test runner configured yet. TypeScript runs in `noEmit` strict mode;
 
 ## Architecture
 
-- **App Router only.** All routes live in `app/`. Currently just the scaffold: `app/layout.tsx` (root layout, Geist fonts wired via `next/font/google` and exposed as `--font-geist-sans` / `--font-geist-mono`) and `app/page.tsx`.
+- **App Router only.** All routes live in `app/`. `app/page.tsx` composes the single landing page from ordered section components; `app/layout.tsx` wires the fonts (Cormorant Garamond → `--font-cormorant`, Inter → `--font-inter`) and the inline favicon.
 - **Path alias:** `@/*` maps to the repo root (`./`), per `tsconfig.json`.
-- **React 19** — Server Components are the default; mark Client Components with `"use client"`.
+- **React 19** — Server Components are the default; mark Client Components with `"use client"`. Keep sections as Server Components where possible; only the interactive primitives (`Reveal`, `RevealGroup`, `Parallax`, `CountUp`, `ScrollProgress`, `ProofStrip`, `Navbar`, `BookingEmbed`, `Faq`) are clients.
+- **Code layout:**
+  - `lib/content.ts` — single source of truth for all copy. Edit copy here, never inline in sections.
+  - `lib/cn.ts` — `cn()` = `clsx` + `tailwind-merge`. Use it for every conditional/merged className.
+  - `components/primitives/` — reusable building blocks (`Container`, `Button`, `Eyebrow`, `SectionHeading`, `WoodGrain`, `SectionCurve`, `GrainOverlay`, reveal/motion helpers).
+  - `components/sections/` — one file per page section, consumed by `app/page.tsx`.
 
 ## Styling — Tailwind v4, CSS-first config
 
@@ -37,6 +42,18 @@ This project uses **Tailwind CSS v4**, configured entirely in CSS, not JavaScrip
 - Theme tokens are declared in `app/globals.css` inside an `@theme inline { ... }` block (e.g. `--color-background`, `--font-sans`). There is **no `tailwind.config.ts`** and Tailwind v4 does not use one by default.
 - Tailwind is wired through PostCSS via `@tailwindcss/postcss` (`postcss.config.mjs`); `globals.css` pulls it in with `@import "tailwindcss";`.
 
-**Reconciling the Satinwood project rules:** the rules call for theme colors (`ink`, `forest`, `gold`) and Framer Motion / Radix UI primitives. None of these are present yet:
-- The rules say "map theme colors to `tailwind.config.ts`" — in v4 this means adding `--color-ink`, `--color-forest`, `--color-gold` to the `@theme inline` block in `app/globals.css` (which then exposes `bg-ink`, `text-forest`, etc.). Only create a `tailwind.config.ts` if you have a specific reason to opt back into JS config.
-- **Framer Motion** and **Radix UI** are not yet in `package.json` — install them before using the staggered `whileInView` reveal animations and Radix primitives the rules require.
+- **Theme colors live in CSS, not JS.** Tokens are declared once as raw `--name` values in `:root`, then re-exposed to Tailwind inside `@theme inline` as `--color-<name>` (which generates `bg-<name>`, `text-<name>`, `border-<name>`, …). To add a colour: add both the raw `--x` and the `--color-x: var(--x)` line. Do **not** create a `tailwind.config.ts` unless you have a specific reason to opt back into JS config.
+- **Custom utilities** use Tailwind v4's `@utility` directive in `globals.css` (e.g. `grain`, `woodgrain-light/dark`, `rule-gold`, `tnum`). **Keyframe animations** are exposed as `--animate-*` theme vars and invoked with arbitrary properties, e.g. `[animation:var(--animate-grain-drift)]`.
+- **Framer Motion** (`framer-motion`) and **Radix** (`@radix-ui/react-accordion`) are installed and in use. The Cal.com embed uses `@calcom/embed-react`.
+
+## Design system — "Satinwood: Heritage Editorial"
+
+Satinwood is a lustrous pale-gold Ceylon hardwood with a wavy, ribboned figure; the design language *is* that material. Keep new work consistent with these conventions:
+
+- **Palette (tokens in `app/globals.css`):** forest greens (`forest`, `forest-deep`, `forest-shadow`), heartwood golds (`gold`, `gold-bright`, `honey`, `satin`), `walnut`, warm neutrals (`paper`, `cream`, `cream-deep`), text (`ink`, `grey`, `grey-light`), lines (`hairline`, `tint`, `tint-edge`). Dark sections sit on `forest-deep`; light sections alternate `paper` / `cream` / `white`.
+- **Type:** display = Cormorant Garamond (`font-display`), body = Inter (`font-sans`). Headings use `clamp()` for fluid sizing; emphasized phrases go in `<em>` (rendered italic + gold via `SectionHeading`).
+- **Wide layout:** `Container` spans ~88–92% of the viewport (gutters ≤ ~6%/side) up to `max-w-[1600px]`. Use it for every section's content; do not reintroduce a narrow fixed column.
+- **Satinwood grain — `<WoodGrain theme="light|dark" id="unique" />`:** a real SVG `feTurbulence` ribbon texture (anisotropic frequency = horizontal wood figure), tinted gold, with ambient drift + sheen (CSS-only, killed under reduced motion). It **replaced a removed WebGL 3D ring motif** — there is no `three`/`@react-three/fiber` dependency anymore; do not add one back. Give each instance a unique `id` (filter-id collision avoidance). It is `aria-hidden` and needs a `relative overflow-hidden` parent.
+- **Curvy dividers — `<SectionCurve position="top|bottom" fill="var(--token)" variant="wave|swell" />`:** organic wave transitions that replace flat `border-y`. `fill` is the colour of the *adjacent* section so one colour drapes into the next; applied mainly at the dramatic light→dark→light bands (Difference, Stats, Booking). Section background order must stay consistent with the `fill` passed to its curves.
+- **Motion:** reveals via `Reveal` / `RevealGroup`+`RevealItem` (fade + 16px rise, `whileInView` once, ease `[0.22,1,0.36,1]`, ~0.06s stagger). Everything respects `prefers-reduced-motion`. Animate transform/opacity only. Note: `whileInView` content is `opacity:0` until scrolled into view, so **full-page screenshots show off-screen sections blank — scroll to a section to QA it.**
+- **Verify before done:** `pnpm build` (type-check gate) + `pnpm lint` must pass. The dev server runs on `http://localhost:3000`.
