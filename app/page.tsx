@@ -48,7 +48,17 @@ const jsonLd = {
       parentOrganization: { "@id": `${SITE}/#organization` },
       description:
         "Satinwood embeds senior finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies. It places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire.",
-      serviceType: "Outsourced finance and accounting",
+      // `serviceType` is only valid on schema.org/Service, not on a
+      // ProfessionalService (a LocalBusiness). Express the focus with
+      // `knowsAbout` instead; the dedicated Service node below carries serviceType.
+      knowsAbout: [
+        "Outsourced controller",
+        "Outsourced FP&A",
+        "Outsourced accounting manager",
+        "Senior accountant",
+        "Month-end close",
+        "Financial controls",
+      ],
       areaServed,
     },
     {
