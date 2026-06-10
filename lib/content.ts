@@ -13,12 +13,15 @@ export const serviceLinks = [
   { label: "Finance for ecommerce brands", href: "/finance-for-ecommerce-brands" },
 ];
 
+// Home-page nav. Identical menu to `pageNav`, but the on-page sections
+// (The difference / How it works / Build your team) scroll in-page rather
+// than linking back to the homepage. Team and Advisory are real page links.
 export const nav = {
   links: [
     { label: "The difference", href: "#difference" },
     { label: "Services", children: serviceLinks },
-    { label: "The team", href: "#team" },
-    { label: "Proof", href: "#proof" },
+    { label: "Team", href: "/team" },
+    { label: "Advisory", href: "/advisory" },
     { label: "How it works", href: "#how" },
   ],
   cta: { label: "Build your team", href: "#cta" },

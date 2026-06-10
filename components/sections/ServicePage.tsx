@@ -18,9 +18,12 @@ export function ServicePage({ data }: { data: ServicePageData }) {
 
   return (
     <>
-      {/* Page hero — copy left, "At a glance" panel right */}
-      <section className="bg-paper pb-2.5 pt-[66px]">
-        <Container className="grid grid-cols-1 items-center gap-[34px] min-[861px]:grid-cols-[1.12fr_0.88fr] min-[861px]:gap-[54px]">
+      {/* Page hero — copy left, "At a glance" panel right.
+          Columns are top-aligned so the panel starts level with the headline,
+          and the hero carries its own small bottom padding (it must not inherit
+          the generic 88px section padding, or the gap to the next band doubles). */}
+      <section className="bg-paper pb-1 pt-16">
+        <Container className="grid grid-cols-1 items-start gap-[34px] min-[861px]:grid-cols-[1.12fr_0.88fr] min-[861px]:gap-[54px]">
           <div>
             <Reveal>
               <Eyebrow>{hero.eyebrow}</Eyebrow>
