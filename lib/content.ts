@@ -1,9 +1,7 @@
 /**
  * Single source of truth for all landing-page copy.
- * Copy is taken verbatim from the reference design (satinwood-draft.html).
+ * Copy is taken verbatim from the reference design (Satinwood Updated for Team.html).
  */
-
-import { label } from "framer-motion/client";
 
 export const nav = {
   links: [
@@ -20,7 +18,7 @@ export const hero = {
   eyebrow: "Senior finance teams · Crafted in Ceylon",
   trust: [
     "Finance only",
-    "Senior by default",
+    "Always senior",
     "Full-time & embedded",
     "Fluent in modern tooling & AI",
   ],
@@ -58,23 +56,23 @@ export const problems = [
 export const differences = [
   {
     n: "01",
-    title: "Finance only, senior only",
-    body: "We place finance leaders and nothing else. No assistants, no marketing pool. Senior by default, never junior staff relabelled.",
+    title: "Finance is all we place",
+    body: "We place finance leaders and nothing else. No assistants, no marketing pool, no junior staff with a senior title.",
   },
   {
     n: "02",
-    title: "Built by operators, not recruiters",
-    body: "Satinwood is run by people who own finance functions themselves. We hire the way an operator hires, because we are operators.",
+    title: "Run by people who've scaled finance teams and businesses",
+    body: "The people who built Satinwood trained at Deloitte, Ernst & Young, Goldman Sachs, and Stanford, and have scaled finance functions themselves. We hire for that.",
   },
   {
     n: "03",
-    title: "Backed by an established group",
-    body: "Delivered with MAC Holdings, a long-standing Sri Lankan group. Institutional weight behind every placement, not a venture experiment.",
+    title: "From one seat to a full finance function",
+    body: "Start with the role you need most, a controller or an FP&A lead, and scale to a full outsourced finance function at the same senior standard as you grow.",
   },
   {
     n: "04",
-    title: "Built to own the work",
-    body: "Embedded, exclusive, full-time, and fluent in modern finance tooling and AI. A teammate who owns outcomes, not a queue that processes tasks.",
+    title: "Embedded like a teammate",
+    body: "Embedded, exclusive, full-time, and fluent in modern finance tools and AI. They own outcomes the way a teammate does.",
   },
 ];
 
@@ -241,28 +239,52 @@ export const reassurances = [
 
 export const faqs = [
   {
-    q: "How are you different from other offshore providers?",
-    a: "Most are generalist marketplaces placing assistants, marketers, and junior bookkeepers. We place senior finance operators only, we are run by people who own finance functions, and we are delivered with an established group rather than a venture-backed staffing app.",
+    q: "What is Satinwood?",
+    a: "Satinwood is a senior finance talent firm. We embed finance operators from Sri Lanka full-time and exclusively in your business to own the close, reporting, and controls, for a fraction of building the same seat at home. We serve growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia, placing controller, FP&A, accounting manager, and senior accountant level talent. We are not a staffing marketplace or a bookkeeping provider.",
   },
   {
-    q: "How senior are these people, really?",
-    a: "Controller, FP&A, accounting manager, and senior accountant level. CA Sri Lanka, ACCA, CIMA, or CFA qualified, with real ownership experience inside global firms, not junior staff relabelled as senior.",
+    q: "How is Satinwood different from other offshore finance providers and staffing marketplaces?",
+    a: "Satinwood places senior finance operators only, never generalists. Most offshore providers are generalist marketplaces staffing assistants, marketers, and junior bookkeepers from a shared pool. We place finance and nothing else, we are run by people who own finance functions themselves, and we are delivered with MAC Holdings, an established Sri Lankan group, not a venture-backed app.",
   },
   {
-    q: "Are your operators fluent in AI and modern tools?",
-    a: "Yes. They work in QuickBooks, NetSuite, Xero and the rest of the modern finance stack, and they use AI tooling where it makes the work faster and sharper. Judgment first, tools to amplify it.",
+    q: "What is an outsourced controller?",
+    a: "An outsourced controller is a senior finance professional who owns your month-end close, reconciliations, financial controls, and reporting from outside your local payroll. With Satinwood the controller is embedded full-time in your business and tools, so you get ownership of the numbers, not a task queue. It is the same seniority as a local controller, at a fraction of the cost.",
   },
   {
-    q: "How do you handle our financial data?",
-    a: "Secure, company-issued devices, signed NDAs, role-based access, and documented handling standards. Your data is treated as if our own books depended on it.",
+    q: "What is the difference between outsourced bookkeeping and a controller-level finance hire?",
+    a: "Bookkeeping records transactions; a controller owns the integrity of your numbers. A bookkeeper handles data entry, AP, and AR. A controller owns the close, the controls, the reporting package, and the judgment behind the numbers. Satinwood places controller, FP&A, accounting manager, and senior accountant level talent, not junior bookkeeping.",
   },
   {
-    q: "Is the operator exclusive to us?",
-    a: "Yes. Full-time and dedicated to your business, embedded in your tools and team. Not shared, not a pooled queue.",
+    q: "Can an offshore finance team run our month-end close?",
+    a: "Yes. A senior offshore finance operator can own your full month-end close, reconciliations, customer or retailer settlements, and the monthly reporting pack, working inside your own tools. Satinwood operators run the close end to end with real ownership, with working hours that overlap your day so the close never waits. Most finance work, from the ledger to board reporting, runs remotely.",
   },
   {
-    q: "What is the contract and trial?",
-    a: "Start with a trial period to confirm fit, then a flexible rolling engagement. If the match is not right, we replace it.",
+    q: "Why Sri Lanka for finance talent?",
+    a: "Sri Lanka has a deep, internationally trained finance profession, the same people the global firms recruit. Operators are CA Sri Lanka, ACCA, CIMA, or CFA qualified, with real ownership experience inside global banks, Big Four firms, and listed groups. The talent already exists at the standard you want. It is simply in a market where the cost of the same seat is far lower.",
+  },
+  {
+    q: "How senior are Satinwood's operators?",
+    a: "Controller, FP&A, accounting manager, and senior accountant level. Operators are CA Sri Lanka, ACCA, CIMA, or CFA qualified, with real ownership experience inside global firms, not junior staff relabelled as senior. The average senior operator on our bench has 15 or more years of experience.",
+  },
+  {
+    q: "What accounting tools do your operators use?",
+    a: "Satinwood operators work in QuickBooks, NetSuite, Xero, and the rest of the modern finance stack, and they use AI tooling where it makes the work faster and sharper. We train every operator on the tools your business already runs on. Judgment first, tools to amplify it.",
+  },
+  {
+    q: "Are your operators full-time and exclusive to us?",
+    a: "Yes. Each operator is full-time, dedicated, and exclusive to your business, embedded in your tools and team. Not shared, not a pooled queue, not a task marketplace.",
+  },
+  {
+    q: "Which countries does Satinwood serve?",
+    a: "Satinwood serves growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia. Operators work hours that overlap your day, agreed up front, so the close never waits.",
+  },
+  {
+    q: "How fast can you match someone, and is there a trial?",
+    a: "About two weeks from the first call to a hand-selected senior match. Every match starts on a trial period to confirm fit, and if it is not right we replace it. Terms are flexible and rolling, with no long lock-in to get started.",
+  },
+  {
+    q: "How does Satinwood handle our financial data?",
+    a: "Secure, company-issued devices, signed NDAs, role-based access, and documented handling standards. Your financial data is treated as if our own books depended on it.",
   },
 ];
 
@@ -274,6 +296,7 @@ export const booking = {
     "A trial period on every match. If it is not right, we replace it.",
   ],
   email: "hello@satinwood.co",
+  cities: "Washington DC · Miami · Toronto · Colombo",
 };
 
 export const footer = {

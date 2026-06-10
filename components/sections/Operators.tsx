@@ -7,7 +7,7 @@ import { operators } from "@/lib/content";
 
 export function Operators() {
   return (
-    <section id="team" className="border-y border-hairline bg-white py-[clamp(80px,10vw,132px)]">
+    <section id="team" className="border-y border-hairline bg-white py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
           <SectionHeading

@@ -1,4 +1,3 @@
-import { Check } from "lucide-react";
 import { Container } from "@/components/primitives/Container";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
@@ -14,7 +13,7 @@ export function Comparison() {
   const lastIndex = rows.length - 1;
 
   return (
-    <section className="bg-paper py-[clamp(80px,10vw,132px)]">
+    <section className="bg-paper py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
           <SectionHeading
@@ -79,14 +78,7 @@ export function Comparison() {
                         isLast ? "rounded-b-[14px]" : "border-b border-[#F4EFE2]/12"
                       }`}
                     >
-                      <span className="inline-flex items-center justify-center gap-2">
-                        <Check
-                          aria-hidden
-                          className="size-4 flex-none text-gold-bright"
-                          strokeWidth={2.4}
-                        />
-                        {row.satinwood}
-                      </span>
+                      {row.satinwood}
                     </td>
                   </tr>
                 );

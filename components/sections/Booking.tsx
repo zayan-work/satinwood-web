@@ -1,8 +1,6 @@
 import { Container } from "@/components/primitives/Container";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
 import { Reveal } from "@/components/primitives/Reveal";
-import { WoodGrain } from "@/components/primitives/WoodGrain";
-import { SectionCurve } from "@/components/primitives/SectionCurve";
 import { BookingEmbed } from "./BookingEmbed";
 import { booking } from "@/lib/content";
 
@@ -10,24 +8,20 @@ export function Booking() {
   return (
     <section
       id="cta"
-      className="relative overflow-hidden bg-forest-deep pb-[clamp(72px,9vw,104px)] pt-[clamp(96px,12vw,150px)] text-[#EDE7D6]"
+      className="bg-forest-deep py-[88px] text-[#EDE7D6] max-[560px]:py-[60px]"
     >
-      <WoodGrain theme="dark" id="booking" className="opacity-70" />
-      {/* The Ceylon heartwood swells up from the close. */}
-      <SectionCurve position="top" fill="var(--paper)" variant="swell" />
-
-      <Container className="relative z-10">
-        <div className="grid grid-cols-1 items-start gap-[clamp(48px,5vw,80px)] lg:grid-cols-[0.95fr_1.05fr]">
+      <Container>
+        <div className="grid grid-cols-1 items-start gap-[clamp(48px,5vw,58px)] lg:grid-cols-2">
           <Reveal>
             <div className="lg:sticky lg:top-28">
               <Eyebrow tone="dark">{booking.eyebrow}</Eyebrow>
-              <h2 className="mt-4 font-display text-[clamp(34px,4.6vw,56px)] font-semibold leading-[1.03] text-[#F4EFE2]">
-                Build a finance team{" "}
+              <h2 className="mt-3.5 font-display text-[clamp(30px,4vw,46px)] font-semibold leading-[1.05] text-[#F4EFE2]">
+                Build a finance team,{" "}
                 <em className="italic text-gold-bright">crafted in Ceylon.</em>
               </h2>
-              <p className="mt-5 max-w-[44ch] text-[clamp(15px,1.1vw,17px)] leading-[1.6] text-[#C5BCA6]">
-                Tell us the seat you need. We will come back with a hand-selected senior
-                match.
+              <p className="mt-4 max-w-[42ch] text-[16px] leading-[1.6] text-[#C5BCA6]">
+                Tell us the seat you need and pick a time below. We will come back with a
+                hand-selected senior match.
               </p>
               <ul className="mt-7 flex flex-col gap-3.5">
                 {booking.bullets.map((b) => (
@@ -40,8 +34,8 @@ export function Booking() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-[14px] leading-[1.9] text-[#C5BCA6]">
-                Pick a time that suits you, or email{" "}
+              <p className="mt-[26px] text-[14px] leading-[1.9] text-[#C5BCA6]">
+                Prefer email?{" "}
                 <a
                   href={`mailto:${booking.email}`}
                   className="border-b border-gold-bright/40 text-gold-bright transition-colors hover:border-gold-bright"
@@ -49,6 +43,9 @@ export function Booking() {
                   {booking.email}
                 </a>
               </p>
+              <div className="mt-6 border-t border-[#F4EFE2]/16 pt-5 text-[11px] font-semibold uppercase tracking-[1.7px] text-[#9a937f]">
+                {booking.cities}
+              </div>
             </div>
           </Reveal>
 

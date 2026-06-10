@@ -1,6 +1,5 @@
 import { Container } from "@/components/primitives/Container";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
-import { WoodGrain } from "@/components/primitives/WoodGrain";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { cn } from "@/lib/cn";
@@ -13,7 +12,7 @@ const avatarStyles: Record<string, string> = {
 
 export function CaseStudy() {
   return (
-    <section id="proof" className="bg-paper py-[clamp(80px,10vw,132px)]">
+    <section id="proof" className="bg-paper py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
           <SectionHeading eyebrow="Proof" title="What it looks like when finance just runs." />
@@ -21,10 +20,9 @@ export function CaseStudy() {
 
         <div className="mt-[clamp(40px,5vw,64px)] grid grid-cols-1 items-stretch gap-[clamp(32px,4vw,56px)] lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
-            <div className="relative h-full overflow-hidden rounded-[22px] bg-forest-deep p-[clamp(32px,3vw,46px)] text-[#EDE7D6]">
-              <WoodGrain theme="dark" id="case" className="opacity-60" />
+            <div className="relative h-full overflow-hidden rounded-[18px] bg-forest-deep p-[clamp(34px,3vw,42px)] text-[#EDE7D6]">
               <div className="relative z-10">
-                <div className="font-display text-[clamp(28px,2.6vw,34px)] font-semibold text-[#F4EFE2]">
+                <div className="font-display text-[clamp(28px,2.6vw,30px)] font-semibold text-[#F4EFE2]">
                   {caseStudy.logo}
                 </div>
                 <div className="mt-2 text-[13.5px] leading-[1.5] text-[#B9B19C]">
@@ -66,19 +64,16 @@ export function CaseStudy() {
           </Reveal>
         </div>
 
-        <RevealGroup className="mt-12 grid grid-cols-1 gap-[clamp(18px,2vw,28px)] md:grid-cols-2">
+        <RevealGroup className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {testimonials.map((t) => (
             <RevealItem
               key={t.initials}
-              className="group relative overflow-hidden rounded-[16px] border border-hairline bg-white p-[clamp(24px,2.2vw,32px)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-tint-edge hover:shadow-[0_20px_44px_rgba(28,27,22,0.08)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              className="rounded-[14px] border border-hairline bg-white px-[26px] py-6"
             >
-              <span className="pointer-events-none absolute -left-2 -top-4 select-none font-display text-[90px] leading-none text-gold/10">
-                &ldquo;
-              </span>
-              <q className="relative block font-display text-[clamp(17px,1.5vw,20px)] italic leading-[1.42] text-ink">
+              <q className="block font-display text-[18px] italic leading-[1.42] text-ink">
                 {t.quote}
               </q>
-              <div className="mt-5 flex items-center gap-3">
+              <div className="mt-4 flex items-center gap-3">
                 <div
                   className={cn(
                     "flex h-[36px] w-[36px] items-center justify-center rounded-full font-display text-[14px] font-semibold",

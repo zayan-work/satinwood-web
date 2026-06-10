@@ -6,7 +6,7 @@ import { problems } from "@/lib/content";
 
 export function Problem() {
   return (
-    <section className="bg-paper py-[clamp(80px,10vw,132px)]">
+    <section className="bg-paper py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
           <SectionHeading
@@ -14,15 +14,13 @@ export function Problem() {
             title="Senior finance judgment is expensive and scarce."
           />
         </Reveal>
-        <RevealGroup className="mt-[clamp(40px,5vw,64px)] grid grid-cols-1 gap-[clamp(24px,3vw,44px)] md:grid-cols-3">
+        <RevealGroup className="mt-[46px] grid grid-cols-1 gap-[30px] md:grid-cols-3">
           {problems.map((p) => (
-            <RevealItem key={p.title} className="group relative pt-7">
-              {/* Grain-gold top rule that warms on hover. */}
-              <span className="absolute left-0 top-0 h-[3px] w-full rounded-full bg-gradient-to-r from-gold to-tint-edge transition-all duration-300 group-hover:from-honey group-hover:to-gold-bright" />
-              <h3 className="font-display text-[clamp(22px,2vw,27px)] font-semibold leading-[1.15] text-ink">
+            <RevealItem key={p.title} className="border-t-2 border-gold pt-5">
+              <h3 className="font-display text-[23px] font-semibold leading-[1.15] text-ink">
                 {p.title}
               </h3>
-              <p className="mt-3 text-[15px] leading-[1.62] text-grey">{p.body}</p>
+              <p className="mt-2.5 text-[14.5px] leading-[1.6] text-grey">{p.body}</p>
             </RevealItem>
           ))}
         </RevealGroup>

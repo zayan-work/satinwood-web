@@ -1,4 +1,3 @@
-import { ScrollProgress } from "@/components/primitives/ScrollProgress";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ProofStrip } from "@/components/sections/ProofStrip";
@@ -89,7 +88,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ScrollProgress />
       <Navbar />
       <main className="flex-1">
         <Hero />

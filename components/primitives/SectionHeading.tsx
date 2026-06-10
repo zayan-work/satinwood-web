@@ -30,7 +30,7 @@ export function SectionHeading({
       <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
       <h2
         className={cn(
-          "mt-4 font-display text-[clamp(33px,4.4vw,56px)] font-semibold leading-[1.03] tracking-[-0.4px] [&_em]:italic",
+          "mt-3.5 font-display text-[clamp(32px,4.4vw,50px)] font-semibold leading-[1.04] tracking-[-0.3px] [&_em]:italic",
           heading,
         )}
       >
@@ -39,7 +39,7 @@ export function SectionHeading({
       {lede && (
         <p
           className={cn(
-            "mt-5 max-w-[58ch] text-[clamp(15.5px,1.2vw,18px)] leading-[1.62]",
+            "mt-4 max-w-[56ch] text-[17px] leading-[1.6]",
             ledeColor,
             centered && "mx-auto",
           )}

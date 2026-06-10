@@ -33,7 +33,7 @@ export function BookingEmbed() {
   }, []);
 
   return (
-    <div className="relative h-[760px] overflow-hidden rounded-[20px] border border-hairline bg-white p-3 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.45)] sm:p-4">
+    <div className="relative h-[550px] overflow-hidden rounded-[20px] border border-hairline bg-white p-3 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.45)] sm:p-4">
       <span
         aria-hidden
         className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-gold via-gold-bright to-honey"
@@ -67,7 +67,7 @@ export function BookingEmbed() {
           (~480px); without the cap it stretches huge across the wide column.
           The card holds a comfortable height that fits the whole month, and the
           long time-slot list below scrolls inside it rather than being clipped. */}
-      <div className="mx-auto h-[1200px] w-full max-w-[960px] overflow-y-auto rounded-[12px] scrollbar-none">
+      <div className="mx-auto h-1200 w-full max-w-[960px] overflow-y-auto rounded-[12px] scrollbar-none">
         <Cal
           namespace={NAMESPACE}
           calLink={CAL_LINK}

@@ -52,8 +52,6 @@
 
   --animate-faq-down: faq-down 0.32s cubic-bezier(0.22, 1, 0.36, 1);
   --animate-faq-up: faq-up 0.28s cubic-bezier(0.4, 0, 1, 1);
-  --animate-grain-drift: grain-drift 22s ease-in-out infinite;
-  --animate-sheen: sheen 7s ease-in-out infinite;
 }
 
 @keyframes faq-down {
@@ -75,30 +73,6 @@
   to {
     height: 0;
     opacity: 0;
-  }
-}
-
-/* Slow lateral drift for the grain texture — a living, hand-planed feel. */
-@keyframes grain-drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1.04);
-  }
-  50% {
-    transform: translate3d(-1.5%, 0.6%, 0) scale(1.08);
-  }
-}
-
-/* Gold sheen sweep — the satin lustre catching light across the heartwood. */
-@keyframes sheen {
-  0%,
-  100% {
-    opacity: 0.35;
-    transform: translateX(-12%);
-  }
-  50% {
-    opacity: 0.7;
-    transform: translateX(12%);
   }
 }
 
@@ -141,41 +115,6 @@ body {
   );
 }
 
-/* ----------------------------------------------------------------------------
-   Satinwood figure — a CSS fallback ribbon grain (the rich, filter-based
-   version lives in <WoodGrain>). Layered low-frequency sine ribbons in honey
-   over transparent; read as faint figured-wood streaks behind content.
-   -------------------------------------------------------------------------- */
-@utility woodgrain-light {
-  background-image: repeating-linear-gradient(
-      88deg,
-      rgba(156, 123, 46, 0.05) 0px,
-      rgba(156, 123, 46, 0) 2px 9px,
-      rgba(181, 134, 58, 0.045) 11px 13px,
-      rgba(156, 123, 46, 0) 14px 26px
-    ),
-    repeating-linear-gradient(
-      91deg,
-      rgba(221, 196, 136, 0.05) 0px,
-      rgba(221, 196, 136, 0) 3px 17px
-    );
-}
-
-@utility woodgrain-dark {
-  background-image: repeating-linear-gradient(
-      88deg,
-      rgba(194, 162, 78, 0.07) 0px,
-      rgba(194, 162, 78, 0) 2px 9px,
-      rgba(221, 196, 136, 0.05) 11px 13px,
-      rgba(194, 162, 78, 0) 14px 26px
-    ),
-    repeating-linear-gradient(
-      91deg,
-      rgba(221, 196, 136, 0.045) 0px,
-      rgba(221, 196, 136, 0) 3px 17px
-    );
-}
-
 /* Thin gold rule with a soft fade at both ends — used as an inline flourish. */
 @utility rule-gold {
   background-image: linear-gradient(
@@ -190,10 +129,5 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-  /* Kill the ambient loops; intent-driven reveals are handled in JS. */
-  .grain-anim,
-  [data-grain-anim] {
-    animation: none !important;
   }
 }

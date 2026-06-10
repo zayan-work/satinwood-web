@@ -1,10 +1,8 @@
 import { cn } from "@/lib/cn";
 
 /**
- * Centered page gutter. Wide editorial measure — content spans ~90% of the
- * viewport (gutters ≤5% per side) up to a generous 1600px cap, so the layout
- * fills the screen on large displays instead of floating in a narrow column.
- * Gutters scale down on small screens for breathing room without waste.
+ * Centered page gutter. Matches the reference design's `.wrap`: a 1200px
+ * editorial measure with 44px side gutters (22px on small screens).
  */
 export function Container({
   children,
@@ -16,7 +14,7 @@ export function Container({
   return (
     <div
       className={cn(
-        "mx-auto w-[92%] max-w-[1600px] sm:w-[90%] lg:w-[88%]",
+        "mx-auto w-full max-w-[1200px] px-[22px] sm:px-11",
         className,
       )}
     >
