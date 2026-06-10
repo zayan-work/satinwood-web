@@ -10,7 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 1 },
     { url: `${BASE}/outsourced-controller`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/outsourced-fpa`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/outsourced-accounting-manager`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/outsourced-senior-accountant`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/finance-for-cpg-brands`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/finance-for-ecommerce-brands`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/team`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/advisory`, lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.7 },
   ];

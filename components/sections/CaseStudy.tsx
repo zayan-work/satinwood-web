@@ -32,7 +32,8 @@ export function CaseStudy() {
                   {caseStudy.quote}
                 </q>
                 <div className="mt-5 text-[13.5px] text-[#C5BCA6]">
-                  <b className="font-semibold text-[#F4EFE2]">Founder</b>, {caseStudy.who}
+                  <b className="font-semibold text-[#F4EFE2]">{caseStudy.attribution.name}</b>,{" "}
+                  {caseStudy.attribution.role}
                 </div>
               </div>
             </div>

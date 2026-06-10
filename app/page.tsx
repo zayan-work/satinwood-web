@@ -98,10 +98,22 @@ const jsonLd = {
               url: `${SITE}/outsourced-fpa`,
             },
           },
-          // Pages not built yet — listed as services offered, without a URL so
-          // the markup never points Google at a 404.
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Outsourced Accounting Manager" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Senior Accountant" } },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Outsourced Accounting Manager",
+              url: `${SITE}/outsourced-accounting-manager`,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Outsourced Senior Accountant",
+              url: `${SITE}/outsourced-senior-accountant`,
+            },
+          },
         ],
       },
     },

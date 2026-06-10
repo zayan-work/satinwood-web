@@ -28,7 +28,7 @@ export function Hero() {
     >
       <GrainOverlay tone="dark" />
 
-      <Container className="relative grid grid-cols-1 items-center gap-[54px] md:grid-cols-[1.15fr_0.85fr]">
+      <Container className="relative grid grid-cols-1 items-center gap-10 min-[1041px]:grid-cols-[1.15fr_0.85fr] min-[1041px]:gap-[54px]">
         <div>
           <Reveal>
             <Eyebrow>{hero.eyebrow}</Eyebrow>
@@ -40,7 +40,7 @@ export function Hero() {
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-[47ch] text-[18.5px] leading-[1.55] text-grey">
+            <p className="mt-6 max-w-[47ch] text-[18.5px] leading-[1.55] text-grey max-[1040px]:max-w-[62ch]">
               Satinwood is a senior finance talent firm. We embed finance operators from
               Sri Lanka full-time to own the close, reporting, and controls, for a
               fraction of building the same seat at home.
@@ -73,7 +73,7 @@ export function Hero() {
 
         {/* The senior bench — a white dossier panel matching the reference. */}
         <Reveal delay={0.08}>
-          <aside className="rounded-[18px] border border-hairline bg-white px-6 pb-[18px] pt-1 shadow-[0_22px_56px_rgba(28,27,22,0.08)]">
+          <aside className="rounded-[18px] border border-hairline bg-white px-6 pb-[18px] pt-1 shadow-[0_22px_56px_rgba(28,27,22,0.08)] max-[1040px]:max-w-[520px]">
             <div className="flex items-center justify-between border-b border-hairline py-[18px] pb-3.5">
               <span className="font-display text-[19px] font-semibold tracking-[0.2px] text-ink">
                 Your senior bench

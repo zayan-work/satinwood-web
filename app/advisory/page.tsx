@@ -11,14 +11,14 @@ import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { pageNav, advisory } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Advisory · Satinwood",
+  title: "Advisory | Satinwood",
   description:
-    "Rengan Rajaratnam spent three decades in global finance, including Goldman Sachs and Morgan Stanley. He advises a small number of founders and funds directly on strategy, growth, and capital.",
+    "Business, growth, and operating strategy advisory for founders and funds. Work directly with a senior finance operator.",
   alternates: { canonical: "/advisory" },
   openGraph: {
-    title: "Advisory · Satinwood",
+    title: "Advisory | Satinwood",
     description:
-      "An operator in your corner. Rengan Rajaratnam advises founders and funds on strategy, growth, and capital.",
+      "Business, growth, and operating strategy advisory for founders and funds. Work directly with a senior finance operator.",
     url: "/advisory",
     type: "website",
   },

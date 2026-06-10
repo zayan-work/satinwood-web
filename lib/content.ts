@@ -3,11 +3,14 @@
  * Copy is taken verbatim from the reference design (Satinwood Updated for Team.html).
  */
 
-/** The three service landing pages — shared by the nav dropdown and footer. */
+/** The six service landing pages — shared by the nav dropdown and footer. */
 export const serviceLinks = [
   { label: "Outsourced Controller", href: "/outsourced-controller" },
   { label: "Outsourced FP&A", href: "/outsourced-fpa" },
+  { label: "Outsourced Accounting Manager", href: "/outsourced-accounting-manager" },
+  { label: "Outsourced Senior Accountant", href: "/outsourced-senior-accountant" },
   { label: "Finance for CPG brands", href: "/finance-for-cpg-brands" },
+  { label: "Finance for ecommerce brands", href: "/finance-for-ecommerce-brands" },
 ];
 
 export const nav = {
@@ -146,6 +149,7 @@ export const caseStudy = {
   quote:
     "I stopped doing the books and started running the business. The numbers are cleaner than they have ever been.",
   who: "Flourish",
+  attribution: { name: "Jenson Sada", role: "CFO and COO, Flourish" },
   blocks: [
     {
       label: "The problem",
@@ -311,12 +315,9 @@ export const booking = {
 
 export const footer = {
   links: [
-    { label: "Outsourced Controller", href: "/outsourced-controller" },
-    { label: "Outsourced FP&A", href: "/outsourced-fpa" },
-    { label: "Finance for CPG brands", href: "/finance-for-cpg-brands" },
+    ...serviceLinks,
     { label: "Team", href: "/team" },
     { label: "Advisory", href: "/advisory" },
-    { label: "How it works", href: "/#how" },
     { label: "Build your team", href: "/#cta" },
   ],
   base: "Senior finance teams, embedded in your business. Crafted in Ceylon. © 2026 Satinwood.",
@@ -387,7 +388,7 @@ export const team = {
       name: "Rengan Rajaratnam",
       role: "Chairman",
       photo: "/team/rengan.jpg",
-      bio: "Rengan chairs Satinwood and opens the doors. Two decades in global finance across Goldman Sachs and Morgan Stanley, a Stanford MBA, and a deep network across founders, funds, and operators. He sets direction and brings the relationships that put senior finance talent in front of the companies that need it.",
+      bio: "Rengan chairs Satinwood and opens the doors. Three decades in global finance, including Morgan Stanley, Point72, and Mercer, a Stanford MBA, and a deep network across founders, funds, and operators. He sets direction and brings the relationships that put senior finance talent in front of the companies that need it.",
       link: { label: "Advisory with Rengan", href: "/advisory" },
     },
     {
@@ -431,8 +432,8 @@ export const advisory = {
     eyebrow: "Advisory",
     titleLead: "An operator ",
     titleEm: "in your corner.",
-    lede: "Rengan Rajaratnam spent three decades in global finance, including Goldman Sachs and Morgan Stanley. He now advises a small number of founders and funds directly, on strategy, growth, and capital.",
-    credLine: "Goldman Sachs · Morgan Stanley · Stanford",
+    lede: "Rengan Rajaratnam spent three decades in global finance, including Morgan Stanley, Point72, and Mercer. He now advises a small number of founders and funds directly, on strategy, growth, and capital.",
+    credLine: "Morgan Stanley · Point72 · Mercer · Stanford",
     photo: "/team/rengan.jpg",
   },
   who: {
@@ -474,7 +475,7 @@ export const advisory = {
   why: {
     eyebrow: "Why Rengan",
     title: "He has been on both sides of the table.",
-    body: "Three decades in global finance, including Goldman Sachs and Morgan Stanley, a Stanford MBA, and years building and backing companies. A network across founders, funds, and operators that is hard to reach from the outside. He advises a small number of people at a time, directly, not through a junior team.",
+    body: "Three decades in global finance, including Morgan Stanley, Point72, Mercer, and Robertson Stephens, a Stanford MBA, and years building and backing companies. A network across founders, funds, and operators that is hard to reach from the outside. He advises a small number of people at a time, directly, not through a junior team.",
   },
   how: {
     eyebrow: "How it works",
@@ -492,17 +493,19 @@ export const advisory = {
   },
 } as const;
 
+
 /**
- * SEO service landing pages. One template (hero → "the work" → why → compare →
- * who-it-is-for → FAQ → CTA), rendered by <ServicePage> and keyed by slug.
- * Copy is verbatim from the reference mockups in tmp/updated.
+ * SEO service landing pages. One template (two-column hero with an "At a glance"
+ * panel → "the work" → why → compare → who-it-is-for → FAQ → CTA), rendered by
+ * <ServicePage> and keyed by slug. Copy + titles/meta are verbatim from the
+ * reference mockups in tmp/update-v4 (use the titles/meta exactly — sized for SERPs).
  */
 export const servicePages = {
   "outsourced-controller": {
     slug: "outsourced-controller",
     metaTitle: "Outsourced Controller Services | Satinwood",
     metaDescription:
-      "Outsourced controller services for growing US and Canadian companies. A senior, dedicated controller embedded full-time to own your month-end close, reporting, and controls, at a fraction of a local hire.",
+      "Outsourced controller services for US and Canadian companies. A senior controller embedded full-time to own your month-end close, reporting, and controls.",
     serviceName: "Outsourced Controller Services",
     serviceType: "Outsourced controller",
     breadcrumb: "Outsourced Controller",
@@ -512,6 +515,13 @@ export const servicePages = {
       titleEm: "embedded in your business.",
       lede: "An outsourced controller, sometimes called a fractional controller, is a senior finance professional who owns your month-end close, reporting, and controls. Satinwood embeds one full-time in your business, with the seniority of a local hire, at a fraction of the cost.",
       credLine: "Serving the US and Canada · CA Sri Lanka, ACCA, CIMA, CFA qualified",
+      atAGlance: [
+        { k: "Seniority", v: "Controller level and up" },
+        { k: "Model", v: "Full-time, embedded, dedicated" },
+        { k: "Owns", v: "Close, reporting, controls" },
+        { k: "Time to match", v: "About two weeks" },
+        { k: "Cost", v: "A fraction of a local hire" },
+      ],
     },
     work: {
       eyebrow: "The role",
@@ -595,7 +605,7 @@ export const servicePages = {
     slug: "outsourced-fpa",
     metaTitle: "Outsourced FP&A Services | Satinwood",
     metaDescription:
-      "Outsourced FP&A services for growing US and Canadian companies. A dedicated, senior FP&A operator embedded full-time to own your budgeting, forecasting, and reporting, at a fraction of a local hire.",
+      "Outsourced FP&A services for US and Canadian companies. A senior FP&A operator embedded full-time for budgeting, forecasting, and decision analysis.",
     serviceName: "Outsourced FP&A Services",
     serviceType: "Outsourced financial planning and analysis",
     breadcrumb: "Outsourced FP&A",
@@ -605,6 +615,13 @@ export const servicePages = {
       titleEm: "embedded in your business.",
       lede: "Outsourced FP&A, sometimes called FP&A as a service or fractional FP&A, gives you budgeting, forecasting, and the analysis behind your decisions, without a full-time hire. Satinwood embeds a dedicated FP&A operator full-time in your business, with the seniority of a local hire, at a fraction of the cost.",
       credLine: "Serving the US and Canada · CA Sri Lanka, ACCA, CIMA, CFA qualified",
+      atAGlance: [
+        { k: "Talent", v: "Senior FP&A operator" },
+        { k: "Model", v: "Full-time, embedded, dedicated" },
+        { k: "Owns", v: "Budget, forecast, reporting" },
+        { k: "Time to match", v: "About two weeks" },
+        { k: "Cost", v: "A fraction of a local hire" },
+      ],
     },
     work: {
       eyebrow: "The role",
@@ -683,11 +700,216 @@ export const servicePages = {
     },
   },
 
+  "outsourced-accounting-manager": {
+    slug: "outsourced-accounting-manager",
+    metaTitle: "Outsourced Accounting Manager | Satinwood",
+    metaDescription:
+      "Outsourced accounting manager for US and Canadian companies. A senior manager embedded full-time to run your close, AP, AR, and reconciliations.",
+    serviceName: "Outsourced Accounting Manager",
+    serviceType: "Outsourced accounting manager",
+    breadcrumb: "Outsourced Accounting Manager",
+    hero: {
+      eyebrow: "Outsourced accounting manager",
+      titleLead: "Outsourced accounting manager, ",
+      titleEm: "embedded in your business.",
+      lede: "An outsourced accounting manager is a senior finance professional who runs the day-to-day finance function, reconciliations, AP, AR, payroll coordination, and month-end close. Satinwood embeds one full-time and exclusively in your business, at the seniority of a local hire, at a fraction of the cost.",
+      credLine: "Serving the US and Canada · CA Sri Lanka, ACCA, CIMA qualified",
+      atAGlance: [
+        { k: "Seniority", v: "Accounting manager level" },
+        { k: "Model", v: "Full-time, embedded, dedicated" },
+        { k: "Owns", v: "Close, AP and AR, reconciliations" },
+        { k: "Time to match", v: "About two weeks" },
+        { k: "Cost", v: "A fraction of a local hire" },
+      ],
+    },
+    work: {
+      eyebrow: "The role",
+      title: "What an outsourced accounting manager does.",
+      lede: "An accounting manager runs the engine of your finance function day to day. A Satinwood operator owns the following end to end, inside your own tools.",
+      items: [
+        { n: "01", title: "Month-end close", body: "Drives the monthly close on a fixed cadence, with reconciliations done and the books locked on time, every month." },
+        { n: "02", title: "Accounts payable and receivable", body: "Owns AP and AR end to end, from coding and approvals to collections and vendor management, so cash flow is never a surprise." },
+        { n: "03", title: "Bank and account reconciliations", body: "Reconciles every account monthly so the books tie out to the bank and nothing slips through." },
+        { n: "04", title: "Payroll coordination", body: "Coordinates payroll inputs and reconciliations, making sure what gets paid ties to what gets recorded." },
+        { n: "05", title: "General ledger and journals", body: "Owns the GL, posting adjusting entries, accruals, and prepayments so the books reflect reality." },
+        { n: "06", title: "Supporting the controller or CFO", body: "Handles the production work that frees your controller or CFO to focus on reporting, controls, and strategy." },
+      ],
+    },
+    why: {
+      eyebrow: "Why Satinwood",
+      title: "A dedicated accounting manager, full-time in your business.",
+      items: [
+        { title: "Always senior", body: "Accounting manager level and above, qualified and experienced. Not a junior bookkeeper handling volume." },
+        { title: "Dedicated to you", body: "Full-time and exclusive to your business, embedded in your tools and team. Not a shared task queue spread across ten clients." },
+        { title: "Finance only", body: "We place finance and nothing else. A finance firm, not a generalist staffing marketplace." },
+        { title: "A fraction of the cost", body: "The seniority you need for far less, because the talent sits in a lower-cost market, not because the work is junior." },
+      ],
+    },
+    compare: {
+      eyebrow: "How we compare",
+      titleLead: "Senior day-to-day ownership, ",
+      titleEm: "at a fraction of the cost.",
+      columns: ["Local hire", "Typical offshore", "Satinwood"],
+      rows: [
+        { label: "Seniority", a: "Senior", b: "Often junior", sat: "Always senior" },
+        { label: "Owns close and reconciliations", a: "Yes", b: "Task processing", sat: "Yes, end to end" },
+        { label: "Dedicated and exclusive", a: "Yes", b: "Often shared pool", sat: "Yes, full-time" },
+        { label: "Time to hire", a: "Two to three months", b: "Weeks", sat: "About two weeks" },
+        { label: "Relative cost", a: "Six figures", b: "Low, but limited", sat: "A fraction of a local hire" },
+      ],
+    },
+    whoFor: {
+      eyebrow: "Who it is for",
+      title: "Built for growing US and Canadian companies.",
+      items: [
+        { title: "The bookkeeper is not enough", body: "Transactions are getting complex and you need someone who owns the reconciliations and the close, not just the data entry." },
+        { title: "The controller is buried", body: "Your controller or CFO is spending too much time on production work and not enough on reporting and strategy." },
+        { title: "The close is always late", body: "Month-end runs long because nobody owns the process. You need someone dedicated to making it run on time." },
+        { title: "Scaling past manual processes", body: "The business is growing and the finance function needs a senior operator to hold the standard as it gets more complex." },
+      ],
+    },
+    faq: {
+      eyebrow: "Questions",
+      title: "Outsourced accounting manager, answered.",
+      items: [
+        { q: "What is an outsourced accounting manager?", a: "An outsourced accounting manager is a senior finance professional who runs the day-to-day finance function from outside your local payroll, owning reconciliations, AP, AR, payroll coordination, the month-end close, and the GL. Satinwood embeds one full-time and exclusively in your business, at the seniority of a local hire and a fraction of the cost." },
+        { q: "What does an outsourced accounting manager do?", a: "An accounting manager runs the engine of your day-to-day finance function. That means owning the month-end close, AP and AR, bank reconciliations, payroll coordination, general ledger entries, and supporting the controller or CFO on reporting. Satinwood operators run this end to end inside your own tools." },
+        { q: "What is the difference between an accounting manager and a bookkeeper?", a: "A bookkeeper records transactions; an accounting manager owns the function. A bookkeeper handles data entry. An accounting manager owns the close, the reconciliations, the AP and AR process, the GL integrity, and the production work the controller depends on. Satinwood places accounting manager level talent, not junior bookkeeping." },
+        { q: "What is the difference between an accounting manager and a controller?", a: "A controller owns financial reporting, controls, and the integrity of the numbers. An accounting manager runs the day-to-day operations, the close, reconciliations, and AP and AR, that make the controller's work possible. Many growing companies need both, and Satinwood places either or both at the same senior standard." },
+        { q: "Can an offshore accounting manager run our month-end close?", a: "Yes. A senior offshore accounting manager can own your full month-end close, reconciliations, AP and AR, and GL entries, working inside your own tools, with hours that overlap your day so the close never waits." },
+        { q: "How senior are Satinwood's accounting managers?", a: "Accounting manager level and above, CA Sri Lanka, ACCA, or CIMA qualified, with real ownership experience inside global firms, Big Four, and listed groups. The average senior operator on our bench has 12 or more years of experience." },
+        { q: "Is the accounting manager dedicated and full-time, or shared?", a: "Dedicated, full-time, and exclusive to your business, embedded in your tools and team. Not a shared pool, not a pooled task queue, not a marketplace match." },
+        { q: "How much does an outsourced accounting manager cost compared with a local hire?", a: "A fraction of a local accounting manager, who in the US or Canada typically costs well into six figures with benefits and payroll taxes. You get the same seniority and day-to-day ownership for far less, because the talent sits in a lower-cost market, not because the work is junior." },
+        { q: "Do you work with US and Canadian companies?", a: "Yes. Satinwood serves growing companies across the United States and Canada, as well as the United Kingdom, the United Arab Emirates, and Australia. Operators work hours that overlap your day, agreed up front." },
+        { q: "How fast can you place an accounting manager, and is there a trial?", a: "About two weeks from the first call to a hand-selected senior match. Every match starts on a trial to confirm fit, and if it is not right we replace it. Terms are flexible and rolling, with no long lock-in." },
+        { q: "How is our financial data handled?", a: "Secure, company-issued devices, signed NDAs, role-based access, and documented handling standards. Your financial data is treated as if our own books depended on it." },
+      ],
+    },
+    cta: {
+      eyebrow: "Get started",
+      title: "Get a senior accounting manager, embedded.",
+      ledeParts: [
+        "Tell us about your close and your stack. We hand-select a senior accounting manager and embed them full-time, usually within about two weeks. We also place ",
+        { text: "outsourced controllers", href: "/outsourced-controller" },
+        ", ",
+        { text: "outsourced FP&A", href: "/outsourced-fpa" },
+        ", and full finance teams for ",
+        { text: "CPG", href: "/finance-for-cpg-brands" },
+        " and ",
+        { text: "ecommerce brands", href: "/finance-for-ecommerce-brands" },
+        ".",
+      ],
+      button: { label: "Build your team", href: "/#cta" },
+    },
+  },
+
+  "outsourced-senior-accountant": {
+    slug: "outsourced-senior-accountant",
+    metaTitle: "Outsourced Senior Accountant | Satinwood",
+    metaDescription:
+      "Outsourced senior accountant for US and Canadian companies. A qualified senior accountant embedded full-time to own your GL, reconciliations, and books.",
+    serviceName: "Outsourced Senior Accountant",
+    serviceType: "Outsourced senior accountant",
+    breadcrumb: "Outsourced Senior Accountant",
+    hero: {
+      eyebrow: "Outsourced senior accountant",
+      titleLead: "Outsourced senior accountant, ",
+      titleEm: "embedded in your business.",
+      lede: "An outsourced senior accountant is a qualified finance professional who owns your general ledger, reconciliations, and month-end production work. Satinwood embeds one full-time and exclusively in your business, at a fraction of the cost of a local hire.",
+      credLine: "Serving the US and Canada · CA Sri Lanka, ACCA, CIMA qualified",
+      atAGlance: [
+        { k: "Qualified", v: "CA SL, ACCA, CIMA" },
+        { k: "Model", v: "Full-time, embedded, dedicated" },
+        { k: "Owns", v: "GL, reconciliations, books" },
+        { k: "Time to match", v: "About two weeks" },
+        { k: "Cost", v: "A fraction of a local hire" },
+      ],
+    },
+    work: {
+      eyebrow: "The role",
+      title: "What an outsourced senior accountant does.",
+      lede: "A senior accountant owns the accuracy and integrity of your books, the production work that makes everything else possible. A Satinwood operator handles the following inside your own tools.",
+      items: [
+        { n: "01", title: "General ledger", body: "Owns the GL, posting journal entries, accruals, prepayments, and adjustments so the books always reflect reality." },
+        { n: "02", title: "Bank reconciliations", body: "Reconciles every account monthly so the books tie out to the bank and nothing is missed." },
+        { n: "03", title: "AP and AR support", body: "Codes, processes, and tracks payables and receivables to keep the function running cleanly and on time." },
+        { n: "04", title: "Month-end production", body: "Runs the production work that closes the books, from reconciliations to the trial balance, so the controller can report." },
+        { n: "05", title: "Fixed assets and depreciation", body: "Maintains the fixed asset register and posts depreciation accurately so the balance sheet stays clean." },
+        { n: "06", title: "Audit-ready workpapers", body: "Keeps the files, schedules, and reconciliations organised so audits and investor reviews do not become a scramble." },
+      ],
+    },
+    why: {
+      eyebrow: "Why Satinwood",
+      title: "Senior, qualified, and dedicated to your books.",
+      items: [
+        { title: "Always senior", body: "CA Sri Lanka, ACCA, or CIMA qualified. Big Four and listed-group trained. Not a junior clerk with a senior title." },
+        { title: "Dedicated to you", body: "Full-time and exclusive to your business, embedded in your tools and your close cadence. Not a shared bookkeeping pool." },
+        { title: "Finance only", body: "We place finance and nothing else. Every operator is vetted to a single, finance-only standard." },
+        { title: "A fraction of the cost", body: "The qualification and ownership of a local senior accountant, for far less, because the talent sits in a lower-cost market." },
+      ],
+    },
+    compare: {
+      eyebrow: "How we compare",
+      titleLead: "Qualified senior ownership, ",
+      titleEm: "at a fraction of the cost.",
+      columns: ["Local hire", "Typical offshore", "Satinwood"],
+      rows: [
+        { label: "Qualification", a: "CA, CPA, ACCA", b: "Often unverified", sat: "CA SL, ACCA, CIMA" },
+        { label: "Owns GL and reconciliations", a: "Yes", b: "Task processing", sat: "Yes, end to end" },
+        { label: "Dedicated and exclusive", a: "Yes", b: "Often shared pool", sat: "Yes, full-time" },
+        { label: "Time to hire", a: "Two to three months", b: "Weeks", sat: "About two weeks" },
+        { label: "Relative cost", a: "Six figures", b: "Low, but limited", sat: "A fraction of a local hire" },
+      ],
+    },
+    whoFor: {
+      eyebrow: "Who it is for",
+      title: "Built for growing US and Canadian companies.",
+      items: [
+        { title: "Your first proper hire", body: "You have outgrown spreadsheets and a part-time bookkeeper and need someone who can own the books to a real standard." },
+        { title: "Supporting a controller or CFO", body: "Your controller needs a qualified operator to handle the production work so they can focus on reporting and controls." },
+        { title: "Getting books investor-ready", body: "You need clean, reconciled books and organised workpapers before a raise or audit, and you need them handled properly." },
+        { title: "Replacing a departing accountant", body: "Someone left and the close cannot wait two or three months for a local hire to go through the full hiring process." },
+      ],
+    },
+    faq: {
+      eyebrow: "Questions",
+      title: "Outsourced senior accountant, answered.",
+      items: [
+        { q: "What is an outsourced senior accountant?", a: "An outsourced senior accountant is a qualified finance professional who owns your general ledger, reconciliations, and month-end production work from outside your local payroll. Satinwood embeds one full-time and exclusively in your business, at a standard that holds up to audit and investor review, at a fraction of the cost of a local hire." },
+        { q: "What does a senior accountant do, compared with a bookkeeper?", a: "A bookkeeper records transactions. A senior accountant owns the integrity of the books. That means owning the GL, posting adjusting entries and accruals, reconciling every account, preparing audit-ready workpapers, and making sure the books are clean and accurate at month-end. Satinwood places senior accountant level talent, not bookkeeping." },
+        { q: "What qualifications do Satinwood's senior accountants hold?", a: "CA Sri Lanka, ACCA, or CIMA qualified, with experience inside global firms, Big Four, and listed groups. These are the same credentials global firms recruit from Sri Lanka's internationally recognised finance profession." },
+        { q: "What is the difference between a senior accountant and an accounting manager?", a: "A senior accountant owns the production work, the GL, reconciliations, journal entries, and workpapers. An accounting manager also owns the production work but adds management of the close process, AP and AR oversight, and coordination of the finance function. Satinwood places both at the same senior standard." },
+        { q: "Can an offshore senior accountant own our GL and reconciliations?", a: "Yes. A qualified offshore senior accountant can own your GL, bank reconciliations, journal entries, and month-end production work, inside your own tools, with hours that overlap your day." },
+        { q: "Is the senior accountant dedicated and full-time, or shared?", a: "Dedicated, full-time, and exclusive to your business. Not a shared bookkeeping pool, not a marketplace match, not a task queue." },
+        { q: "How much does an outsourced senior accountant cost compared with a local hire?", a: "A fraction of a local senior accountant, who in the US or Canada typically costs well into six figures with benefits and payroll taxes. You get the same qualification and ownership for far less, because the talent sits in a lower-cost market, not because the work is junior." },
+        { q: "Do you work with US and Canadian companies?", a: "Yes. Satinwood serves growing companies across the United States and Canada, as well as the United Kingdom, the United Arab Emirates, and Australia. Operators work hours that overlap your day, agreed up front." },
+        { q: "How fast can you place a senior accountant, and is there a trial?", a: "About two weeks from the first call to a hand-selected match. Every match starts on a trial to confirm fit, and if it is not right we replace it. Terms are flexible and rolling, with no long lock-in." },
+        { q: "How is our financial data handled?", a: "Secure, company-issued devices, signed NDAs, role-based access, and documented handling standards. Your financial data is treated as if our own books depended on it." },
+      ],
+    },
+    cta: {
+      eyebrow: "Get started",
+      title: "Get a qualified senior accountant, embedded.",
+      ledeParts: [
+        "Tell us about your books and your stack. We hand-select a qualified senior accountant and embed them full-time, usually within about two weeks. We also place ",
+        { text: "outsourced accounting managers", href: "/outsourced-accounting-manager" },
+        ", ",
+        { text: "controllers", href: "/outsourced-controller" },
+        ", and full finance teams for ",
+        { text: "ecommerce", href: "/finance-for-ecommerce-brands" },
+        " and ",
+        { text: "CPG brands", href: "/finance-for-cpg-brands" },
+        ".",
+      ],
+      button: { label: "Build your team", href: "/#cta" },
+    },
+  },
+
   "finance-for-cpg-brands": {
     slug: "finance-for-cpg-brands",
-    metaTitle: "Outsourced Finance & Accounting for CPG and Consumer Brands | Satinwood",
+    metaTitle: "Outsourced Finance for CPG Brands | Satinwood",
     metaDescription:
-      "Outsourced finance and accounting for CPG, consumer, and ecommerce brands. A senior operator who knows trade spend, retailer deductions, landed cost, and margin by SKU, embedded full-time. Serving the US and Canada.",
+      "Outsourced finance for CPG and consumer brands. A senior operator who understands trade spend, retailer deductions, and margin by SKU, embedded full-time.",
     serviceName: "Outsourced Finance for CPG and Consumer Brands",
     serviceType: "Outsourced finance and accounting for consumer brands",
     breadcrumb: "Finance for CPG brands",
@@ -697,6 +919,13 @@ export const servicePages = {
       titleEm: "CPG and consumer brands.",
       lede: "Outsourced finance for CPG brands means a senior operator who understands the economics that actually run a consumer business, trade spend, retailer deductions, landed cost, and margin by SKU, embedded full-time in your business. Satinwood places finance built for consumer and ecommerce brands, at the seniority of a local hire and a fraction of the cost.",
       credLine: "Built for consumer brands across the US and Canada",
+      atAGlance: [
+        { k: "Talent", v: "Controller and senior accountant" },
+        { k: "Model", v: "Full-time, embedded, dedicated" },
+        { k: "Knows", v: "Deductions, trade spend, SKU margin" },
+        { k: "Time to match", v: "About two weeks" },
+        { k: "Cost", v: "A fraction of a local hire" },
+      ],
     },
     work: {
       eyebrow: "The work",
@@ -769,6 +998,107 @@ export const servicePages = {
         { text: "outsourced controllers", href: "/outsourced-controller" },
         " and ",
         { text: "outsourced FP&A", href: "/outsourced-fpa" },
+        ".",
+      ],
+      button: { label: "Build your team", href: "/#cta" },
+    },
+  },
+
+  "finance-for-ecommerce-brands": {
+    slug: "finance-for-ecommerce-brands",
+    metaTitle: "Outsourced Finance for Ecommerce Brands | Satinwood",
+    metaDescription:
+      "Outsourced finance for ecommerce brands on Amazon and Shopify. A senior operator who reconciles every channel and owns true COGS, embedded full-time.",
+    serviceName: "Outsourced Finance for Ecommerce Brands",
+    serviceType: "Outsourced finance and accounting for ecommerce brands",
+    breadcrumb: "Finance for ecommerce brands",
+    hero: {
+      eyebrow: "Finance for ecommerce brands",
+      titleLead: "Outsourced finance for ",
+      titleEm: "ecommerce brands.",
+      lede: "Ecommerce brands carry financial complexity a generalist accountant misses. Amazon payouts speak a different language to Shopify settlements, and COGS without FBA fees and duties is fiction. Satinwood embeds a senior finance operator full-time in your brand, one who has worked inside these numbers.",
+      credLine: "Built for Amazon, Shopify, DTC, and multi-channel brands across the US and Canada",
+      atAGlance: [
+        { k: "Talent", v: "Senior finance operator" },
+        { k: "Model", v: "Full-time, embedded, dedicated" },
+        { k: "Knows", v: "Amazon, Shopify, COGS, inventory" },
+        { k: "Time to match", v: "About two weeks" },
+        { k: "Cost", v: "A fraction of a local hire" },
+      ],
+    },
+    work: {
+      eyebrow: "The work",
+      title: "What we handle for ecommerce brands.",
+      lede: "Ecommerce financials have complexity that breaks generic accounting. A Satinwood operator owns the following inside your own tools.",
+      items: [
+        { n: "01", title: "Channel reconciliation", body: "Reconciles Amazon settlements, Shopify payouts, and every other channel to the bank, including fees, returns, and reserves, so every dollar accounts for itself." },
+        { n: "02", title: "True COGS and landed cost", body: "Builds cost of goods including purchase price, freight, duties, FBA fees, and storage, so your margin by SKU reflects what you actually made, not what you hoped." },
+        { n: "03", title: "Inventory accounting", body: "Owns inventory valuation and COGS so the books reflect what is actually on hand, in transit, and at fulfillment centres, not a number that drifts from reality." },
+        { n: "04", title: "Cash flow through the buying cycle", body: "Tracks the cash tied up in inventory and the buying cycle, so you can place the next PO without running out of runway." },
+        { n: "05", title: "Ad spend and returns reconciliation", body: "Reconciles ad spend, platform fees, and returns against revenue by channel so you see contribution margin, not just top-line sales." },
+        { n: "06", title: "Month-end close and reporting", body: "Closes the books monthly and builds the reporting pack so you always know where the business stands, by channel, by SKU, and in total." },
+      ],
+    },
+    why: {
+      eyebrow: "Why Satinwood",
+      title: "Finance from people who understand ecommerce.",
+      items: [
+        { title: "Speaks Amazon and Shopify", body: "We know that Amazon settlement reports and Shopify payouts are completely different data formats, and we reconcile both cleanly to the bank every month." },
+        { title: "Owned by operators", body: "The people behind Satinwood run a consumer brand sold across major North American retailers. We have closed the books, tracked the deductions, and managed inventory cash flow ourselves." },
+        { title: "Senior and embedded", body: "Controller and senior accountant level talent, full-time and dedicated to your brand, inside your own tools and reporting cadence." },
+        { title: "A fraction of the cost", body: "Senior finance on an ecommerce brand's budget, because the talent sits in a lower-cost market, not because the work is junior." },
+      ],
+    },
+    compare: {
+      eyebrow: "How we compare",
+      titleLead: "Finance that ",
+      titleEm: "understands ecommerce.",
+      columns: ["Generalist accountant", "Typical outsourced", "Satinwood"],
+      rows: [
+        { label: "Reconciles Amazon and Shopify", a: "Rarely", b: "Often incomplete", sat: "Yes, channel by channel" },
+        { label: "True COGS with FBA fees and duties", a: "Sometimes", b: "Often missing", sat: "Built from scratch" },
+        { label: "Inventory cash flow tracking", a: "Generic", b: "No", sat: "Owns it" },
+        { label: "Dedicated and embedded", a: "Maybe", b: "Often shared pool", sat: "Yes, full-time" },
+        { label: "Relative cost", a: "Six figures", b: "Low, but limited", sat: "A fraction of a local hire" },
+      ],
+    },
+    whoFor: {
+      eyebrow: "Who it is for",
+      title: "Built for the brands selling across channels.",
+      items: [
+        { title: "Amazon and Shopify sellers", body: "You sell on multiple platforms and cannot get a clean number because each channel reports differently and nobody reconciles them properly." },
+        { title: "DTC brands moving into wholesale", body: "You are adding retail or wholesale on top of DTC and the financial complexity is outpacing what a bookkeeper can handle." },
+        { title: "Brands flying blind on margin", body: "Revenue is growing but you do not know your true margin by SKU because COGS is missing FBA fees, duties, and the real cost of returns." },
+        { title: "Founders stuck managing the numbers", body: "Finance is still running on the founder and every month-end is a scramble. You need someone who owns it so you can run the business." },
+      ],
+    },
+    faq: {
+      eyebrow: "Questions",
+      title: "Finance for ecommerce brands, answered.",
+      items: [
+        { q: "What is outsourced finance for ecommerce brands?", a: "Outsourced finance for ecommerce brands is a senior finance operator who understands the specific economics of selling across Amazon, Shopify, and multiple channels, embedded full-time in your business. Satinwood places operators who reconcile channel settlements, build true COGS, track inventory cash flow, and close the books monthly, at a fraction of the cost of a local hire." },
+        { q: "Can you reconcile Amazon and Shopify?", a: "Yes. Amazon settlement reports and Shopify payouts are completely different data formats, and most generalist accountants do not handle them properly. We reconcile both, plus any other channels, to the bank every month, including fees, returns, reserves, and adjustments, so every dollar accounts for itself." },
+        { q: "Can you build true COGS including FBA fees and duties?", a: "Yes. COGS without FBA fees, fulfillment costs, duties, freight, and storage is fiction for an ecommerce brand. We build cost of goods from the ground up by SKU, so your margin reflects what you actually made on each product, not what you hoped." },
+        { q: "Do you track inventory and cash flow through the buying cycle?", a: "Yes. Inventory ties up cash, and ecommerce brands live and die by the buying cycle. We track inventory valuation, COGS, and the cash flow through the cycle so you can plan the next purchase order without running dry." },
+        { q: "Can you handle a multi-channel brand selling on Amazon, Shopify, and wholesale?", a: "Yes. Multi-channel complexity is exactly what we are built for. We reconcile each channel, consolidate the reporting, and give you a clear view of the business by channel and in total, every month." },
+        { q: "Who is behind Satinwood's ecommerce finance capability?", a: "The people behind Satinwood run a consumer brand sold across major North American retailers. We have closed the books, tracked the deductions, and managed inventory cash flow ourselves. This is finance from operators who have done it, not theory." },
+        { q: "How senior are your operators?", a: "Controller and senior accountant level. CA Sri Lanka, ACCA, CIMA, or CFA qualified, with real ownership experience inside global firms, Big Four, and listed groups. The average senior operator on our bench has 12 or more years of experience." },
+        { q: "Is the operator dedicated and full-time, or shared?", a: "Dedicated, full-time, and exclusive to your brand, embedded in your tools and reporting cadence. Not a shared pool, not a pooled task queue, not a marketplace match." },
+        { q: "Do you work with US and Canadian brands?", a: "Yes. Satinwood serves growing brands across the United States and Canada, as well as the United Kingdom, the United Arab Emirates, and Australia. Operators work hours that overlap your day." },
+        { q: "How fast can you place someone, and is there a trial?", a: "About two weeks from the first call to a hand-selected senior match. Every match starts on a trial to confirm fit, and if it is not right we replace it. Terms are flexible and rolling, with no long lock-in." },
+        { q: "How is our financial data handled?", a: "Secure, company-issued devices, signed NDAs, role-based access, and documented handling standards. Your financial data is treated as if our own books depended on it." },
+      ],
+    },
+    cta: {
+      eyebrow: "Get started",
+      title: "Finance that speaks ecommerce.",
+      ledeParts: [
+        "Tell us about your channels and your stack. We hand-select a senior operator who understands ecommerce economics and embed them full-time. We also place ",
+        { text: "outsourced controllers", href: "/outsourced-controller" },
+        ", ",
+        { text: "accounting managers", href: "/outsourced-accounting-manager" },
+        ", and full finance teams for ",
+        { text: "CPG brands", href: "/finance-for-cpg-brands" },
         ".",
       ],
       button: { label: "Build your team", href: "/#cta" },

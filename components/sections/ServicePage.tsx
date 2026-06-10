@@ -5,6 +5,7 @@ import { Button } from "@/components/primitives/Button";
 import { FaqAccordion } from "@/components/primitives/FaqAccordion";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
+import { cn } from "@/lib/cn";
 import type { servicePages } from "@/lib/content";
 
 type ServicePageData = (typeof servicePages)[keyof typeof servicePages];
@@ -17,31 +18,53 @@ export function ServicePage({ data }: { data: ServicePageData }) {
 
   return (
     <>
-      {/* Page hero */}
+      {/* Page hero — copy left, "At a glance" panel right */}
       <section className="bg-paper pb-2.5 pt-[66px]">
-        <Container>
-          <Reveal>
-            <Eyebrow>{hero.eyebrow}</Eyebrow>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <h1 className="mt-3.5 font-display text-[clamp(32px,4.4vw,50px)] font-semibold leading-[1.04] tracking-[-0.3px] text-ink">
-              {hero.titleLead}
-              <em className="italic text-gold">{hero.titleEm}</em>
-            </h1>
-          </Reveal>
+        <Container className="grid grid-cols-1 items-center gap-[34px] min-[861px]:grid-cols-[1.12fr_0.88fr] min-[861px]:gap-[54px]">
+          <div>
+            <Reveal>
+              <Eyebrow>{hero.eyebrow}</Eyebrow>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h1 className="mt-3.5 font-display text-[clamp(32px,4.4vw,50px)] font-semibold leading-[1.04] tracking-[-0.3px] text-ink">
+                {hero.titleLead}
+                <em className="italic text-gold">{hero.titleEm}</em>
+              </h1>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-4 max-w-[48ch] text-[17px] leading-[1.6] text-grey">{hero.lede}</p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <div className="mt-6 text-[12px] font-semibold uppercase tracking-[1.5px] text-gold">
+                {hero.credLine}
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="mt-7">
+                <Button href="/#cta" variant="primary">
+                  Build your team
+                </Button>
+              </div>
+            </Reveal>
+          </div>
+
           <Reveal delay={0.1}>
-            <p className="mt-4 max-w-[56ch] text-[17px] leading-[1.6] text-grey">{hero.lede}</p>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <div className="mt-6 text-[12px] font-semibold uppercase tracking-[1.5px] text-gold">
-              {hero.credLine}
-            </div>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <div className="mt-7">
-              <Button href="/#cta" variant="primary">
-                Build your team
-              </Button>
+            <div className="rounded-[18px] border border-hairline bg-[#FBF7EC] px-[30px] py-7 max-[860px]:max-w-[430px]">
+              <div className="mb-1.5 font-display text-[20px] font-semibold text-ink">At a glance</div>
+              {hero.atAGlance.map((row, i) => (
+                <div
+                  key={row.k}
+                  className={cn(
+                    "flex items-start justify-between gap-5 border-b border-hairline py-[13px]",
+                    i === hero.atAGlance.length - 1 && "border-b-0 pb-0",
+                  )}
+                >
+                  <span className="whitespace-nowrap pt-0.5 text-[11px] font-semibold uppercase tracking-[1.3px] text-gold">
+                    {row.k}
+                  </span>
+                  <span className="text-right text-[14.5px] leading-[1.4] text-ink">{row.v}</span>
+                </div>
+              ))}
             </div>
           </Reveal>
         </Container>
