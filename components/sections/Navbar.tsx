@@ -7,7 +7,21 @@ import { Wordmark } from "@/components/primitives/Wordmark";
 import { cn } from "@/lib/cn";
 import { nav } from "@/lib/content";
 
-export function Navbar() {
+type NavLink = { label: string; href: string };
+
+/**
+ * Sticky site header. Defaults to the home-page anchor nav; sub-pages pass their
+ * own absolute `links`/`cta` and a `homeHref` so the wordmark returns home.
+ */
+export function Navbar({
+  links = nav.links,
+  cta = nav.cta,
+  homeHref = "#top",
+}: {
+  links?: readonly NavLink[];
+  cta?: NavLink;
+  homeHref?: string;
+} = {}) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -32,11 +46,11 @@ export function Navbar() {
           scrolled ? "h-[68px]" : "h-20",
         )}
       >
-        <a href="#top" aria-label="Satinwood home" className="flex items-center">
+        <a href={homeHref} aria-label="Satinwood home" className="flex items-center">
           <Wordmark variant="header" />
         </a>
         <nav className="hidden items-center gap-9 md:flex">
-          {nav.links.map((link) => (
+          {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -48,11 +62,11 @@ export function Navbar() {
           ))}
         </nav>
         <Button
-          href={nav.cta.href}
+          href={cta.href}
           variant="primary"
           className="px-5 py-2.5 text-[14px] md:px-6 md:py-3.5 md:text-[15px]"
         >
-          {nav.cta.label}
+          {cta.label}
         </Button>
       </Container>
     </header>

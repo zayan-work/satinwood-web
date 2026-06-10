@@ -7,10 +7,11 @@ const base =
   "group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border text-[15px] font-semibold transition-all duration-200 ease-out outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cream motion-reduce:transition-none";
 
 const variants: Record<Variant, string> = {
-  // The primary action: warm honey-gold heartwood gradient on dark ink text.
-  // High contrast against both cream and forest so the eye lands here first.
+  // The primary action: deep forest-green heartwood gradient on cream text.
+  // Reads as the grounded, authoritative "go" — high contrast against the
+  // cream/paper surfaces, with a thin gold hairline tying it to the palette.
   primary:
-    "border-honey/60 bg-gradient-to-br from-satin via-gold-bright to-honey px-6 py-3.5 text-forest-deep shadow-[0_6px_20px_rgba(156,123,46,0.34)] hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(156,123,46,0.46)] hover:brightness-[1.04] motion-reduce:hover:translate-y-0",
+    "border-forest-deep/70 bg-gradient-to-b from-forest to-forest-deep px-6 py-3.5 text-cream shadow-[0_6px_20px_rgba(30,38,26,0.28)] hover:-translate-y-0.5 hover:from-forest-deep hover:to-forest-shadow hover:shadow-[0_14px_34px_rgba(30,38,26,0.42)] motion-reduce:hover:translate-y-0",
   ghost:
     "border-forest/25 bg-transparent px-6 py-3.5 text-ink hover:border-forest hover:bg-forest/5 hover:text-forest-deep motion-reduce:hover:translate-y-0",
   cream:

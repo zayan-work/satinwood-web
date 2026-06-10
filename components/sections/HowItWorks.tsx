@@ -31,7 +31,7 @@ export function HowItWorks() {
               )}
             >
               <div className="relative flex items-center gap-3">
-                <span className="relative z-10 flex h-7 w-7 flex-none items-center justify-center rounded-full border border-tint-edge bg-paper font-display text-[12px] font-semibold text-gold transition-colors duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-white">
+                <span className="relative z-10 flex h-9 w-9 flex-none items-center justify-center rounded-full border border-tint-edge bg-paper font-display text-[20px] font-semibold text-gold transition-colors duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-white">
                   {i + 1}
                 </span>
               </div>

@@ -3,10 +3,13 @@
  * Copy is taken verbatim from the reference design (satinwood-draft.html).
  */
 
+import { label } from "framer-motion/client";
+
 export const nav = {
   links: [
     { label: "The difference", href: "#difference" },
     { label: "The team", href: "#team" },
+    // { label: "Advisory", href: "/advisor" },
     { label: "Proof", href: "#proof" },
     { label: "How it works", href: "#how" },
   ],
@@ -275,11 +278,181 @@ export const booking = {
 
 export const footer = {
   links: [
-    { label: "The difference", href: "#difference" },
-    { label: "The team", href: "#team" },
-    { label: "Proof", href: "#proof" },
-    { label: "How it works", href: "#how" },
-    { label: "Build your team", href: "#cta" },
+    { label: "The difference", href: "/#difference" },
+    { label: "Team", href: "/team" },
+    { label: "Advisory", href: "/advisory" },
+    { label: "Proof", href: "/#proof" },
+    { label: "How it works", href: "/#how" },
+    { label: "Build your team", href: "/#cta" },
   ],
   base: "Senior finance teams, embedded in your business. Crafted in Ceylon. © 2026 Satinwood.",
 };
+
+/**
+ * "How we compare" table. Three columns; the Satinwood column is highlighted.
+ * `satinwood` values render in the dark, emphasized column.
+ */
+export const comparison = {
+  eyebrow: "How we compare",
+  title: { lead: "The seniority of a local hire, ", em: "at a fraction of the cost." },
+  lede: "The seniority and ownership of a local hire, the speed and cost of offshore, without the usual trade-offs of either.",
+  columns: ["Local hire", "Typical offshore", "Satinwood"] as const,
+  rows: [
+    {
+      label: "Seniority",
+      local: "Senior",
+      offshore: "Often junior",
+      satinwood: "Always senior",
+    },
+    {
+      label: "Owns the close and controls",
+      local: "Yes",
+      offshore: "Task processing",
+      satinwood: "Yes, end to end",
+    },
+    {
+      label: "Embedded and exclusive",
+      local: "Yes",
+      offshore: "Often pooled",
+      satinwood: "Yes, full-time",
+    },
+    {
+      label: "Time to hire",
+      local: "Two to three months",
+      offshore: "Weeks",
+      satinwood: "About two weeks",
+    },
+    {
+      label: "Relative cost",
+      local: "Six figures",
+      offshore: "Low, but limited",
+      satinwood: "A fraction of a local hire",
+    },
+  ],
+};
+
+/** Sub-page navigation — absolute links so they resolve from /team and /advisory. */
+export const pageNav = {
+  links: [
+    { label: "The difference", href: "/#difference" },
+    { label: "Team", href: "/team" },
+    { label: "Advisory", href: "/advisory" },
+    { label: "How it works", href: "/#how" },
+  ],
+  cta: { label: "Build your team", href: "/#cta" },
+};
+
+/** /team — the people who built and run Satinwood. Photos live in /public/team. */
+export const team = {
+  eyebrow: "The team",
+  title: "The people behind Satinwood.",
+  lede: "Operators, not recruiters. The people who built Satinwood have run finance functions and scaled businesses themselves, and they hold the bench to the same standard.",
+  members: [
+    {
+      name: "Rengan Rajaratnam",
+      role: "Chairman",
+      photo: "/team/rengan.jpg",
+      bio: "Rengan chairs Satinwood and opens the doors. Two decades in global finance across Goldman Sachs and Morgan Stanley, a Stanford MBA, and a deep network across founders, funds, and operators. He sets direction and brings the relationships that put senior finance talent in front of the companies that need it.",
+      link: { label: "Advisory with Rengan", href: "/advisory" },
+    },
+    {
+      name: "Tilak Gunawardena",
+      role: "Head of Sri Lanka Operations",
+      photo: "/team/tilak.jpg",
+      bio: "Tilak runs Satinwood on the ground in Sri Lanka. Group Director and Chief Financial Controller at MAC Holdings, with over twenty years in finance leadership. Prior VP Finance at Aitken Spence, a listed Colombo group, plus Acuity Knowledge Partners and Ernst & Young across Colombo and New York. He hires and holds the bench to the standard he was trained in.",
+    },
+    {
+      name: "Imu Moorthy",
+      role: "Advisor, Digital Assets & Web3",
+      photo: "/team/imu.jpg",
+      bio: "Imu advises Satinwood on clients building in blockchain and web3.",
+    },
+  ],
+  podcast: {
+    eyebrow: "Listen",
+    title: "The podcast.",
+    // DEV TODO: drop in the real podcast name and link/embed.
+    body: "Rengan hosts a podcast for founders and investors on capital, markets, and building.",
+    cta: { label: "Listen and subscribe", href: "#" },
+  },
+  cta: {
+    eyebrow: "Work with us",
+    title: "Build your finance team.",
+    body: "Tell us the seat you need and we will hand-select a senior match, embedded full-time in your business.",
+    button: { label: "Build your team", href: "/#cta" },
+  },
+} as const;
+
+/**
+ * /advisory — Rengan's advisory page.
+ * BOOKING DEV TODO: point every "Request a call with Rengan" CTA at Rengan's
+ * real calendar link once it exists. Defaults to the home booking section.
+ * LEGAL NOTE: keep wording to business, growth, and operating advisory only —
+ * not investment advice, securities advice, or fund/money management.
+ */
+export const advisory = {
+  cta: { label: "Request a call with Rengan", href: "/#cta" },
+  hero: {
+    eyebrow: "Advisory",
+    titleLead: "An operator ",
+    titleEm: "in your corner.",
+    lede: "Rengan Rajaratnam spent three decades in global finance, including Goldman Sachs and Morgan Stanley. He now advises a small number of founders and funds directly, on strategy, growth, and capital.",
+    credLine: "Goldman Sachs · Morgan Stanley · Stanford",
+    photo: "/team/rengan.jpg",
+  },
+  who: {
+    eyebrow: "Who he works with",
+    title: "Built for founders and funds.",
+    cards: [
+      {
+        title: "Founders",
+        body: "Scaling past the early days and want a sharper read on growth, capital, and what to build next, from someone who has sat in the operating seat, not just advised from the outside.",
+      },
+      {
+        title: "Funds and investors",
+        body: "Want an operator's view on a company, a market, or a thesis, and the network to act on it. He has spent three decades doing exactly that.",
+      },
+    ],
+  },
+  helps: {
+    eyebrow: "What he helps with",
+    title: "Strategy, capital, and scale.",
+    items: [
+      {
+        title: "Growth strategy",
+        body: "Where to focus, what to build next, and how to get there without breaking the model.",
+      },
+      {
+        title: "Capital strategy",
+        body: "Getting the business ready to raise and to talk to capital, on the operating and reporting side.",
+      },
+      {
+        title: "Scaling and go-to-market",
+        body: "Turning early traction into a repeatable engine, with the network to open doors.",
+      },
+      {
+        title: "The finance function",
+        body: "Bringing reporting and controls up to the standard investors expect, with a senior team to run it.",
+      },
+    ],
+  },
+  why: {
+    eyebrow: "Why Rengan",
+    title: "He has been on both sides of the table.",
+    body: "Three decades in global finance, including Goldman Sachs and Morgan Stanley, a Stanford MBA, and years building and backing companies. A network across founders, funds, and operators that is hard to reach from the outside. He advises a small number of people at a time, directly, not through a junior team.",
+  },
+  how: {
+    eyebrow: "How it works",
+    title: "Three steps.",
+    steps: [
+      { n: "01", title: "Request a call", body: "A short introduction to see whether it is a fit, both ways." },
+      { n: "02", title: "Talk it through", body: "What you need, how he can help, and how the two of you work together." },
+      { n: "03", title: "Get to work", body: "Direct access, focused on the things that actually move your company." },
+    ],
+  },
+  final: {
+    eyebrow: "Get started",
+    title: "Request a call with Rengan.",
+    body: "He works with a small number of founders and funds at a time.",
+  },
+} as const;
