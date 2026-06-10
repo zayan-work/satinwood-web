@@ -78,6 +78,32 @@ const jsonLd = {
       description:
         "Satinwood embeds a senior finance operator from Sri Lanka full-time and exclusively in your business to own the close, reporting, and controls, for a fraction of building the same seat at home.",
       areaServed,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Finance roles Satinwood places",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Outsourced Controller",
+              url: `${SITE}/outsourced-controller`,
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Outsourced FP&A",
+              url: `${SITE}/outsourced-fpa`,
+            },
+          },
+          // Pages not built yet — listed as services offered, without a URL so
+          // the markup never points Google at a 404.
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Outsourced Accounting Manager" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Senior Accountant" } },
+        ],
+      },
     },
     {
       "@type": "FAQPage",

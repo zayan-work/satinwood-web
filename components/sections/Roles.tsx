@@ -15,15 +15,33 @@ export function Roles() {
           />
         </Reveal>
         <RevealGroup className="mt-11 grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
-          {roles.map((r) => (
-            <RevealItem
-              key={r.name}
-              className="rounded-[13px] border border-hairline bg-white px-5 py-[22px]"
-            >
-              <div className="font-display text-[21px] font-semibold text-ink">{r.name}</div>
-              <p className="mt-2 text-[13px] leading-[1.55] text-grey">{r.body}</p>
-            </RevealItem>
-          ))}
+          {roles.map((r) => {
+            const href = "href" in r ? r.href : undefined;
+            const inner = (
+              <>
+                <div className="font-display text-[21px] font-semibold text-ink transition-colors group-hover:text-gold">
+                  {r.name}
+                </div>
+                <p className="mt-2 text-[13px] leading-[1.55] text-grey">{r.body}</p>
+              </>
+            );
+            return (
+              <RevealItem key={r.name}>
+                {href ? (
+                  <a
+                    href={href}
+                    className="group block h-full rounded-[13px] border border-hairline bg-white px-5 py-[22px] transition-colors hover:border-tint-edge"
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div className="h-full rounded-[13px] border border-hairline bg-white px-5 py-[22px]">
+                    {inner}
+                  </div>
+                )}
+              </RevealItem>
+            );
+          })}
         </RevealGroup>
       </Container>
     </section>

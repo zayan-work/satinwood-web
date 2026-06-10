@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/primitives/Container";
 import { Wordmark } from "@/components/primitives/Wordmark";
 import { footer } from "@/lib/content";
@@ -7,7 +8,9 @@ export function Footer() {
     <footer className="border-t border-[#F4EFE2]/12 bg-forest-deep pb-[46px] pt-[30px] text-[#A9A491]">
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-6">
-          <Wordmark variant="footer" />
+          <Link href="/" aria-label="Satinwood home" className="inline-flex">
+            <Wordmark variant="footer" />
+          </Link>
           <nav className="flex flex-wrap gap-6">
             {footer.links.map((link) => (
               <a

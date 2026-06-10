@@ -26,7 +26,7 @@ There is no test runner configured yet. TypeScript runs in `noEmit` strict mode;
 
 ## Architecture
 
-- **App Router only.** All routes live in `app/`. `app/page.tsx` composes the single landing page from ordered section components; `app/layout.tsx` wires the fonts (Cormorant Garamond → `--font-cormorant`, Inter → `--font-inter`) and the inline favicon.
+- **App Router only.** All routes live in `app/`. `app/page.tsx` composes the landing page from ordered section components; `app/layout.tsx` wires the fonts (Cormorant Garamond → `--font-cormorant`, Inter → `--font-inter`), the inline favicon, and `robots`. Other routes: `/team`, `/advisory`, and three SEO service landing pages — `/outsourced-controller`, `/outsourced-fpa`, `/finance-for-cpg-brands`. Each service route is a thin file that pulls its copy from `servicePages[slug]` in `lib/content.ts`, renders `<ServicePage data={…}>`, and emits `Service` + `FAQPage` + `BreadcrumbList` JSON-LD via `serviceJsonLd()` in `lib/serviceSchema.ts`. Per-page `metadata` sets `title`/`description`/`canonical`/OG; `app/sitemap.ts` and `app/robots.ts` are the indexing surface; `app/opengraph-image.tsx` generates the shared share image.
 - **Path alias:** `@/*` maps to the repo root (`./`), per `tsconfig.json`.
 - **React 19** — Server Components are the default; mark Client Components with `"use client"`. Keep sections as Server Components where possible; only the interactive primitives (`Reveal`, `RevealGroup`, `CountUp`, `Navbar`, `BookingEmbed`, `Faq`) are clients.
 - **Code layout:**

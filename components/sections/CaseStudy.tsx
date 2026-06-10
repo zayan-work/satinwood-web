@@ -64,6 +64,18 @@ export function CaseStudy() {
           </Reveal>
         </div>
 
+        <Reveal>
+          <p className="mt-[30px] text-[15px] leading-[1.6] text-grey">
+            We build finance teams like this for{" "}
+            <a
+              href="/finance-for-cpg-brands"
+              className="border-b border-gold/40 text-gold transition-colors hover:border-gold"
+            >
+              CPG and consumer brands &rarr;
+            </a>
+          </p>
+        </Reveal>
+
         <RevealGroup className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {testimonials.map((t) => (
             <RevealItem
