@@ -44,7 +44,7 @@ const jsonLd = {
       "@id": `${SITE}/#business`,
       name: "Satinwood",
       url: `${SITE}/`,
-      image: `${SITE}/og-image.png`,
+      image: `${SITE}/opengraph-image`,
       parentOrganization: { "@id": `${SITE}/#organization` },
       description:
         "Satinwood embeds senior finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies. It places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire.",

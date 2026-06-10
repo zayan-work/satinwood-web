@@ -27,6 +27,17 @@ export const metadata: Metadata = {
     "Satinwood embeds senior finance operators from Sri Lanka full-time as your outsourced controller, FP&A, or accounting team, for a fraction of a local hire.",
   alternates: { canonical: "/" },
   icons: { icon: favicon },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     siteName: "Satinwood",
