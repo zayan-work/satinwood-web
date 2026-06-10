@@ -115,6 +115,24 @@ body {
   );
 }
 
+/* Slim, unobtrusive scrollbar for inner scroll areas (e.g. the booking embed's
+   stacked time-slot list). Keeps the affordance without a heavy native bar. */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tint-edge) transparent;
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--tint-edge);
+    border-radius: 999px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
 /* Thin gold rule with a soft fade at both ends — used as an inline flourish. */
 @utility rule-gold {
   background-image: linear-gradient(
