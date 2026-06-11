@@ -423,76 +423,136 @@ export const team = {
 } as const;
 
 /**
- * /advisory — Rengan's advisory page.
- * BOOKING DEV TODO: point every "Request a call with Rengan" CTA at Rengan's
- * real calendar link once it exists. Defaults to the home booking section.
+ * /advisory — Rengan's paid 15-minute introductory call (productized advisory).
+ * BOOKING: every CTA scrolls to the in-page booking section (#book), which embeds
+ * Rengan's paid Calendly intro call. The live slug is set via NEXT_PUBLIC_CALENDLY_LINK
+ * (see .env.example / AdvisoryBooking.tsx); Calendly + Stripe collect the $150 at booking.
+ * CHARITY: "healthcare for families in South Asia" is a placeholder cause — name and
+ * link the real partner organisation once chosen (giving line + the 5% FAQ answer).
  * LEGAL NOTE: keep wording to business, growth, and operating advisory only —
  * not investment advice, securities advice, or fund/money management.
  */
 export const advisory = {
-  cta: { label: "Request a call with Rengan", href: "/#cta" },
   hero: {
     eyebrow: "Advisory",
-    titleLead: "An operator ",
-    titleEm: "in your corner.",
-    lede: "Rengan Rajaratnam spent three decades in global finance, including Morgan Stanley, Point72, and Mercer. He now advises a small number of founders and funds directly, on strategy, growth, and capital.",
+    titleLead: "Fifteen minutes with an operator who has ",
+    titleEm: "been where you are.",
+    lede: "Direct access to Rengan Rajaratnam, three decades in global finance across Morgan Stanley, Point72, and Mercer, on your actual situation. A growth question, a thesis you are testing, a decision you are weighing. An introductory call to start, and where it goes from there is up to you.",
     credLine: "Morgan Stanley · Point72 · Mercer · Stanford",
+    price: "$150",
+    priceLabel: "15-minute introductory call",
+    primaryCta: { label: "Book your 15 minutes", href: "#book" },
+    subLink: { label: "Working together longer? Explore advisory", href: "#longer" },
     photo: "/team/rengan.jpg",
   },
-  who: {
-    eyebrow: "Who he works with",
-    title: "Built for founders and funds.",
+  intro: {
+    eyebrow: "The introductory call",
+    title: "Fifteen minutes, used well.",
     cards: [
       {
-        title: "Founders",
-        body: "Scaling past the early days and want a sharper read on growth, capital, and what to build next, from someone who has sat in the operating seat, not just advised from the outside.",
+        title: "An operator's read",
+        body: "Not generic advice. A direct, experienced read on your actual situation, from someone who has built companies and sat across the table from them.",
       },
       {
-        title: "Funds and investors",
-        body: "Want an operator's view on a company, a market, or a thesis, and the network to act on it. He has spent three decades doing exactly that.",
+        title: "A clear point of view",
+        body: "Bring two or three questions. Leave with a sharp, honest answer on each, and a clear sense of your next move.",
       },
     ],
-  },
-  helps: {
-    eyebrow: "What he helps with",
-    title: "Strategy, capital, and scale.",
-    items: [
-      {
-        title: "Growth strategy",
-        body: "Where to focus, what to build next, and how to get there without breaking the model.",
-      },
-      {
-        title: "Capital strategy",
-        body: "Getting the business ready to raise and to talk to capital, on the operating and reporting side.",
-      },
-      {
-        title: "Scaling and go-to-market",
-        body: "Turning early traction into a repeatable engine, with the network to open doors.",
-      },
-      {
-        title: "The finance function",
-        body: "Bringing reporting and controls up to the standard investors expect, with a senior team to run it.",
-      },
+    expect: [
+      { k: "Format", v: "15-minute video call" },
+      { k: "Price", v: "$150 per call" },
+      { k: "Turnaround", v: "Booked in minutes" },
     ],
   },
   why: {
     eyebrow: "Why Rengan",
-    title: "He has been on both sides of the table.",
-    body: "Three decades in global finance, including Morgan Stanley, Point72, Mercer, and Robertson Stephens, a Stanford MBA, and years building and backing companies. A network across founders, funds, and operators that is hard to reach from the outside. He advises a small number of people at a time, directly, not through a junior team.",
+    titleLead: "He has been on ",
+    titleEm: "both sides of the table.",
+    body: "Three decades in global finance, including Morgan Stanley, Point72, Mercer, and Robertson Stephens. A Stanford MBA. Years building and backing companies, and a network across founders, funds, and operators that is hard to reach from the outside. For fifteen minutes, you have his full attention, directly.",
+  },
+  questions: {
+    eyebrow: "Bring your questions",
+    title: "What people bring to the call.",
+    items: [
+      {
+        title: "Where to bet",
+        body: "“We have two product lines and the team for one. The easy one pays the bills, the big one is the bet. Which do we starve?”",
+      },
+      {
+        title: "Timing a raise",
+        body: "“A name-brand fund is interested but moving slowly, and we have term sheets from smaller names now. Do we wait, or build the round around who is ready?”",
+      },
+      {
+        title: "Before you wire",
+        body: "“We are about to lead a round. The founder is excellent and the numbers are thin. What would you stress-test before we commit?”",
+      },
+      {
+        title: "Before diligence",
+        body: "“Diligence starts in six weeks and our reporting will not survive it. What do we fix first, and what can wait?”",
+      },
+    ],
+  },
+  longer: {
+    eyebrow: "Beyond the introduction",
+    titleLead: "When a call becomes ",
+    titleEm: "a corner.",
+    body: "Some founders and funds come back. The work grows into strategy, growth, and capital, measured in months and quarters. It is selective, and built around the relationship itself. It begins the same way for everyone, with an introductory call. If there is a fit, you take it from there.",
+    cta: { label: "Start with 15 minutes", href: "#book" },
   },
   how: {
     eyebrow: "How it works",
-    title: "Three steps.",
+    title: "Booking takes a minute.",
     steps: [
-      { n: "01", title: "Request a call", body: "A short introduction to see whether it is a fit, both ways." },
-      { n: "02", title: "Talk it through", body: "What you need, how he can help, and how the two of you work together." },
-      { n: "03", title: "Get to work", body: "Direct access, focused on the things that actually move your company." },
+      { n: "01", title: "Book your time", body: "Choose a slot and reserve your fifteen minutes. Payment is taken at booking." },
+      { n: "02", title: "Send your questions", body: "Two or three, ahead of the call, so the time goes straight to substance." },
+      { n: "03", title: "Get your read", body: "A direct conversation, and a clear point of view you can act on." },
     ],
   },
-  final: {
-    eyebrow: "Get started",
-    title: "Request a call with Rengan.",
-    body: "He works with a small number of founders and funds at a time.",
+  faq: {
+    eyebrow: "Common questions",
+    title: "Before you book.",
+    items: [
+      {
+        q: "How long is the introductory call, and what does it cost?",
+        a: "A focused fifteen-minute video call for $150, paid at the time of booking.",
+      },
+      {
+        q: "What will I actually walk away with?",
+        a: "A direct, experienced read on the questions you bring, and a clear sense of what you would do next. Come with two or three; you will leave with an answer on each.",
+      },
+      {
+        q: "Who is this for?",
+        a: "Founders scaling past the early days, and funds or investors who want an operator's view on a company, a market, or a thesis. It is built for people who want a sharp point of view, quickly.",
+      },
+      {
+        q: "What does Rengan advise on?",
+        a: "Growth strategy, capital strategy, scaling and go-to-market, and building the finance function. This is business and operating guidance, not investment advice.",
+      },
+      {
+        q: "What happens to the 5% for charity?",
+        a: "Five percent of every call goes to organisations working on healthcare for families in South Asia. It is contributed on your behalf, at no extra cost to you.",
+      },
+      {
+        q: "Can the introductory call lead to ongoing advisory?",
+        a: "Yes, and many do. There is no pitch on the call itself. If it is a fit, you will both know, and you take it from there.",
+      },
+      {
+        q: "What timezone are calls in?",
+        a: "Times are shown in your local timezone when you book. Rengan takes calls across US, Canadian, and international hours.",
+      },
+      {
+        q: "Can I reschedule or cancel?",
+        a: "Yes, with reasonable notice ahead of the call. The details are shown at the time of booking.",
+      },
+    ],
+  },
+  book: {
+    eyebrow: "Book a call",
+    title: "Book your 15 minutes.",
+    lede: "Direct access, your situation, a clear point of view. Choose a time below.",
+    price: "$150",
+    priceLabel: "15-minute introductory call",
+    giving: "Every call gives back. A share of each session supports healthcare for families in South Asia.",
   },
 } as const;
 
