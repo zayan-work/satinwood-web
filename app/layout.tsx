@@ -23,17 +23,6 @@ export const metadata: Metadata = {
   description:
     "Satinwood embeds senior finance operators from Sri Lanka full-time as your outsourced controller, FP&A, or accounting team, for a fraction of a local hire.",
   alternates: { canonical: "/" },
-  // Favicon bundle lives in /public (see tmp/facicon-update). This reproduces the
-  // generator's recommended <head> markup: svg + 96px png + .ico + apple-touch + manifest.
-  icons: {
-    icon: [
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
-  },
-  manifest: "/site.webmanifest",
   appleWebApp: { title: "Satinwood" },
   robots: {
     index: true,
