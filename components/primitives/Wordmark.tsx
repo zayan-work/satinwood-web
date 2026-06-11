@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 
 /**
  * Brand wordmark: "Satinw" + inline SVG ("oo" = two overlapping marks, each
- * three concentric rings, per the brand guide) + "d". The SVG strokes use
+ * two concentric rings, per the brand guide) + "d". The SVG strokes use
  * `currentColor`, driven by the mark's text-color class.
  */
 export function Wordmark({
@@ -27,16 +27,14 @@ export function Wordmark({
         fill="none"
         aria-hidden="true"
         className={cn(
-          "mx-[0.02em] inline-block h-[0.64em] w-[1.06em] translate-y-[0.11em]",
+          "mx-[0.01em] inline-block h-[0.55em] w-[0.924em] translate-y-[0.085em]",
           isHeader ? "text-gold" : "text-gold-bright",
         )}
       >
-        <circle cx="55" cy="50" r="45" stroke="currentColor" strokeWidth="3.6" />
-        <circle cx="55" cy="50" r="31" stroke="currentColor" strokeWidth="3.2" />
-        <circle cx="55" cy="50" r="17" stroke="currentColor" strokeWidth="2.8" />
-        <circle cx="113" cy="50" r="45" stroke="currentColor" strokeWidth="3.6" />
-        <circle cx="113" cy="50" r="31" stroke="currentColor" strokeWidth="3.2" />
-        <circle cx="113" cy="50" r="17" stroke="currentColor" strokeWidth="2.8" />
+        <circle cx="55" cy="50" r="44" stroke="currentColor" strokeWidth="4.4" />
+        <circle cx="55" cy="50" r="30" stroke="currentColor" strokeWidth="3.7" />
+        <circle cx="113" cy="50" r="44" stroke="currentColor" strokeWidth="4.4" />
+        <circle cx="113" cy="50" r="30" stroke="currentColor" strokeWidth="3.7" />
       </svg>
       d
     </span>
