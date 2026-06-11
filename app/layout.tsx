@@ -17,16 +17,24 @@ const inter = Inter({
   display: "swap",
 });
 
-const favicon =
-  "data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2750%27%20r%3D%2750%27%20fill%3D%27%231E261A%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23C2A24E%27%20stroke-width%3D%272.8%27%3E%3Ccircle%20cx%3D%2737%27%20cy%3D%2750%27%20r%3D%2721%27/%3E%3Ccircle%20cx%3D%2737%27%20cy%3D%2750%27%20r%3D%2714%27/%3E%3Ccircle%20cx%3D%2737%27%20cy%3D%2750%27%20r%3D%277.5%27/%3E%3Ccircle%20cx%3D%2763%27%20cy%3D%2750%27%20r%3D%2721%27/%3E%3Ccircle%20cx%3D%2763%27%20cy%3D%2750%27%20r%3D%2714%27/%3E%3Ccircle%20cx%3D%2763%27%20cy%3D%2750%27%20r%3D%277.5%27/%3E%3C/g%3E%3C/svg%3E";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.satinwood.co"),
   title: "Satinwood · Senior finance teams from Sri Lanka",
   description:
     "Satinwood embeds senior finance operators from Sri Lanka full-time as your outsourced controller, FP&A, or accounting team, for a fraction of a local hire.",
   alternates: { canonical: "/" },
-  icons: { icon: favicon },
+  // Favicon bundle lives in /public (see tmp/facicon-update). This reproduces the
+  // generator's recommended <head> markup: svg + 96px png + .ico + apple-touch + manifest.
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: { title: "Satinwood" },
   robots: {
     index: true,
     follow: true,
