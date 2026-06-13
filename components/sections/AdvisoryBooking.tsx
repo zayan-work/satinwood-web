@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 // Calendly slug for Rengan's paid "15-Minute Introductory Call".
-// Format: "username/event-slug" (e.g. "rengan/15min"). Set this once Rengan's
-// Calendly event (with Stripe "Require payment to book" → $150) is live:
-//   NEXT_PUBLIC_CALENDLY_LINK=rengan/15min   (see .env.example)
+// Format: "username/event-slug" (e.g. "rengan-satinwood/satinwood-15-minute-meeting").
+// Set this once Rengan's Calendly event (with Stripe "Require payment to book"
+// → $150) is live:
+//   NEXT_PUBLIC_CALENDLY_LINK=rengan-satinwood/satinwood-15-minute-meeting   (see .env.example)
 // While unset it falls back to the placeholder and we render an on-brand notice
 // instead of a broken iframe.
 const CALENDLY_LINK =
@@ -19,7 +20,7 @@ const WIDGET_PARAMS =
   "hide_event_type_details=1&hide_gdpr_banner=1" +
   "&background_color=fbfaf5&text_color=1c1b16&primary_color=9c7b2e";
 
-const WIDGET_URL = `https://calendly.com/${CALENDLY_LINK}/15min?${WIDGET_PARAMS}`;
+const WIDGET_URL = `https://calendly.com/${CALENDLY_LINK}?${WIDGET_PARAMS}`;
 const SCRIPT_SRC = "https://assets.calendly.com/assets/external/widget.js";
 
 declare global {
