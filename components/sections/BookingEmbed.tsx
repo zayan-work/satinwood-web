@@ -1,6 +1,7 @@
 "use client";
 
 import { Clock, Video } from "lucide-react";
+import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 // Calendly slug for the 15-minute discovery call. Shares the same event as the
@@ -40,11 +41,16 @@ declare global {
  * the slug is unset or the script fails it shows a graceful on-brand notice.
  */
 export function BookingEmbed() {
+  const cardRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
   const [failed, setFailed] = useState(false);
+  // Defer Calendly's widget.js (+ ~1.2 MB CSS) until the booking card nears the
+  // viewport. The card sits at the bottom of the page, so this keeps that weight
+  // off the initial load entirely for most visits.
+  const inView = useInView(cardRef, { once: true, margin: "400px" });
 
   useEffect(() => {
-    if (IS_PLACEHOLDER) return;
+    if (IS_PLACEHOLDER || !inView) return;
 
     const init = () => {
       const host = hostRef.current;
@@ -75,10 +81,13 @@ export function BookingEmbed() {
       script?.removeEventListener("load", onLoad);
       script?.removeEventListener("error", onError);
     };
-  }, []);
+  }, [inView]);
 
   return (
-    <div className="relative overflow-hidden rounded-[20px] border border-hairline bg-white p-3 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.45)] sm:p-4">
+    <div
+      ref={cardRef}
+      className="relative overflow-hidden rounded-[20px] border border-hairline bg-white p-3 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.45)] sm:p-4"
+    >
       <span
         aria-hidden
         className="absolute inset-x-0 top-0 z-10 h-[3px] bg-gradient-to-r from-gold via-gold-bright to-honey"
@@ -125,13 +134,21 @@ export function BookingEmbed() {
             Scheduling by Calendly
           </div>
         </div>
-      ) : (
+      ) : inView ? (
         // Calendly replaces this node with the live calendar. min-width 320.
         <div
           ref={hostRef}
           className="w-full overflow-hidden rounded-[12px]"
           style={{ minWidth: 320, height: 560 }}
         />
+      ) : (
+        // Reserve the calendar's height before it loads (no layout shift).
+        <div
+          className="flex w-full items-center justify-center rounded-[12px]"
+          style={{ minWidth: 320, height: 560 }}
+        >
+          <span className="text-[13px] text-grey-light">Loading calendar…</span>
+        </div>
       )}
     </div>
   );

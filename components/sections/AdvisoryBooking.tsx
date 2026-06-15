@@ -1,5 +1,6 @@
 "use client";
 
+import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 // Calendly slug for Rengan's paid "15-Minute Introductory Call".
@@ -41,11 +42,15 @@ declare global {
  * compact on-brand placeholder reading "Rengan's calendar mounts here".
  */
 export function AdvisoryBooking() {
+  const cardRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
   const [failed, setFailed] = useState(false);
+  // Defer Calendly's widget.js (+ ~1.2 MB CSS) until the booking card nears the
+  // viewport, so it stays off the initial load.
+  const inView = useInView(cardRef, { once: true, margin: "400px" });
 
   useEffect(() => {
-    if (IS_PLACEHOLDER) return;
+    if (IS_PLACEHOLDER || !inView) return;
 
     const init = () => {
       const host = hostRef.current;
@@ -76,10 +81,13 @@ export function AdvisoryBooking() {
       script?.removeEventListener("load", onLoad);
       script?.removeEventListener("error", onError);
     };
-  }, []);
+  }, [inView]);
 
   return (
-    <div className="mx-auto mt-[34px] max-w-[700px] rounded-[18px] border border-hairline bg-gradient-to-b from-white to-[#FAF6EC] p-2.5 shadow-[0_24px_64px_-30px_rgba(28,27,22,0.5)]">
+    <div
+      ref={cardRef}
+      className="mx-auto mt-[34px] max-w-[700px] rounded-[18px] border border-hairline bg-gradient-to-b from-white to-[#FAF6EC] p-2.5 shadow-[0_24px_64px_-30px_rgba(28,27,22,0.5)]"
+    >
       {IS_PLACEHOLDER || failed ? (
         <div className="flex min-h-[300px] flex-col items-center justify-center gap-[13px] rounded-[12px] px-7 py-[54px] text-center max-[560px]:px-[18px] max-[560px]:py-9">
           <div className="flex h-[82px] w-[82px] items-center justify-center rounded-full border-[1.5px] border-tint-edge font-display text-[36px] font-bold text-gold">
@@ -97,13 +105,21 @@ export function AdvisoryBooking() {
             Secured by Stripe · Scheduling by Calendly
           </div>
         </div>
-      ) : (
+      ) : inView ? (
         // Calendly replaces this node with the live calendar. min-width 320 / height 700.
         <div
           ref={hostRef}
           className="overflow-hidden rounded-[12px]"
           style={{ minWidth: 320, height: 700 }}
         />
+      ) : (
+        // Reserve the calendar's height before it loads (no layout shift).
+        <div
+          className="flex items-center justify-center rounded-[12px]"
+          style={{ minWidth: 320, height: 700 }}
+        >
+          <span className="text-[13px] text-grey-light">Loading calendar…</span>
+        </div>
       )}
     </div>
   );
