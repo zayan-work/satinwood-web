@@ -12,14 +12,14 @@ import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { pageNav, team } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Team · Satinwood",
+  title: "Team · Satinwood Talent",
   description:
-    "Meet the operators behind Satinwood. The people who built the firm have run finance functions and scaled businesses themselves, and hold the Sri Lanka bench to that standard.",
+    "Meet the operators behind Satinwood Talent. The people who built the firm have run finance functions and scaled businesses themselves, and hold the Sri Lanka bench to that standard.",
   alternates: { canonical: "/team" },
   openGraph: {
-    title: "Team · Satinwood",
+    title: "Team · Satinwood Talent",
     description:
-      "The operators behind Satinwood. Built and run by people who have run finance functions and scaled businesses themselves.",
+      "The operators behind Satinwood Talent. Built and run by people who have run finance functions and scaled businesses themselves.",
     url: "/team",
     type: "website",
   },
@@ -54,7 +54,7 @@ export default function TeamPage() {
                   <div className="relative aspect-square w-[150px] overflow-hidden rounded-[16px] sm:w-[200px]">
                     <Image
                       src={m.photo}
-                      alt={`${m.name}, ${m.role} at Satinwood`}
+                      alt={`${m.name}, ${m.role} at Satinwood Talent`}
                       fill
                       sizes="(max-width: 640px) 150px, 200px"
                       className="object-cover"

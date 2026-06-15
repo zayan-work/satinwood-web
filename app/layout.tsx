@@ -18,12 +18,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.satinwood.co"),
-  title: "Satinwood · Senior finance teams from Sri Lanka",
+  metadataBase: new URL("https://www.satinwoodtalent.com"),
+  title: "Satinwood Talent · Senior finance teams from Sri Lanka",
   description:
-    "Satinwood embeds senior finance operators from Sri Lanka full-time as your outsourced controller, FP&A, or accounting team, for a fraction of a local hire.",
+    "Satinwood Talent embeds senior finance operators from Sri Lanka full-time as your outsourced controller, FP&A, or accounting team, for a fraction of a local hire.",
   alternates: { canonical: "/" },
-  appleWebApp: { title: "Satinwood" },
+  appleWebApp: { title: "Satinwood Talent" },
   robots: {
     index: true,
     follow: true,
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "Satinwood",
-    title: "Satinwood · Senior finance teams from Sri Lanka",
+    siteName: "Satinwood Talent",
+    title: "Satinwood Talent · Senior finance teams from Sri Lanka",
     description:
       "A controller-grade finance team, embedded in your business. Senior finance operators from Sri Lanka, full-time, for a fraction of a local hire.",
     url: "/",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Satinwood · Senior finance teams from Sri Lanka",
+    title: "Satinwood Talent · Senior finance teams from Sri Lanka",
     description:
       "A controller-grade finance team, embedded in your business. Senior finance operators from Sri Lanka, full-time, for a fraction of a local hire.",
   },

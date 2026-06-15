@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-[#F4EFE2]/12 bg-forest-deep pb-[46px] pt-[30px] text-[#A9A491]">
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-6">
-          <Link href="/" aria-label="Satinwood home" className="inline-flex">
+          <Link href="/" aria-label="Satinwood Talent home" className="inline-flex">
             <Wordmark variant="footer" />
           </Link>
           <nav className="flex flex-wrap gap-6">

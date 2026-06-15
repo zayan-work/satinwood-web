@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://www.satinwood.co";
+const BASE = "https://www.satinwoodtalent.com";
 
 // Static publish date for the current set of routes. Bump when content changes.
 const LAST_MODIFIED = "2026-06-10";

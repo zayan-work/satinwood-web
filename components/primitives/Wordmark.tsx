@@ -1,9 +1,11 @@
 import { cn } from "@/lib/cn";
 
 /**
- * Brand wordmark: "Satinw" + inline SVG ("oo" = two overlapping marks, each
- * two concentric rings, per the brand guide) + "d". The SVG strokes use
- * `currentColor`, driven by the mark's text-color class.
+ * Brand logo: the "Satinwood Talent" wordmark, shipped as flat SVG assets in
+ * `/public`. The header logo is the dark (ink) cut on light bands; below 430px
+ * it swaps to the short "Satinwood" cut. The footer logo is the cream cut for
+ * the dark forest band. Sizes match the static mockups (27/23px header, 21px
+ * short, 24px footer).
  */
 export function Wordmark({
   variant = "header",
@@ -12,31 +14,31 @@ export function Wordmark({
   variant?: "header" | "footer";
   className?: string;
 }) {
-  const isHeader = variant === "header";
+  if (variant === "footer") {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/logo-footer.svg"
+        alt="Satinwood Talent"
+        className={cn("block h-[24px] w-auto", className)}
+      />
+    );
+  }
+
   return (
-    <span
-      className={cn(
-        "inline-flex items-baseline font-display font-semibold tracking-[0.4px]",
-        isHeader ? "text-[25px] text-ink" : "text-[22px] text-[#F4EFE2]",
-        className,
-      )}
-    >
-      Satinw
-      <svg
-        viewBox="0 0 168 100"
-        fill="none"
-        aria-hidden="true"
-        className={cn(
-          "mx-[0.01em] inline-block h-[0.55em] w-[0.924em] translate-y-[0.085em]",
-          isHeader ? "text-gold" : "text-gold-bright",
-        )}
-      >
-        <circle cx="55" cy="50" r="44" stroke="currentColor" strokeWidth="4.4" />
-        <circle cx="55" cy="50" r="30" stroke="currentColor" strokeWidth="3.7" />
-        <circle cx="113" cy="50" r="44" stroke="currentColor" strokeWidth="4.4" />
-        <circle cx="113" cy="50" r="30" stroke="currentColor" strokeWidth="3.7" />
-      </svg>
-      d
+    <span className={cn("inline-flex items-center", className)}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo.svg"
+        alt="Satinwood Talent"
+        className="block h-[27px] w-auto max-[560px]:h-[23px] max-[430px]:hidden"
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo-short.svg"
+        alt="Satinwood Talent"
+        className="hidden h-[21px] w-auto max-[430px]:block"
+      />
     </span>
   );
 }

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE = "https://www.satinwood.co";
+const SITE = "https://www.satinwoodtalent.com";
 
 // AI search crawlers are intentionally allowed (answer-engine optimization),
 // alongside the catch-all rule. Mirrors the reference robots.txt.

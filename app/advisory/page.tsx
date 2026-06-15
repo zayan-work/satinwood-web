@@ -13,12 +13,12 @@ import { AdvisoryBooking } from "@/components/sections/AdvisoryBooking";
 import { pageNav, advisory } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Advisory | Satinwood",
+  title: "Advisory | Satinwood Talent",
   description:
     "A 15-minute introductory call with Rengan Rajaratnam — business, growth, and operating strategy advisory for founders and funds.",
   alternates: { canonical: "/advisory" },
   openGraph: {
-    title: "Advisory | Satinwood",
+    title: "Advisory | Satinwood Talent",
     description:
       "Fifteen minutes with an operator who has been where you are. A $150 introductory call with Rengan Rajaratnam.",
     url: "/advisory",
@@ -32,12 +32,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Service",
-      name: "Satinwood Advisory",
+      name: "Satinwood Talent Advisory",
       serviceType: "Business and growth strategy advisory",
       provider: {
         "@type": "Organization",
-        name: "Satinwood",
-        url: "https://www.satinwood.co/",
+        name: "Satinwood Talent",
+        url: "https://www.satinwoodtalent.com/",
       },
       description:
         "Business, growth, and operating strategy advisory for founders and funds.",
@@ -51,7 +51,7 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.satinwood.co/advisory#faq",
+      "@id": "https://www.satinwoodtalent.com/advisory#faq",
       mainEntity: advisory.faq.items.map((item) => ({
         "@type": "Question",
         name: item.q,
@@ -153,7 +153,7 @@ export default function AdvisoryPage() {
               <div className="relative mx-auto aspect-[4/5] w-full max-w-[430px] overflow-hidden rounded-[18px] shadow-[0_34px_70px_-34px_rgba(0,0,0,0.6)] md:ml-auto md:mr-0">
                 <Image
                   src={hero.photo}
-                  alt="Rengan Rajaratnam, Chairman of Satinwood"
+                  alt="Rengan Rajaratnam, Chairman of Satinwood Talent"
                   fill
                   priority
                   sizes="(max-width: 768px) 280px, 430px"

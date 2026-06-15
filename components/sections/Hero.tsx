@@ -41,7 +41,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-[47ch] text-[18.5px] leading-[1.55] text-grey max-[1040px]:max-w-[62ch]">
-              Satinwood is a senior finance talent firm. We embed finance operators from
+              Satinwood Talent is a senior finance talent firm. We embed finance operators from
               Sri Lanka full-time to own the close, reporting, and controls, for a
               fraction of building the same seat at home.
             </p>

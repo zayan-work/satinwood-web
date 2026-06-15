@@ -1,6 +1,6 @@
 import { servicePages } from "@/lib/content";
 
-const SITE = "https://www.satinwood.co";
+const SITE = "https://www.satinwoodtalent.com";
 const COUNTRIES = ["United States", "Canada", "United Kingdom", "United Arab Emirates", "Australia"];
 
 /**

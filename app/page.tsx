@@ -17,7 +17,7 @@ import { Booking } from "@/components/sections/Booking";
 import { Footer } from "@/components/sections/Footer";
 import { faqs } from "@/lib/content";
 
-const SITE = "https://www.satinwood.co";
+const SITE = "https://www.satinwoodtalent.com";
 const COUNTRIES = ["United States", "Canada", "United Kingdom", "United Arab Emirates", "Australia"];
 const areaServed = COUNTRIES.map((name) => ({ "@type": "Country", name }));
 
@@ -29,25 +29,25 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${SITE}/#organization`,
-      name: "Satinwood",
+      name: "Satinwood Talent",
       url: `${SITE}/`,
       logo: `${SITE}/logo.png`,
-      email: "hello@satinwood.co",
+      email: "hello@satinwoodtalent.com",
       description:
-        "Satinwood is a senior finance talent firm that embeds finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia. Satinwood places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire. It is not a staffing marketplace or a bookkeeping provider.",
+        "Satinwood Talent is a senior finance talent firm that embeds finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia. Satinwood Talent places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire. It is not a staffing marketplace or a bookkeeping provider.",
       foundingLocation: { "@type": "Place", name: "Sri Lanka" },
       parentOrganization: { "@type": "Organization", name: "MAC Holdings" },
-      contactPoint: { "@type": "ContactPoint", email: "hello@satinwood.co", contactType: "sales" },
+      contactPoint: { "@type": "ContactPoint", email: "hello@satinwoodtalent.com", contactType: "sales" },
     },
     {
       "@type": "ProfessionalService",
       "@id": `${SITE}/#business`,
-      name: "Satinwood",
+      name: "Satinwood Talent",
       url: `${SITE}/`,
       image: `${SITE}/opengraph-image`,
       parentOrganization: { "@id": `${SITE}/#organization` },
       description:
-        "Satinwood embeds senior finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies. It places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire.",
+        "Satinwood Talent embeds senior finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies. It places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire.",
       // `serviceType` is only valid on schema.org/Service, not on a
       // ProfessionalService (a LocalBusiness). Express the focus with
       // `knowsAbout` instead; the dedicated Service node below carries serviceType.
@@ -65,7 +65,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${SITE}/#website`,
       url: `${SITE}/`,
-      name: "Satinwood",
+      name: "Satinwood Talent",
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en",
     },
@@ -76,11 +76,11 @@ const jsonLd = {
       serviceType: "Outsourced finance and accounting",
       provider: { "@id": `${SITE}/#business` },
       description:
-        "Satinwood embeds a senior finance operator from Sri Lanka full-time and exclusively in your business to own the close, reporting, and controls, for a fraction of building the same seat at home.",
+        "Satinwood Talent embeds a senior finance operator from Sri Lanka full-time and exclusively in your business to own the close, reporting, and controls, for a fraction of building the same seat at home.",
       areaServed,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Finance roles Satinwood places",
+        name: "Finance roles Satinwood Talent places",
         itemListElement: [
           {
             "@type": "Offer",

@@ -31,7 +31,7 @@ export function Comparison() {
         <Reveal delay={0.08} className="mt-[clamp(36px,4vw,52px)] -mx-[4%] overflow-x-auto px-[4%] sm:mx-0 sm:px-0">
           <table className="w-full min-w-[600px] border-separate border-spacing-0 text-[14.5px]">
             <caption className="sr-only">
-              How Satinwood compares with a local hire and a typical offshore provider
+              How Satinwood Talent compares with a local hire and a typical offshore provider
             </caption>
             <thead>
               <tr>
@@ -52,7 +52,7 @@ export function Comparison() {
                   scope="col"
                   className="rounded-t-[14px] bg-forest-deep px-5 pb-5 pt-5 text-center font-display text-[19px] font-semibold text-gold-bright"
                 >
-                  Satinwood
+                  Satinwood Talent
                 </th>
               </tr>
             </thead>

@@ -48,7 +48,7 @@ export function Navbar({
           scrolled ? "h-[64px]" : "h-[74px]",
         )}
       >
-        <a href={homeHref} aria-label="Satinwood home" className="flex items-center">
+        <a href={homeHref} aria-label="Satinwood Talent home" className="flex items-center">
           <Wordmark variant="header" />
         </a>
         <nav className="hidden items-center gap-9 md:flex">

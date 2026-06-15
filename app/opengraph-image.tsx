@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 // og:image and twitter:image for the whole site (inherited by /team, /advisory),
 // so link previews render without needing a separately hosted PNG.
 export const alt =
-  "Satinwood — senior finance teams from Sri Lanka, embedded in your business.";
+  "Satinwood Talent — senior finance teams from Sri Lanka, embedded in your business.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -64,9 +64,9 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ fontSize: 40, fontWeight: 700, color: "#F6F1E6", letterSpacing: 0.5 }}>
-            Satinwood
+            Satinwood Talent
           </div>
-          <div style={{ fontSize: 26, color: "#C5BCA6" }}>satinwood.co</div>
+          <div style={{ fontSize: 26, color: "#C5BCA6" }}>satinwoodtalent.com</div>
         </div>
       </div>
     ),
