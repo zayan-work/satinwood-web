@@ -4,12 +4,11 @@ import { Clock, Video } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-// Calendly slug for the 15-minute discovery call. Shares the same event as the
-// /advisory page (NEXT_PUBLIC_CALENDLY_LINK). Format: "username/event-slug" from
-// calendly.com/<username>/<event-slug>. While unset it falls back to the
-// placeholder and we render an on-brand notice instead of a broken iframe.
-const CALENDLY_LINK =
-  process.env.NEXT_PUBLIC_CALENDLY_LINK ?? "REPLACE-WITH-RENGAN-EVENT";
+// Calendly slug for the homepage "Get started" discovery call. This is the free
+// Satinwood Talent event (no payment required) — distinct from the paid intro
+// call on /advisory. Format: "username/event-slug" from
+// calendly.com/<username>/<event-slug>.
+const CALENDLY_LINK = process.env.NEXT_PUBLIC_CALENDLY_DISCOVERY_CALL || "rengan-satinwoodtalent/satinwood-talent";
 
 const IS_PLACEHOLDER = CALENDLY_LINK.includes("REPLACE");
 
