@@ -33,12 +33,12 @@ const jsonLd = {
       name: "Satinwood Talent",
       url: `${SITE}/`,
       logo: `${SITE}/logo.png`,
-      email: "hello@satinwoodtalent.com",
+      email: "info@satinwoodtalent.com",
       description:
         "Satinwood Talent is a senior finance talent firm that embeds finance operators from Sri Lanka full-time, exclusively, and dedicated in growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia. Satinwood Talent places controller, FP&A, accounting manager, and senior accountant level talent, for a fraction of a local hire. It is not a staffing marketplace or a bookkeeping provider.",
       foundingLocation: { "@type": "Place", name: "Sri Lanka" },
       parentOrganization: { "@type": "Organization", name: "MAC Holdings" },
-      contactPoint: { "@type": "ContactPoint", email: "hello@satinwoodtalent.com", contactType: "sales" },
+      contactPoint: { "@type": "ContactPoint", email: "info@satinwoodtalent.com", contactType: "sales" },
     },
     {
       "@type": "ProfessionalService",

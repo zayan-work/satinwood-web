@@ -28,7 +28,13 @@ const pad = (n) => "  ".repeat(n);
 function field(key, value, indent, opts = {}) {
   const label = humanize(key);
   const head = `${pad(indent)}- name: ${key}\n${pad(indent + 1)}label: ${JSON.stringify(label)}\n`;
-  const req = opts.required === false ? `${pad(indent + 1)}required: false\n` : "";
+  // A field is optional when caller says so, or when its seed value is an empty
+  // string — Sveltia treats string fields as required by default, so a legitimately
+  // empty seed (e.g. stats prefix, a plain-text ledePart href) would block saving.
+  const optional =
+    opts.required === false ||
+    (opts.required === undefined && typeof value === "string" && value.trim() === "");
+  const req = optional ? `${pad(indent + 1)}required: false\n` : "";
 
   if (IMAGE_KEYS.has(key)) return head + req + `${pad(indent + 1)}widget: image\n`;
 
@@ -50,8 +56,10 @@ function field(key, value, indent, opts = {}) {
       let out = head + req + `${pad(indent + 1)}widget: list\n`;
       out += `${pad(indent + 1)}fields:\n`;
       for (const k of keys) {
-        const sample = value.find((el) => el[k] !== undefined)[k];
-        const required = value.some((el) => el[k] === undefined) ? false : undefined;
+        const present = value.find((el) => el[k] !== undefined && el[k] !== "");
+        const sample = present ? present[k] : value.find((el) => el[k] !== undefined)[k];
+        // Optional if any entry is missing the key or has it empty.
+        const required = value.some((el) => el[k] === undefined || el[k] === "") ? false : undefined;
         out += field(k, sample, indent + 2, { required });
       }
       return out;

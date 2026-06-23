@@ -228,6 +228,7 @@ collections:
                 widget: number
               - name: prefix
                 label: "Prefix"
+                required: false
                 widget: string
               - name: suffix
                 label: "Suffix"
@@ -1175,6 +1176,7 @@ collections:
                 widget: text
               - name: href
                 label: "Href"
+                required: false
                 widget: string
           - name: button
             label: "Button"
