@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { cn } from "@/lib/cn";
-import { caseStudy, testimonials } from "@/lib/content";
+import { caseStudy, testimonials, sections } from "@/lib/content";
 
 const avatarStyles: Record<string, string> = {
   a1: "bg-forest text-cream",
@@ -15,7 +15,7 @@ export function CaseStudy() {
     <section id="proof" className="bg-paper py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
-          <SectionHeading eyebrow="Proof" title="What it looks like when finance just runs." />
+          <SectionHeading eyebrow={sections.proof.eyebrow} title={sections.proof.title} />
         </Reveal>
 
         <div className="mt-[clamp(40px,5vw,64px)] grid grid-cols-1 items-stretch gap-[clamp(32px,4vw,56px)] lg:grid-cols-[0.9fr_1.1fr]">
@@ -56,9 +56,8 @@ export function CaseStudy() {
                   The outcome
                 </span>
                 <p className="font-display text-[clamp(22px,2vw,26px)] leading-[1.34] text-ink">
-                  A finance function that runs without the founder, with cleaner books and
-                  faster reporting, for{" "}
-                  <b className="font-semibold italic text-gold">a fraction of a local hire.</b>
+                  {sections.proof.outcomeLead}
+                  <b className="font-semibold italic text-gold">{sections.proof.outcomeEm}</b>
                 </p>
               </div>
             </div>
@@ -67,12 +66,12 @@ export function CaseStudy() {
 
         <Reveal>
           <p className="mt-[30px] text-[15px] leading-[1.6] text-grey">
-            We build finance teams like this for{" "}
+            {sections.proof.cpgPre}
             <a
-              href="/finance-for-cpg-brands"
+              href={sections.proof.cpgHref}
               className="border-b border-gold/40 text-gold transition-colors hover:border-gold"
             >
-              CPG and consumer brands &rarr;
+              {sections.proof.cpgLink} &rarr;
             </a>
           </p>
         </Reveal>

@@ -50,7 +50,7 @@ export default function OpengraphImage() {
               maxWidth: 980,
             }}
           >
-            A controller-grade finance team, embedded in your business.
+            A senior finance leader who owns your numbers.
           </div>
         </div>
 

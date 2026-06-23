@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Satinwood Talent",
     title: "Satinwood Talent · Senior finance teams from Sri Lanka",
     description:
-      "A controller-grade finance team, embedded in your business. Senior finance operators from Sri Lanka, full-time, for a fraction of a local hire.",
+      "A senior finance leader who owns your numbers, embedded full-time in your business — your month-end close, reporting, and controls, owned with the seniority of a senior in-house hire.",
     url: "/",
     locale: "en_US",
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Satinwood Talent · Senior finance teams from Sri Lanka",
     description:
-      "A controller-grade finance team, embedded in your business. Senior finance operators from Sri Lanka, full-time, for a fraction of a local hire.",
+      "A senior finance leader who owns your numbers, embedded full-time in your business — your month-end close, reporting, and controls, owned with the seniority of a senior in-house hire.",
   },
 };
 

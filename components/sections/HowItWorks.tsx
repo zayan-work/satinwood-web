@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { cn } from "@/lib/cn";
-import { steps } from "@/lib/content";
+import { steps, sections } from "@/lib/content";
 
 export function HowItWorks() {
   return (
@@ -11,8 +11,8 @@ export function HowItWorks() {
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="How it works"
-            title="From first call to embedded, in weeks."
+            eyebrow={sections.howItWorks.eyebrow}
+            title={sections.howItWorks.title}
           />
         </Reveal>
         <RevealGroup className="mt-11 grid grid-cols-1 border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
@@ -35,8 +35,8 @@ export function HowItWorks() {
         </RevealGroup>
         <Reveal>
           <div className="mt-[34px] rounded-[13px] border border-hairline bg-white px-6 py-5 text-[14.5px] leading-[1.55] text-grey">
-            <b className="text-ink">Low risk by design.</b> Start with a trial period, and if a
-            match is not right, we replace it. Flexible rolling terms, no long lock-in.
+            <b className="text-ink">{sections.howItWorks.lowRiskBold}</b>
+            {sections.howItWorks.lowRiskRest}
           </div>
         </Reveal>
       </Container>

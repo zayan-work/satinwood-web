@@ -1,0 +1,167 @@
+{
+  "serviceLinks": [
+    {
+      "label": "Outsourced Controller",
+      "href": "/outsourced-controller"
+    },
+    {
+      "label": "Outsourced FP&A",
+      "href": "/outsourced-fpa"
+    },
+    {
+      "label": "Outsourced Accounting Manager",
+      "href": "/outsourced-accounting-manager"
+    },
+    {
+      "label": "Outsourced Senior Accountant",
+      "href": "/outsourced-senior-accountant"
+    },
+    {
+      "label": "Finance for CPG brands",
+      "href": "/finance-for-cpg-brands"
+    },
+    {
+      "label": "Finance for ecommerce brands",
+      "href": "/finance-for-ecommerce-brands"
+    }
+  ],
+  "nav": {
+    "links": [
+      {
+        "label": "Team",
+        "href": "/team"
+      },
+      {
+        "label": "Services",
+        "children": [
+          {
+            "label": "Outsourced Controller",
+            "href": "/outsourced-controller"
+          },
+          {
+            "label": "Outsourced FP&A",
+            "href": "/outsourced-fpa"
+          },
+          {
+            "label": "Outsourced Accounting Manager",
+            "href": "/outsourced-accounting-manager"
+          },
+          {
+            "label": "Outsourced Senior Accountant",
+            "href": "/outsourced-senior-accountant"
+          },
+          {
+            "label": "Finance for CPG brands",
+            "href": "/finance-for-cpg-brands"
+          },
+          {
+            "label": "Finance for ecommerce brands",
+            "href": "/finance-for-ecommerce-brands"
+          }
+        ]
+      },
+      {
+        "label": "Advisory",
+        "href": "/advisory"
+      }
+    ],
+    "cta": {
+      "label": "Build your team",
+      "href": "#cta"
+    }
+  },
+  "pageNav": {
+    "links": [
+      {
+        "label": "Team",
+        "href": "/team"
+      },
+      {
+        "label": "Services",
+        "children": [
+          {
+            "label": "Outsourced Controller",
+            "href": "/outsourced-controller"
+          },
+          {
+            "label": "Outsourced FP&A",
+            "href": "/outsourced-fpa"
+          },
+          {
+            "label": "Outsourced Accounting Manager",
+            "href": "/outsourced-accounting-manager"
+          },
+          {
+            "label": "Outsourced Senior Accountant",
+            "href": "/outsourced-senior-accountant"
+          },
+          {
+            "label": "Finance for CPG brands",
+            "href": "/finance-for-cpg-brands"
+          },
+          {
+            "label": "Finance for ecommerce brands",
+            "href": "/finance-for-ecommerce-brands"
+          }
+        ]
+      },
+      {
+        "label": "Advisory",
+        "href": "/advisory"
+      }
+    ],
+    "cta": {
+      "label": "Build your team",
+      "href": "/#cta"
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Outsourced Controller",
+        "href": "/outsourced-controller"
+      },
+      {
+        "label": "Outsourced FP&A",
+        "href": "/outsourced-fpa"
+      },
+      {
+        "label": "Accounting Manager",
+        "href": "/outsourced-accounting-manager"
+      },
+      {
+        "label": "Senior Accountant",
+        "href": "/outsourced-senior-accountant"
+      },
+      {
+        "label": "Finance for CPG brands",
+        "href": "/finance-for-cpg-brands"
+      },
+      {
+        "label": "Finance for ecommerce brands",
+        "href": "/finance-for-ecommerce-brands"
+      },
+      {
+        "label": "Team",
+        "href": "/team"
+      },
+      {
+        "label": "Advisory",
+        "href": "/advisory"
+      },
+      {
+        "label": "Build your team",
+        "href": "/#cta"
+      }
+    ],
+    "base": "Senior finance teams, embedded in your business. Crafted in Ceylon. © 2026 Satinwood Talent."
+  },
+  "youtube": {
+    "channelId": "UCjCgqty5wJawKsVq2d9UIVw",
+    "channelUrl": "https://www.youtube.com/@versionnextpodcast"
+  }
+}

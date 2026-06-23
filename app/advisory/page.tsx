@@ -10,7 +10,9 @@ import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { FaqAccordion } from "@/components/primitives/FaqAccordion";
 import { AdvisoryBooking } from "@/components/sections/AdvisoryBooking";
-import { pageNav, advisory } from "@/lib/content";
+import { PodcastVideos } from "@/components/sections/PodcastVideos";
+import { pageNav, advisory, youtube } from "@/lib/content";
+import { getPodcastVideos } from "@/lib/youtube";
 
 export const metadata: Metadata = {
   title: "Advisory | Satinwood Talent",
@@ -89,8 +91,16 @@ function SessionLine({
   );
 }
 
-export default function AdvisoryPage() {
-  const { hero, intro, why, questions, longer, how, faq, book } = advisory;
+export default async function AdvisoryPage() {
+  const { hero, intro, why, questions, longer, how, faq, book, videos } = advisory;
+  const podcast = videos.enabled
+    ? await getPodcastVideos({
+        channelId: youtube.channelId,
+        count: videos.count,
+        sort: videos.sort,
+        showStats: videos.showStats,
+      })
+    : { videos: [], configured: false, error: null };
 
   return (
     <>
@@ -316,6 +326,13 @@ export default function AdvisoryPage() {
                 {book.giving}
               </p>
             </Reveal>
+            <PodcastVideos
+              videos={podcast.videos}
+              error={podcast.error}
+              eyebrow={videos.eyebrow}
+              title={videos.title}
+              channelUrl={youtube.channelUrl}
+            />
           </Container>
         </section>
       </main>

@@ -1,0 +1,161 @@
+{
+  "hero": {
+    "eyebrow": "Advisory",
+    "titleLead": "Fifteen minutes with an operator who has ",
+    "titleEm": "been where you are.",
+    "lede": "Direct access to Rengan Rajaratnam, three decades in global finance across Morgan Stanley, SAC Capital, Mercer, and Robertson Stephens, on your actual situation. A growth question, a thesis you are testing, a decision you are weighing. An introductory call to start, and where it goes from there is up to you.",
+    "credLine": "Morgan Stanley · SAC Capital · Mercer · Robertson Stephens",
+    "price": "$150",
+    "priceLabel": "15-minute introductory call",
+    "primaryCta": {
+      "label": "Book your 15 minutes",
+      "href": "#book"
+    },
+    "subLink": {
+      "label": "Working together longer? Explore advisory",
+      "href": "#longer"
+    },
+    "photo": "/team/rengan.jpg"
+  },
+  "intro": {
+    "eyebrow": "The introductory call",
+    "title": "Fifteen minutes, used well.",
+    "cards": [
+      {
+        "title": "An operator's read",
+        "body": "Not generic advice. A direct, experienced read on your actual situation, from someone who has built companies and sat across the table from them."
+      },
+      {
+        "title": "A clear point of view",
+        "body": "Bring two or three questions. Leave with a sharp, honest answer on each, and a clear sense of your next move."
+      }
+    ],
+    "expect": [
+      {
+        "k": "Format",
+        "v": "15-minute video call"
+      },
+      {
+        "k": "Price",
+        "v": "$150 per call"
+      },
+      {
+        "k": "Turnaround",
+        "v": "Booked in minutes"
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why Rengan",
+    "titleLead": "He has been on ",
+    "titleEm": "both sides of the table.",
+    "body": "Three decades of global finance experience, including Morgan Stanley, SAC Capital, Mercer, and Robertson Stephens. A Stanford MBA. Years building and backing companies, and a network across founders, funds, and operators that is hard to reach from the outside. For fifteen minutes, you have his full attention, directly."
+  },
+  "questions": {
+    "eyebrow": "Bring your questions",
+    "title": "What people bring to the call.",
+    "items": [
+      {
+        "title": "Where to bet",
+        "body": "“We have two product lines and the team for one. The easy one pays the bills, the big one is the bet. Which do we starve?”"
+      },
+      {
+        "title": "Timing a raise",
+        "body": "“A name-brand fund is interested but moving slowly, and we have term sheets from smaller names now. Do we wait, or build the round around who is ready?”"
+      },
+      {
+        "title": "Before you wire",
+        "body": "“We are about to lead a round. The founder is excellent and the numbers are thin. What would you stress-test before we commit?”"
+      },
+      {
+        "title": "Before diligence",
+        "body": "“Diligence starts in six weeks and our reporting will not survive it. What do we fix first, and what can wait?”"
+      }
+    ]
+  },
+  "longer": {
+    "eyebrow": "Beyond the introduction",
+    "titleLead": "When a call becomes ",
+    "titleEm": "someone in your corner.",
+    "body": "Some founders and funds come back. The work grows into strategy, growth, and capital, measured in months and quarters. It is selective, and built around the relationship itself. It begins the same way for everyone, with an introductory call. If there is a fit, you take it from there.",
+    "cta": {
+      "label": "Start with 15 minutes",
+      "href": "#book"
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Booking takes a minute.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Book your time",
+        "body": "Choose a slot and reserve your fifteen minutes. Payment is taken at booking."
+      },
+      {
+        "n": "02",
+        "title": "Send your questions",
+        "body": "Two or three, ahead of the call, so the time goes straight to substance."
+      },
+      {
+        "n": "03",
+        "title": "Get your read",
+        "body": "A direct conversation, and a clear point of view you can act on."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "title": "Before you book.",
+    "items": [
+      {
+        "q": "How long is the introductory call, and what does it cost?",
+        "a": "A focused fifteen-minute video call for $150, paid at the time of booking."
+      },
+      {
+        "q": "What will I actually walk away with?",
+        "a": "A direct, experienced read on the questions you bring, and a clear sense of what you would do next. Come with two or three; you will leave with an answer on each."
+      },
+      {
+        "q": "Who is this for?",
+        "a": "Founders scaling past the early days, and funds or investors who want an operator's view on a company, a market, or a thesis. It is built for people who want a sharp point of view, quickly."
+      },
+      {
+        "q": "What does Rengan advise on?",
+        "a": "Growth strategy, capital strategy, scaling and go-to-market, and building the finance function. This is business and operating guidance, not investment advice."
+      },
+      {
+        "q": "What happens to the 5% for charity?",
+        "a": "Five percent of every call goes to organisations working on healthcare for families in South Asia. It is contributed on your behalf, at no extra cost to you."
+      },
+      {
+        "q": "Can the introductory call lead to ongoing advisory?",
+        "a": "Yes, and many do. There is no pitch on the call itself. If it is a fit, you will both know, and you take it from there."
+      },
+      {
+        "q": "What timezone are calls in?",
+        "a": "Times are shown in your local timezone when you book. Rengan takes calls across US, Canadian, and international hours."
+      },
+      {
+        "q": "Can I reschedule or cancel?",
+        "a": "Yes, with reasonable notice ahead of the call. The details are shown at the time of booking."
+      }
+    ]
+  },
+  "book": {
+    "eyebrow": "Book a call",
+    "title": "Book your 15 minutes.",
+    "lede": "Direct access, your situation, a clear point of view. Choose a time below.",
+    "price": "$150",
+    "priceLabel": "15-minute introductory call",
+    "giving": "Every call gives back. A share of each session supports healthcare for families in South Asia."
+  },
+  "videos": {
+    "enabled": true,
+    "eyebrow": "From the podcast",
+    "title": "Watch recent episodes.",
+    "count": 4,
+    "sort": "recent",
+    "showStats": true
+  }
+}

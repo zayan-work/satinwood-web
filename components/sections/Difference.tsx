@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
 import { cn } from "@/lib/cn";
-import { differences } from "@/lib/content";
+import { differences, sections } from "@/lib/content";
 
 export function Difference() {
   return (
@@ -12,13 +12,14 @@ export function Difference() {
         <Reveal>
           <SectionHeading
             tone="dark"
-            eyebrow="The difference"
+            eyebrow={sections.difference.eyebrow}
             title={
               <>
-                Finance that <em>runs without you.</em>
+                {sections.difference.titleLead}
+                <em>{sections.difference.titleEm}</em>
               </>
             }
-            lede="Plenty of services will rent you an offshore generalist. We are built for one thing, and we are built by the people who actually do the job."
+            lede={sections.difference.lede}
           />
         </Reveal>
         <RevealGroup className="mt-12 grid grid-cols-1 border-t border-[#F4EFE2]/15 md:grid-cols-2">

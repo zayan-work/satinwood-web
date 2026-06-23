@@ -6,6 +6,22 @@ const nextConfig: NextConfig = {
   // default; pinned here so it can't drift.
   trailingSlash: false,
 
+  // YouTube video thumbnails (advisory + team podcast sections) via next/image.
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "i.ytimg.com" },
+      { protocol: "https", hostname: "img.youtube.com" },
+    ],
+  },
+
+  // Serve the Sveltia CMS admin (public/admin/index.html) at the clean /admin
+  // URL. Next does not do directory-index resolution for static files, so the
+  // bare /admin path 404s without this. The CMS uses hash routing, so only the
+  // entry needs rewriting; /admin/config.yml resolves to the static file.
+  async rewrites() {
+    return [{ source: "/admin", destination: "/admin/index.html" }];
+  },
+
   // Domain routing for the satinwoodtalent.com migration. All canonical tags use
   // https://www.satinwoodtalent.com, so every other host 301s onto it.
   // http→https is handled at the host/reverse proxy (Coolify).

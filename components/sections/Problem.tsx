@@ -2,17 +2,14 @@ import { Container } from "@/components/primitives/Container";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
-import { problems } from "@/lib/content";
+import { problems, sections } from "@/lib/content";
 
 export function Problem() {
   return (
     <section className="bg-paper py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
-          <SectionHeading
-            eyebrow="Why now"
-            title="Senior finance judgment is expensive and scarce."
-          />
+          <SectionHeading eyebrow={sections.problem.eyebrow} title={sections.problem.title} />
         </Reveal>
         <RevealGroup className="mt-[46px] grid grid-cols-1 gap-[30px] md:grid-cols-3">
           {problems.map((p) => (

@@ -11,6 +11,7 @@ import { CaseStudy } from "@/components/sections/CaseStudy";
 import { Stats } from "@/components/sections/Stats";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Craft } from "@/components/sections/Craft";
+import { Coverage } from "@/components/sections/Coverage";
 import { Reassurance } from "@/components/sections/Reassurance";
 import { Faq } from "@/components/sections/Faq";
 import { Booking } from "@/components/sections/Booking";
@@ -151,6 +152,7 @@ export default function Home() {
         <HowItWorks />
         <Craft />
         <Reassurance />
+        <Coverage />
         <Faq />
         <Booking />
       </main>

@@ -2,17 +2,14 @@ import { Container } from "@/components/primitives/Container";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
-import { roles } from "@/lib/content";
+import { roles, sections } from "@/lib/content";
 
 export function Roles() {
   return (
     <section className="bg-paper py-[88px] max-[560px]:py-[60px]">
       <Container>
         <Reveal>
-          <SectionHeading
-            eyebrow="Finance roles we place"
-            title="The seat you need, owned end to end."
-          />
+          <SectionHeading eyebrow={sections.roles.eyebrow} title={sections.roles.title} />
         </Reveal>
         <RevealGroup className="mt-11 grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
           {roles.map((r) => {
@@ -43,6 +40,9 @@ export function Roles() {
             );
           })}
         </RevealGroup>
+        <Reveal delay={0.05}>
+          <p className="mt-7 text-[14.5px] leading-[1.6] text-grey">{sections.roles.note}</p>
+        </Reveal>
       </Container>
     </section>
   );

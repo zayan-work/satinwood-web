@@ -2,7 +2,7 @@ import { Container } from "@/components/primitives/Container";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
 import { Reveal } from "@/components/primitives/Reveal";
 import { BookingEmbed } from "./BookingEmbed";
-import { booking } from "@/lib/content";
+import { booking, sections } from "@/lib/content";
 
 export function Booking() {
   return (
@@ -16,12 +16,11 @@ export function Booking() {
             <div className="lg:sticky lg:top-28">
               <Eyebrow tone="dark">{booking.eyebrow}</Eyebrow>
               <h2 className="mt-3.5 font-display text-[clamp(30px,4vw,46px)] font-semibold leading-[1.05] text-[#F4EFE2]">
-                Build a finance team,{" "}
-                <em className="italic text-gold-bright">crafted in Ceylon.</em>
+                {sections.booking.headingLead}
+                <em className="italic text-gold-bright">{sections.booking.headingEm}</em>
               </h2>
               <p className="mt-4 max-w-[42ch] text-[16px] leading-[1.6] text-[#C5BCA6]">
-                Tell us the seat you need and pick a time below. We will come back with a
-                hand-selected senior match.
+                {sections.booking.body}
               </p>
               <ul className="mt-7 flex flex-col gap-3.5">
                 {booking.bullets.map((b) => (

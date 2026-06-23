@@ -224,9 +224,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
             </h2>
             <p className="mt-4 max-w-[56ch] text-[17px] leading-[1.6] text-[#C9C0AA]">
               {cta.ledeParts.map((part, i) =>
-                typeof part === "string" ? (
-                  <span key={i}>{part}</span>
-                ) : (
+                part.href ? (
                   <a
                     key={i}
                     href={part.href}
@@ -234,6 +232,8 @@ export function ServicePage({ data }: { data: ServicePageData }) {
                   >
                     {part.text}
                   </a>
+                ) : (
+                  <span key={i}>{part.text}</span>
                 ),
               )}
             </p>

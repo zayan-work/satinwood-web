@@ -2,7 +2,7 @@ import { Container } from "@/components/primitives/Container";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
-import { craftPoints } from "@/lib/content";
+import { craftPoints, sections } from "@/lib/content";
 
 export function Craft() {
   return (
@@ -11,18 +11,15 @@ export function Craft() {
         <div className="grid grid-cols-1 items-start gap-[50px] lg:grid-cols-2">
           <Reveal>
             <div className="lg:sticky lg:top-28">
-              <Eyebrow>The craft</Eyebrow>
+              <Eyebrow>{sections.craft.eyebrow}</Eyebrow>
               <h2 className="mt-3.5 font-display text-[clamp(32px,4.4vw,50px)] font-semibold leading-[1.04] tracking-[-0.3px] text-ink">
-                Why the standard is different.
+                {sections.craft.title}
               </h2>
               <p className="mt-5 text-[clamp(15px,1.15vw,16.5px)] leading-[1.68] text-grey">
-                Sri Lanka has a deep, internationally trained finance profession, the same
-                people the global firms recruit. We do not just place them. We hold them to a
-                finance-only standard, train them on the tools your business runs on, and give
-                them real ownership.
+                {sections.craft.body}
               </p>
               <p className="mt-4 font-display text-[19px] italic text-gold">
-                Crafted in Ceylon is not a tagline. It is where the standard comes from.
+                {sections.craft.tagline}
               </p>
             </div>
           </Reveal>

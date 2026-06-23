@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Button } from "@/components/primitives/Button";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
-import { pageNav, team } from "@/lib/content";
+import { pageNav, team, youtube } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Team · Satinwood Talent",
@@ -26,6 +26,10 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
+  // Only show the podcast block once it's enabled AND a real channel URL is set,
+  // so it never renders a dead link.
+  const podcastLive = team.podcast.enabled && /^https?:\/\//.test(youtube.channelUrl);
+
   return (
     <>
       <Navbar links={pageNav.links} cta={pageNav.cta} homeHref="/" />
@@ -43,6 +47,11 @@ export default function TeamPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-4 max-w-[56ch] text-[17px] leading-[1.6] text-grey">{team.lede}</p>
+            </Reveal>
+            <Reveal delay={0.14}>
+              <p className="mt-4 font-display text-[20px] italic leading-[1.4] text-gold">
+                {team.tagline}
+              </p>
             </Reveal>
 
             <RevealGroup className="mt-[50px] flex flex-col">
@@ -87,10 +96,48 @@ export default function TeamPage() {
                 </RevealItem>
               ))}
             </RevealGroup>
+
+            {team.advisors.length > 0 && (
+              <div className="mt-[60px]">
+                <Reveal>
+                  <Eyebrow>Advisors</Eyebrow>
+                </Reveal>
+                <RevealGroup className="mt-6 flex flex-col">
+                  {team.advisors.map((m) => (
+                    <RevealItem
+                      key={m.name}
+                      className="grid grid-cols-1 items-start gap-[18px] border-t border-hairline py-[36px] last:border-b sm:grid-cols-[200px_1fr] sm:gap-[42px]"
+                    >
+                      <div className="relative aspect-square w-[120px] overflow-hidden rounded-[16px] sm:w-[160px]">
+                        <Image
+                          src={m.photo}
+                          alt={`${m.name}, ${m.role} at Satinwood Talent`}
+                          fill
+                          sizes="(max-width: 640px) 120px, 160px"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-[26px] font-semibold leading-[1.05] text-ink">
+                          {m.name}
+                        </h3>
+                        <div className="mt-2 text-[12.5px] font-semibold uppercase tracking-[1.4px] text-gold">
+                          {m.role}
+                        </div>
+                        <p className="mt-4 max-w-[64ch] text-[15.5px] leading-[1.64] text-grey">
+                          {m.bio}
+                        </p>
+                      </div>
+                    </RevealItem>
+                  ))}
+                </RevealGroup>
+              </div>
+            )}
           </Container>
         </section>
 
-        {/* Podcast */}
+        {/* Podcast — hidden until there is a real channel URL to link to. */}
+        {podcastLive && (
         <section className="bg-forest-deep py-[88px] text-[#EDE7D6] max-[560px]:py-[60px]">
           <Container>
             <Reveal>
@@ -101,7 +148,9 @@ export default function TeamPage() {
               <p className="mt-4 max-w-[56ch] text-[17px] leading-[1.6] text-[#C9C0AA]">
                 {team.podcast.body}{" "}
                 <a
-                  href={team.podcast.cta.href}
+                  href={youtube.channelUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-1 border-b border-gold-bright/40 text-gold-bright transition-colors hover:border-gold-bright"
                 >
                   {team.podcast.cta.label}
@@ -115,6 +164,7 @@ export default function TeamPage() {
             </Reveal>
           </Container>
         </section>
+        )}
 
         {/* Work with us */}
         <section className="bg-paper py-[88px] max-[560px]:py-[60px]">

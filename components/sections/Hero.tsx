@@ -35,24 +35,27 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-[26px] font-display text-[clamp(40px,4.7vw,63px)] font-semibold leading-[1.04] tracking-[-0.5px] text-ink">
-              A controller-grade finance team,{" "}
-              <em className="italic text-gold">embedded in your business.</em>
+              {hero.headingLead}
+              <em className="italic text-gold">{hero.headingEm}</em>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-[47ch] text-[18.5px] leading-[1.55] text-grey max-[1040px]:max-w-[62ch]">
-              Satinwood Talent is a senior finance talent firm. We embed finance operators from
-              Sri Lanka full-time to own the close, reporting, and controls, for a
-              fraction of building the same seat at home.
+              {hero.body}
+            </p>
+          </Reveal>
+          <Reveal delay={0.13}>
+            <p className="mt-5 font-display text-[19px] italic leading-[1.35] text-gold">
+              {hero.tagline}
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-[34px] flex flex-wrap items-center gap-3.5">
-              <Button href="#cta" variant="primary">
-                Build your team
+              <Button href={hero.ctaPrimary.href} variant="primary">
+                {hero.ctaPrimary.label}
               </Button>
-              <Button href="#how" variant="ghost">
-                See how it works
+              <Button href={hero.ctaSecondary.href} variant="ghost">
+                {hero.ctaSecondary.label}
               </Button>
             </div>
           </Reveal>
@@ -76,14 +79,14 @@ export function Hero() {
           <aside className="rounded-[18px] border border-hairline bg-white px-6 pb-[18px] pt-1 shadow-[0_22px_56px_rgba(28,27,22,0.08)] max-[1040px]:max-w-[520px]">
             <div className="flex items-center justify-between border-b border-hairline py-[18px] pb-3.5">
               <span className="font-display text-[19px] font-semibold tracking-[0.2px] text-ink">
-                Your senior bench
+                {hero.benchTitle}
               </span>
               <span className="inline-flex items-center gap-2 text-[10.5px] font-semibold uppercase tracking-[0.8px] text-forest">
                 <span className="relative flex h-[7px] w-[7px]">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4a8a5b]/40 motion-reduce:hidden" />
                   <span className="relative inline-flex h-[7px] w-[7px] rounded-full bg-[#4a8a5b] shadow-[0_0_0_3px_rgba(74,138,91,0.16)]" />
                 </span>
-                Available now
+                {hero.benchStatus}
               </span>
             </div>
 
@@ -114,9 +117,7 @@ export function Hero() {
               ))}
             </RevealGroup>
 
-            <p className="pt-3.5 text-[12px] italic text-grey-light">
-              Hand-selected for your business in about two weeks.
-            </p>
+            <p className="pt-3.5 text-[12px] italic text-grey-light">{hero.benchNote}</p>
           </aside>
         </Reveal>
       </Container>

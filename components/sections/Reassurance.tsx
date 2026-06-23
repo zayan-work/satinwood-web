@@ -2,7 +2,7 @@ import { Container } from "@/components/primitives/Container";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
-import { reassurances } from "@/lib/content";
+import { reassurances, sections } from "@/lib/content";
 
 export function Reassurance() {
   return (
@@ -10,8 +10,8 @@ export function Reassurance() {
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="The fine print, handled"
-            title="Built for how finance teams actually work."
+            eyebrow={sections.reassurance.eyebrow}
+            title={sections.reassurance.title}
           />
         </Reveal>
         <RevealGroup className="mt-11 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">

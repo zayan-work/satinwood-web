@@ -1,0 +1,50 @@
+{
+  "eyebrow": "The team",
+  "title": "The people behind Satinwood Talent.",
+  "lede": "Operators, not recruiters. The people who built Satinwood Talent have run finance functions and scaled businesses themselves, and they hold the bench to the same standard.",
+  "tagline": "We don't recruit finance operators. We've been them.",
+  "members": [
+    {
+      "name": "Rengan Rajaratnam",
+      "role": "Chairman",
+      "photo": "/team/rengan.jpg",
+      "bio": "Rengan chairs Satinwood Talent and sets its direction. Three decades of global finance experience, including Morgan Stanley, SAC Capital, Mercer, and Robertson Stephens, and a Stanford MBA. His standing and his network across founders, funds, and operators are why growing companies trust Satinwood with their senior finance roles.",
+      "link": {
+        "label": "Advisory with Rengan",
+        "href": "/advisory"
+      }
+    },
+    {
+      "name": "Tilak Gunawardena",
+      "role": "Head of Sri Lanka Operations",
+      "photo": "/team/tilak.jpg",
+      "bio": "Tilak runs Satinwood Talent on the ground in Sri Lanka. Group Director and Chief Financial Controller at MAC Holdings, with more than three decades in finance leadership. Prior VP Finance at Aitken Spence, a listed Colombo group, plus Acuity Knowledge Partners and Ernst & Young across Colombo and New York. He hires and develops every operator to the standards he built his own career on."
+    }
+  ],
+  "advisors": [
+    {
+      "name": "Imu Moorthy",
+      "role": "Advisor, Digital Assets & Web3",
+      "photo": "/team/imu.jpg",
+      "bio": "Imu advises Satinwood Talent on clients building in digital assets and web3."
+    }
+  ],
+  "podcast": {
+    "enabled": true,
+    "eyebrow": "Listen",
+    "title": "The podcast.",
+    "body": "Rengan hosts a podcast for founders and investors on capital, markets, and building.",
+    "cta": {
+      "label": "Listen and subscribe"
+    }
+  },
+  "cta": {
+    "eyebrow": "Work with us",
+    "title": "Build your finance team.",
+    "body": "Tell us the seat you need and we will hand-select a senior match, embedded full-time in your business.",
+    "button": {
+      "label": "Build your team",
+      "href": "/#cta"
+    }
+  }
+}

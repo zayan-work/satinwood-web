@@ -1,0 +1,461 @@
+{
+  "hero": {
+    "eyebrow": "Senior finance teams · Crafted in Ceylon",
+    "headingLead": "A senior finance leader who owns your numbers — ",
+    "headingEm": "and works only for you.",
+    "body": "We embed a controller, FP&A lead, or accounting manager full-time in your business — to own your month-end close, reporting, and controls. You get the judgment, ownership, and seniority of a senior in-house hire, without the search, the ramp, or the risk of getting your numbers wrong.",
+    "tagline": "We don't recruit finance operators. We've been them.",
+    "ctaPrimary": {
+      "label": "Build your team",
+      "href": "#cta"
+    },
+    "ctaSecondary": {
+      "label": "See how it works",
+      "href": "#how"
+    },
+    "note": "No long lock-in. Every match starts on a trial.",
+    "trust": [
+      "Finance only",
+      "Always senior",
+      "Full-time & embedded",
+      "Fluent in modern tooling & AI"
+    ],
+    "benchTitle": "Your senior bench",
+    "benchStatus": "Available now",
+    "benchNote": "Hand-selected for your business in about two weeks.",
+    "people": [
+      {
+        "initials": "SR",
+        "name": "Sohaib R.",
+        "role": "Financial Controller",
+        "tag": "CIMA",
+        "avatar": "a1"
+      },
+      {
+        "initials": "DP",
+        "name": "Dilani P.",
+        "role": "FP&A Lead",
+        "tag": "ACCA · CFA",
+        "avatar": "a2"
+      },
+      {
+        "initials": "NF",
+        "name": "Nuwan F.",
+        "role": "Accounting Manager",
+        "tag": "ACCA",
+        "avatar": "a3"
+      },
+      {
+        "initials": "AH",
+        "name": "Amaya H.",
+        "role": "Senior Accountant",
+        "tag": "CA SL",
+        "avatar": "a4"
+      }
+    ]
+  },
+  "proofStrip": [
+    "Finance, and only finance",
+    "Senior operators, embedded full-time",
+    "Matched in 2 weeks",
+    "Backed by an established group"
+  ],
+  "problems": [
+    {
+      "title": "A strong controller runs six figures",
+      "body": "The best finance leaders command six figures, and they are hard to find, harder to keep, and slow to hire."
+    },
+    {
+      "title": "Offshore usually means bookkeeping",
+      "body": "Most providers give you junior transaction processing, not ownership of the month-end close, the controls, or the reporting."
+    },
+    {
+      "title": "You should not overpay for judgment",
+      "body": "The senior finance talent you want already exists. It is simply in the wrong place, at the wrong price."
+    }
+  ],
+  "differences": [
+    {
+      "n": "01",
+      "title": "Finance is all we place",
+      "body": "We place finance leaders and nothing else. No assistants, no marketing pool, no junior staff with a senior title."
+    },
+    {
+      "n": "02",
+      "title": "Built by people who have run finance themselves",
+      "body": "The people who built Satinwood Talent trained at Deloitte, Ernst & Young, Goldman Sachs, and Stanford, and have scaled finance functions themselves. We hire for that."
+    },
+    {
+      "n": "03",
+      "title": "From one seat to a full finance function",
+      "body": "Start with the role you need most, a controller or an FP&A lead, and scale to a full outsourced finance function at the same senior standard as you grow."
+    },
+    {
+      "n": "04",
+      "title": "Embedded like a teammate",
+      "body": "Embedded, exclusive, full-time, and fluent in modern finance tools and AI. They own outcomes the way a teammate does."
+    }
+  ],
+  "roles": [
+    {
+      "name": "Controller",
+      "href": "/outsourced-controller",
+      "body": "Owns the close, the controls, the reporting package, and the integrity of your numbers."
+    },
+    {
+      "name": "FP&A Lead",
+      "href": "/outsourced-fpa",
+      "body": "Budgets, forecasts, board decks, and the analysis behind every decision."
+    },
+    {
+      "name": "Accounting Manager",
+      "body": "Runs the day-to-day function, reconciliations, AP and AR, and the monthly cadence."
+    },
+    {
+      "name": "Senior Accountant",
+      "body": "Hands-on ownership of the ledger, journals, and clean, investor-ready books."
+    }
+  ],
+  "operators": [
+    {
+      "initials": "S",
+      "name": "Sohaib R.",
+      "role": "Financial Controller",
+      "cred": "CIMA · MBA",
+      "gradient": "linear-gradient(160deg,#27301F,#3A4A31)",
+      "meta": "15 years · ex-HSBC, WNS Global · led a 20-person reconciliation team for a US annuities book."
+    },
+    {
+      "initials": "D",
+      "name": "Dilani P.",
+      "role": "FP&A Lead",
+      "cred": "ACCA · CFA L1",
+      "gradient": "linear-gradient(160deg,#2C3826,#4a5a3d)",
+      "meta": "12 years · ex-Virtusa, LSEG · global budgeting, forecasting, and board reporting."
+    },
+    {
+      "initials": "N",
+      "name": "Nuwan F.",
+      "role": "Accounting Manager",
+      "cred": "ACCA",
+      "gradient": "linear-gradient(160deg,#3a3320,#5a4f2e)",
+      "meta": "12 years · ex-WNS Global · ran AP, AR, and month-end across UK and EU clients."
+    },
+    {
+      "initials": "A",
+      "name": "Amaya H.",
+      "role": "Senior Accountant",
+      "cred": "CA Sri Lanka",
+      "gradient": "linear-gradient(160deg,#27301F,#46402a)",
+      "meta": "8 years · Big Four trained · GL, journals, and audit-ready financials end to end."
+    }
+  ],
+  "caseStudy": {
+    "logo": "Flourish",
+    "desc": "CPG brand across major North American retailers, including Costco, Loblaws, and Amazon.",
+    "quote": "I stopped doing the books and started running the business. The numbers are cleaner than they have ever been.",
+    "who": "Flourish",
+    "attribution": {
+      "name": "Jenson Sada",
+      "role": "CFO and COO, Flourish"
+    },
+    "blocks": [
+      {
+        "label": "The problem",
+        "body": "Finance ran on the founder. Month-end, retailer deductions and chargebacks, GL coding, and investor reporting all landed on one person. It did not scale, and the numbers were always a step behind."
+      },
+      {
+        "label": "The solution",
+        "body": "Flourish embedded a Satinwood Talent controller and a senior accountant. They took ownership of the close, reconciliations, retailer settlements, and the monthly reporting pack, running it inside the company's own tools."
+      }
+    ],
+    "outcome": "A finance function that runs without the founder, with cleaner books and faster reporting, for a fraction of a local hire."
+  },
+  "testimonials": [
+    {
+      "quote": "Our controller owns the close end to end. I stopped checking the numbers months ago. That is the highest compliment I can give.",
+      "initials": "JM",
+      "name": "Founder",
+      "role": "Consumer brand, North America",
+      "avatar": "a1"
+    },
+    {
+      "quote": "We were paying a US firm three times as much for less ownership. The judgment we get now is what we were missing.",
+      "initials": "KR",
+      "name": "Operating Partner",
+      "role": "Family office",
+      "avatar": "a3"
+    }
+  ],
+  "stats": [
+    {
+      "value": 15,
+      "prefix": "",
+      "suffix": "+ yrs",
+      "label": "Average senior experience on our bench"
+    },
+    {
+      "value": 2,
+      "prefix": "",
+      "suffix": " weeks",
+      "label": "From first call to matched"
+    },
+    {
+      "value": 100,
+      "prefix": "",
+      "suffix": "%",
+      "label": "Finance, and nothing else"
+    },
+    {
+      "value": 50,
+      "prefix": "",
+      "suffix": "%+",
+      "label": "Typical saving vs a local hire"
+    }
+  ],
+  "steps": [
+    {
+      "n": "01",
+      "title": "Discovery",
+      "body": "We learn your close, your stack, your reporting cadence, and the seat you actually need filled."
+    },
+    {
+      "n": "02",
+      "title": "Match",
+      "body": "We hand-select a senior operator for your business. A considered match, not a stack of resumes."
+    },
+    {
+      "n": "03",
+      "title": "Embed",
+      "body": "A structured 90-day onboarding into your tools, your team, and your monthly rhythm."
+    },
+    {
+      "n": "04",
+      "title": "Grow",
+      "body": "Scale from one seat to a full finance function, at the same standard, as you grow."
+    }
+  ],
+  "craftPoints": [
+    {
+      "title": "Operator-built",
+      "body": "Run by people who own finance functions, so we hire for judgment and ownership, not keywords on a resume."
+    },
+    {
+      "title": "Finance-only bar",
+      "body": "One vetting standard, built for finance. No generalist pool to dilute it."
+    },
+    {
+      "title": "Modern and AI-fluent",
+      "body": "Fluent in QuickBooks, NetSuite, Xero, and the AI tools that now run alongside them."
+    },
+    {
+      "title": "Retained, not rented",
+      "body": "Real career paths mean our people stay, so your finance function has memory."
+    }
+  ],
+  "reassurances": [
+    {
+      "title": "Time-zone overlap",
+      "body": "Real working hours that overlap your day, agreed up front, so the close never waits."
+    },
+    {
+      "title": "Data security",
+      "body": "Secure devices, NDAs, access controls, and clear handling standards for financial data."
+    },
+    {
+      "title": "Trial and replacement",
+      "body": "Start on a trial. If it is not the right fit, we replace the match. The risk is ours."
+    },
+    {
+      "title": "Flexible terms",
+      "body": "Rolling engagement, scale up or down. No multi-year lock-in to get started."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is Satinwood Talent?",
+      "a": "Satinwood Talent is a senior finance talent firm. We embed finance operators from Sri Lanka full-time and exclusively in your business to own the close, reporting, and controls, for a fraction of building the same seat at home. We serve growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia, placing controller, FP&A, accounting manager, and senior accountant level talent. We are not a staffing marketplace or a bookkeeping provider."
+    },
+    {
+      "q": "How is Satinwood Talent different from other offshore finance providers and staffing marketplaces?",
+      "a": "Satinwood Talent places senior finance operators only, never generalists. Most offshore providers are generalist marketplaces staffing assistants, marketers, and junior bookkeepers from a shared pool. We place finance and nothing else, we are run by people who own finance functions themselves, and we are delivered with MAC Holdings, an established Sri Lankan group, not a venture-backed app."
+    },
+    {
+      "q": "What is an outsourced controller?",
+      "a": "An outsourced controller is a senior finance professional who owns your month-end close, reconciliations, financial controls, and reporting from outside your local payroll. With Satinwood Talent the controller is embedded full-time in your business and tools, so you get ownership of the numbers, not a task queue. It is the same seniority as a local controller, at a fraction of the cost."
+    },
+    {
+      "q": "How much does an outsourced controller cost?",
+      "a": "An embedded, controller-level operator typically costs a fraction of a comparable local hire — often [40–60%] less, starting from [$X per month]. The exact figure depends on the role and scope, and we walk you through the numbers on a short discovery call."
+    },
+    {
+      "q": "What is the difference between a fractional controller and an outsourced controller?",
+      "a": "A fractional controller works part-time across several companies. A Satinwood Talent controller is outsourced but full-time, dedicated, and exclusive to your business, embedded in your tools and team, with full ownership of the close, controls, and reporting. You get a controller's seniority without sharing their attention."
+    },
+    {
+      "q": "What is the difference between outsourced bookkeeping and a controller-level finance hire?",
+      "a": "Bookkeeping records transactions; a controller owns the integrity of your numbers. A bookkeeper handles data entry, AP, and AR. A controller owns the close, the controls, the reporting package, and the judgment behind the numbers. Satinwood Talent places controller, FP&A, accounting manager, and senior accountant level talent, not junior bookkeeping."
+    },
+    {
+      "q": "Can an offshore finance team run our month-end close?",
+      "a": "Yes. A senior offshore finance operator can own your full month-end close, reconciliations, customer or retailer settlements, and the monthly reporting pack, working inside your own tools. Satinwood Talent operators run the close end to end with real ownership, with working hours that overlap your day so the close never waits. Most finance work, from the ledger to board reporting, runs remotely."
+    },
+    {
+      "q": "Why Sri Lanka for finance talent?",
+      "a": "Sri Lanka has a deep, internationally trained finance profession, the same people the global firms recruit. Operators are CA Sri Lanka, ACCA, CIMA, or CFA qualified, with real ownership experience inside global banks, Big Four firms, and listed groups. The talent already exists at the standard you want. It is simply in a market where the cost of the same seat is far lower."
+    },
+    {
+      "q": "How senior are Satinwood Talent's operators?",
+      "a": "Controller, FP&A, accounting manager, and senior accountant level. Operators are CA Sri Lanka, ACCA, CIMA, or CFA qualified, with real ownership experience inside global firms, not junior staff relabelled as senior. The average senior operator on our bench has 15 or more years of experience."
+    },
+    {
+      "q": "What accounting tools do your operators use?",
+      "a": "Satinwood Talent operators work in QuickBooks, NetSuite, Xero, and the rest of the modern finance stack, and they use AI tooling where it makes the work faster and sharper. We train every operator on the tools your business already runs on. Judgment first, tools to amplify it."
+    },
+    {
+      "q": "Are your operators full-time and exclusive to us?",
+      "a": "Yes. Each operator is full-time, dedicated, and exclusive to your business, embedded in your tools and team. Not shared, not a pooled queue, not a task marketplace."
+    },
+    {
+      "q": "Which countries does Satinwood Talent serve?",
+      "a": "Satinwood Talent serves growing companies in the United States, Canada, the United Kingdom, the United Arab Emirates, and Australia. Operators work hours that overlap your day, agreed up front, so the close never waits."
+    },
+    {
+      "q": "How fast can you match someone, and is there a trial?",
+      "a": "About two weeks from the first call to a hand-selected senior match. Every match starts on a trial period to confirm fit, and if it is not right we replace it. Terms are flexible and rolling, with no long lock-in to get started."
+    },
+    {
+      "q": "Is my financial data safe with an offshore finance team?",
+      "a": "Yes. Operators work on secure, company-issued devices under signed NDAs, with role-based access and documented handling standards. Your financial data is treated as if our own books depended on it."
+    }
+  ],
+  "booking": {
+    "eyebrow": "Get started",
+    "bullets": [
+      "A 15-minute discovery call to understand the role",
+      "A hand-selected senior match in about two weeks",
+      "A trial period on every match. If it is not right, we replace it."
+    ],
+    "email": "hello@satinwoodtalent.com",
+    "cities": "Washington DC · Miami · Toronto · Colombo"
+  },
+  "comparison": {
+    "eyebrow": "How we compare",
+    "title": {
+      "lead": "The seniority of a local hire, ",
+      "em": "at a fraction of the cost."
+    },
+    "lede": "The seniority and ownership of a local hire, the speed and cost of offshore, without the usual trade-offs of either.",
+    "columns": [
+      "Local hire",
+      "Typical offshore",
+      "Satinwood Talent"
+    ],
+    "rows": [
+      {
+        "label": "Seniority",
+        "local": "Senior",
+        "offshore": "Often junior",
+        "satinwood": "Always senior"
+      },
+      {
+        "label": "Owns the close and controls",
+        "local": "Yes",
+        "offshore": "Task processing",
+        "satinwood": "Yes, end to end"
+      },
+      {
+        "label": "Embedded and exclusive",
+        "local": "Yes",
+        "offshore": "Often pooled",
+        "satinwood": "Yes, full-time"
+      },
+      {
+        "label": "Time to hire",
+        "local": "Two to three months",
+        "offshore": "Weeks",
+        "satinwood": "About two weeks"
+      },
+      {
+        "label": "Relative cost",
+        "local": "Six figures",
+        "offshore": "Low, but limited",
+        "satinwood": "A fraction of a local hire"
+      }
+    ]
+  },
+  "sections": {
+    "problem": {
+      "eyebrow": "Why now",
+      "title": "Senior finance judgment is expensive and scarce."
+    },
+    "difference": {
+      "eyebrow": "The difference",
+      "titleLead": "Finance that ",
+      "titleEm": "runs without you.",
+      "lede": "Freelancers and BPOs sell you task execution by the hour. We place a finance operator who owns the outcome, with the judgment of a senior finance hire."
+    },
+    "roles": {
+      "eyebrow": "Finance roles we place",
+      "title": "The seat you need, owned end to end.",
+      "note": "Not sure which seat you need? We'll help you figure that out on the first call."
+    },
+    "math": {
+      "eyebrow": "What this is worth",
+      "titleLead": "Senior finance ownership, stood up in weeks — ",
+      "titleEm": "not a six-month search.",
+      "lede": "Senior ownership of your month-end close, reporting, and controls — without the cost and risk of building the same capability locally. A comparable senior hire runs [$X–$Y fully loaded], plus a [N]-month search and ramp before they add value. Our clients reach that capability faster, for materially less, and with no recruiting risk.",
+      "kicker": "We will walk you through the numbers for your market on a call."
+    },
+    "operators": {
+      "eyebrow": "Meet your operators",
+      "title": "The people who would run your finance function.",
+      "lede": "CA Sri Lanka, ACCA, CIMA, and CFA qualified, with experience inside global banks, Big Four firms, and listed groups. The same calibre the world's firms recruit.",
+      "note": "Representative of our current bench. We hand-select the match for your business."
+    },
+    "proof": {
+      "eyebrow": "Proof",
+      "title": "What it looks like when finance just runs.",
+      "outcomeLead": "A finance function that runs without the founder, with cleaner books and faster reporting, for ",
+      "outcomeEm": "a fraction of a local hire.",
+      "cpgPre": "We build finance teams like this for ",
+      "cpgLink": "CPG and consumer brands",
+      "cpgHref": "/finance-for-cpg-brands"
+    },
+    "howItWorks": {
+      "eyebrow": "How it works",
+      "title": "From first call to embedded, in weeks.",
+      "lowRiskBold": "Low risk by design.",
+      "lowRiskRest": " Start with a trial period, and if a match is not right, we replace it. Flexible rolling terms, no long lock-in."
+    },
+    "craft": {
+      "eyebrow": "The craft",
+      "title": "Why the standard is different.",
+      "body": "Sri Lanka has a deep, internationally trained finance profession, the same people the global firms recruit. We do not just place them. We hold them to a finance-only standard, train them on the tools your business runs on, and give them real ownership.",
+      "tagline": "Crafted in Ceylon is not a tagline. It is where the standard comes from."
+    },
+    "reassurance": {
+      "eyebrow": "The fine print, handled",
+      "title": "Built for how finance teams actually work."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "The things finance leaders ask first."
+    },
+    "booking": {
+      "headingLead": "Build a finance team, ",
+      "headingEm": "crafted in Ceylon.",
+      "body": "Tell us the seat you need and pick a time below. We will come back with a hand-selected senior match."
+    }
+  },
+  "coverage": {
+    "eyebrow": "Coverage",
+    "title": "Your operator works your hours.",
+    "body": "We staff to a [4–6]-hour daily overlap with North American business hours, so the close, the reporting, and ad-hoc requests happen inside your working day — not overnight."
+  },
+  "continuity": {
+    "eyebrow": "Continuity",
+    "title": "You're never reliant on one person alone.",
+    "body": "Every operator is backed by our bench and a documented handover, and if the fit isn't right we replace them within [X] days — with no gap in your close."
+  }
+}

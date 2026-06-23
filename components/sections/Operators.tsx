@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/primitives/SectionHeading";
 import { GrainOverlay } from "@/components/primitives/GrainOverlay";
 import { Reveal } from "@/components/primitives/Reveal";
 import { RevealGroup, RevealItem } from "@/components/primitives/RevealGroup";
-import { operators } from "@/lib/content";
+import { operators, sections } from "@/lib/content";
 
 export function Operators() {
   return (
@@ -11,9 +11,9 @@ export function Operators() {
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="Meet your operators"
-            title="The people who would run your finance function."
-            lede="CA Sri Lanka, ACCA, CIMA, and CFA qualified, with experience inside global banks, Big Four firms, and listed groups. The same calibre the world's firms recruit."
+            eyebrow={sections.operators.eyebrow}
+            title={sections.operators.title}
+            lede={sections.operators.lede}
           />
         </Reveal>
         <RevealGroup className="mt-[clamp(40px,5vw,60px)] grid grid-cols-2 gap-[clamp(16px,1.8vw,26px)] lg:grid-cols-4">
@@ -42,9 +42,7 @@ export function Operators() {
           ))}
         </RevealGroup>
         <Reveal>
-          <p className="mt-7 text-[12px] italic text-grey-light">
-            Representative of our current bench. We hand-select the match for your business.
-          </p>
+          <p className="mt-7 text-[12px] italic text-grey-light">{sections.operators.note}</p>
         </Reveal>
       </Container>
     </section>
