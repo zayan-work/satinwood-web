@@ -29,7 +29,7 @@ Open `/admin`. Three ways to sign in:
   repo root. Edits write straight to the local files; commit them yourself.
 - **Sign In Using Access Token** — for editing the live site with no extra setup.
   Uses a GitHub personal access token (repo scope). Saves commit to
-  `zayan-work/satinwood-web@main`.
+  `zayan-work/satinwood-web@develop`.
 - **Sign In with GitHub** — a friendlier "Sign in with GitHub" button for
   non-technical editors. Requires deploying the `sveltia/sveltia-cms-auth`
   Cloudflare Worker + a GitHub OAuth app, then adding `base_url:` to the backend

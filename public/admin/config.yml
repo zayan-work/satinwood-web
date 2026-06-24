@@ -8,7 +8,7 @@
 backend:
   name: github
   repo: zayan-work/satinwood-web
-  branch: main
+  branch: develop
 
 # New media uploads are committed here and referenced at /media/... . Existing
 # images under /public (e.g. /team/*.jpg) keep working as-is.
