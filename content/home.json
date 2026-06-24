@@ -1,9 +1,9 @@
 {
   "hero": {
     "eyebrow": "Senior finance teams · Crafted in Ceylon",
-    "headingLead": "A senior finance leader who owns your numbers — ",
-    "headingEm": "and works only for you.",
-    "body": "We embed a controller, FP&A lead, or accounting manager full-time in your business — to own your month-end close, reporting, and controls. You get the judgment, ownership, and seniority of a senior in-house hire, without the search, the ramp, or the risk of getting your numbers wrong.",
+    "headingLead": "A controller-grade finance team",
+    "headingEm": "that owns your numbers.",
+    "body": "We embed a controller, FP&A lead, or accounting manager full-time in your business to own your month-end close, reporting, and controls. You get the judgment, ownership, and seniority of a local finance hire, at a fraction of the cost.",
     "tagline": "We don't recruit finance operators. We've been them.",
     "ctaPrimary": {
       "label": "Build your team",
@@ -67,7 +67,7 @@
     },
     {
       "title": "Offshore usually means bookkeeping",
-      "body": "Most providers give you junior transaction processing, not ownership of the month-end close, the controls, or the reporting."
+      "body": "Most offshore providers give you junior transaction processing, not ownership of the month-end close, the controls, or the reporting."
     },
     {
       "title": "You should not overpay for judgment",
@@ -109,10 +109,12 @@
     },
     {
       "name": "Accounting Manager",
+      "href": "",
       "body": "Runs the day-to-day function, reconciliations, AP and AR, and the monthly cadence."
     },
     {
       "name": "Senior Accountant",
+      "href": "",
       "body": "Hands-on ownership of the ledger, journals, and clean, investor-ready books."
     }
   ],
@@ -197,7 +199,7 @@
     {
       "value": 2,
       "prefix": "",
-      "suffix": " weeks",
+      "suffix": "weeks",
       "label": "From first call to matched"
     },
     {
@@ -327,6 +329,18 @@
     {
       "q": "Is my financial data safe with an offshore finance team?",
       "a": "Yes. Operators work on secure, company-issued devices under signed NDAs, with role-based access and documented handling standards. Your financial data is treated as if our own books depended on it."
+    },
+    {
+      "q": "How much does an outsourced controller cost?",
+      "a": "An embedded, controller-level operator usually costs a fraction of a comparable local hire, and most clients save well into six figures a year. Pricing depends on the role and your requirements, so we walk you through the exact numbers on a short discovery call."
+    },
+    {
+      "q": "What is the difference between a fractional controller and an outsourced controller?",
+      "a": "A fractional controller works part-time across several companies. A Satinwood Talent controller is outsourced but full-time, dedicated, and exclusive to your business, embedded in your tools and team, with full ownership of the close, controls, and reporting. You get a controller's seniority without sharing their attention."
+    },
+    {
+      "q": "Is my financial data safe with an offshore finance team?",
+      "a": "Yes. Operators work on secure, company-issued devices under signed NDAs, with role-based access and documented handling standards. Your financial data is treated as if our own books depended on it."
     }
   ],
   "booking": {
@@ -342,7 +356,7 @@
   "comparison": {
     "eyebrow": "How we compare",
     "title": {
-      "lead": "The seniority of a local hire, ",
+      "lead": "The seniority of a local hire,",
       "em": "at a fraction of the cost."
     },
     "lede": "The seniority and ownership of a local hire, the speed and cost of offshore, without the usual trade-offs of either.",
@@ -391,7 +405,7 @@
     },
     "difference": {
       "eyebrow": "The difference",
-      "titleLead": "Finance that ",
+      "titleLead": "Finance that",
       "titleEm": "runs without you.",
       "lede": "Freelancers and BPOs sell you task execution by the hour. We place a finance operator who owns the outcome, with the judgment of a senior finance hire."
     },
@@ -402,7 +416,7 @@
     },
     "math": {
       "eyebrow": "What this is worth",
-      "titleLead": "Senior finance ownership, stood up in weeks — ",
+      "titleLead": "Senior finance ownership, stood up in weeks —",
       "titleEm": "not a six-month search.",
       "lede": "Senior ownership of your month-end close, reporting, and controls — without the cost and risk of building the same capability locally. A comparable senior hire runs [$X–$Y fully loaded], plus a [N]-month search and ramp before they add value. Our clients reach that capability faster, for materially less, and with no recruiting risk.",
       "kicker": "We will walk you through the numbers for your market on a call."
@@ -416,9 +430,9 @@
     "proof": {
       "eyebrow": "Proof",
       "title": "What it looks like when finance just runs.",
-      "outcomeLead": "A finance function that runs without the founder, with cleaner books and faster reporting, for ",
+      "outcomeLead": "A finance function that runs without the founder, with cleaner books and faster reporting, for",
       "outcomeEm": "a fraction of a local hire.",
-      "cpgPre": "We build finance teams like this for ",
+      "cpgPre": "We build finance teams like this for",
       "cpgLink": "CPG and consumer brands",
       "cpgHref": "/finance-for-cpg-brands"
     },
@@ -426,7 +440,7 @@
       "eyebrow": "How it works",
       "title": "From first call to embedded, in weeks.",
       "lowRiskBold": "Low risk by design.",
-      "lowRiskRest": " Start with a trial period, and if a match is not right, we replace it. Flexible rolling terms, no long lock-in."
+      "lowRiskRest": "Start with a trial period, and if a match is not right, we replace it. Flexible rolling terms, no long lock-in."
     },
     "craft": {
       "eyebrow": "The craft",
@@ -443,7 +457,7 @@
       "title": "The things finance leaders ask first."
     },
     "booking": {
-      "headingLead": "Build a finance team, ",
+      "headingLead": "Build a finance team,",
       "headingEm": "crafted in Ceylon.",
       "body": "Tell us the seat you need and pick a time below. We will come back with a hand-selected senior match."
     }
