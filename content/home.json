@@ -288,7 +288,7 @@
     },
     {
       "q": "How much does an outsourced controller cost?",
-      "a": "An embedded, controller-level operator typically costs a fraction of a comparable local hire — often [40–60%] less, starting from [$X per month]. The exact figure depends on the role and scope, and we walk you through the numbers on a short discovery call."
+      "a": "An embedded, controller-level operator usually costs a fraction of a comparable local hire, and most clients save well into six figures a year. Pricing depends on the role and your requirements, so we walk you through the exact numbers on a short discovery call."
     },
     {
       "q": "What is the difference between a fractional controller and an outsourced controller?",
@@ -329,18 +329,6 @@
     {
       "q": "Is my financial data safe with an offshore finance team?",
       "a": "Yes. Operators work on secure, company-issued devices under signed NDAs, with role-based access and documented handling standards. Your financial data is treated as if our own books depended on it."
-    },
-    {
-      "q": "How much does an outsourced controller cost?",
-      "a": "An embedded, controller-level operator usually costs a fraction of a comparable local hire, and most clients save well into six figures a year. Pricing depends on the role and your requirements, so we walk you through the exact numbers on a short discovery call."
-    },
-    {
-      "q": "What is the difference between a fractional controller and an outsourced controller?",
-      "a": "A fractional controller works part-time across several companies. A Satinwood Talent controller is outsourced but full-time, dedicated, and exclusive to your business, embedded in your tools and team, with full ownership of the close, controls, and reporting. You get a controller's seniority without sharing their attention."
-    },
-    {
-      "q": "Is my financial data safe with an offshore finance team?",
-      "a": "Yes. Operators work on secure, company-issued devices under signed NDAs, with role-based access and documented handling standards. Your financial data is treated as if our own books depended on it."
     }
   ],
   "booking": {
@@ -350,7 +338,7 @@
       "A hand-selected senior match in about two weeks",
       "A trial period on every match. If it is not right, we replace it."
     ],
-    "email": "hello@satinwoodtalent.com",
+    "email": "info@satinwoodtalent.com",
     "cities": "Washington DC · Miami · Toronto · Colombo"
   },
   "comparison": {
@@ -415,10 +403,10 @@
       "note": "Not sure which seat you need? We'll help you figure that out on the first call."
     },
     "math": {
-      "eyebrow": "What this is worth",
-      "titleLead": "Senior finance ownership, stood up in weeks —",
-      "titleEm": "not a six-month search.",
-      "lede": "Senior ownership of your month-end close, reporting, and controls — without the cost and risk of building the same capability locally. A comparable senior hire runs [$X–$Y fully loaded], plus a [N]-month search and ramp before they add value. Our clients reach that capability faster, for materially less, and with no recruiting risk.",
+      "eyebrow": "The math",
+      "titleLead": "A full finance team, for a fraction of",
+      "titleEm": "one local hire.",
+      "lede": "Senior ownership of your month-end close, reporting, and controls for a fraction of the cost of building the same capability locally. Most clients save well into six figures annually versus hiring in-house.",
       "kicker": "We will walk you through the numbers for your market on a call."
     },
     "operators": {

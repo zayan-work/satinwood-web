@@ -16,7 +16,7 @@ export function ValueBand() {
             eyebrow={math.eyebrow}
             title={
               <>
-                {math.titleLead}
+                {math.titleLead}{" "}
                 <em>{math.titleEm}</em>
               </>
             }

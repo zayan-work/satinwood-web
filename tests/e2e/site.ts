@@ -46,4 +46,4 @@ export const ANCHOR_TARGETS: Record<string, string[]> = {
 export const KNOWN_PLACEHOLDERS = new Set<string>(["#"]);
 
 /** Expected contact email used by the home "Get started" mailto link. */
-export const CONTACT_EMAIL = "hello@satinwoodtalent.com";
+export const CONTACT_EMAIL = "info@satinwoodtalent.com";

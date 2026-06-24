@@ -15,7 +15,7 @@ export function Difference() {
             eyebrow={sections.difference.eyebrow}
             title={
               <>
-                {sections.difference.titleLead}
+                {sections.difference.titleLead}{" "}
                 <em>{sections.difference.titleEm}</em>
               </>
             }

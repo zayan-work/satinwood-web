@@ -97,7 +97,7 @@ export default function TeamPage() {
               ))}
             </RevealGroup>
 
-            {team.advisors.length > 0 && (
+            {team.advisorsEnabled && team.advisors.length > 0 && (
               <div className="mt-[60px]">
                 <Reveal>
                   <Eyebrow>Advisors</Eyebrow>

@@ -20,7 +20,7 @@ export function Comparison() {
             eyebrow={eyebrow}
             title={
               <>
-                {title.lead}
+                {title.lead}{" "}
                 <em>{title.em}</em>
               </>
             }

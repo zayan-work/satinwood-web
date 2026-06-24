@@ -16,7 +16,7 @@ export function Booking() {
             <div className="lg:sticky lg:top-28">
               <Eyebrow tone="dark">{booking.eyebrow}</Eyebrow>
               <h2 className="mt-3.5 font-display text-[clamp(30px,4vw,46px)] font-semibold leading-[1.05] text-[#F4EFE2]">
-                {sections.booking.headingLead}
+                {sections.booking.headingLead}{" "}
                 <em className="italic text-gold-bright">{sections.booking.headingEm}</em>
               </h2>
               <p className="mt-4 max-w-[42ch] text-[16px] leading-[1.6] text-[#C5BCA6]">

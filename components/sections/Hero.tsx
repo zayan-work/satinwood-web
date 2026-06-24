@@ -35,7 +35,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-[26px] font-display text-[clamp(40px,4.7vw,63px)] font-semibold leading-[1.04] tracking-[-0.5px] text-ink">
-              {hero.headingLead}
+              {hero.headingLead}{" "}
               <em className="italic text-gold">{hero.headingEm}</em>
             </h1>
           </Reveal>

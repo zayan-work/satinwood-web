@@ -686,6 +686,9 @@ collections:
                   - name: href
                     label: "Href"
                     widget: string
+          - name: advisorsEnabled
+            label: "Advisors Enabled"
+            widget: boolean
           - name: advisors
             label: "Advisors"
             widget: list
