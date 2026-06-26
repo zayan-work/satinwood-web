@@ -67,6 +67,7 @@ export function CaseStudy() {
         <Reveal>
           <p className="mt-[30px] text-[15px] leading-[1.6] text-grey">
             {sections.proof.cpgPre}
+            {" "}
             <a
               href={sections.proof.cpgHref}
               className="border-b border-gold/40 text-gold transition-colors hover:border-gold"
